@@ -14,7 +14,14 @@
 
 *Transform your AI coding agent into an autonomous Product Designer, UX Researcher, and QA Engineer.*
 
-[Get Started](#get-started) · [Skill Registry](#skill-registry) · [CLI Commands](#cli-reference) · [How It Works](#how-it-works) · [Contributing](#contributing)
+---
+
+### 📚 Official Documentation
+**[📖 Skill Authoring Guide](./docs/SKILL-AUTHORING-GUIDE.md)** &nbsp;•&nbsp; **[🗺️ Skill Map](./docs/SKILL-MAP.md)** &nbsp;•&nbsp; **[🍳 Recipes](./docs/RECIPES.md)** &nbsp;•&nbsp; **[📜 Changelog](./docs/CHANGELOG.md)**
+
+---
+
+**On this page:** [Get Started](#get-started) · [Skill Registry](#skill-registry) · [CLI Commands](#cli-reference) · [How It Works](#how-it-works) · [Contributing](#contributing)
 
 </div>
 

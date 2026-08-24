@@ -1,0 +1,3 @@
+interface:
+  display_name: "Module Registry Sync"
+  short_description: "Register modules via manifest so dashboards grow automatically"

@@ -1,0 +1,3 @@
+interface:
+  display_name: "Dashboard Scaffolding Contract"
+  short_description: "Build dashboards as manifest-driven shells that grow automatically"

@@ -1,0 +1,3 @@
+interface:
+  display_name: "Route Integrity Checker"
+  short_description: "Track link intents, detect dead-ends, auto-connect new routes"

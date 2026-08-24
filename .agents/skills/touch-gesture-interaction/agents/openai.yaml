@@ -1,0 +1,3 @@
+interface:
+  display_name: "Touch Gesture Interaction"
+  short_description: "Define tap targets, gestures, and thumb-zone layout"

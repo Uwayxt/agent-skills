@@ -1,0 +1,3 @@
+interface:
+  display_name: "Design Tokens"
+  short_description: "Define color, spacing, shadow, and radius tokens as single source of truth"

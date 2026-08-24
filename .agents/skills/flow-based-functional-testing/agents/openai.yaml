@@ -1,0 +1,3 @@
+interface:
+  display_name: "Flow-Based Functional Testing"
+  short_description: "Test user flows end-to-end and verify outcomes match design"

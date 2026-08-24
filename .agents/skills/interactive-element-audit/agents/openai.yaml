@@ -1,0 +1,3 @@
+interface:
+  display_name: "Interactive Element Audit"
+  short_description: "Find buttons, links, and forms with no handler or action"

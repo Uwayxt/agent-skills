@@ -1,0 +1,3 @@
+interface:
+  display_name: "Visual Responsive Regression Testing"
+  short_description: "Detect visual regressions across all breakpoints automatically"

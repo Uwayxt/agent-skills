@@ -1,0 +1,35 @@
+{
+  "name": "@uwayxt/agent-skills",
+  "version": "1.1.0",
+  "description": "Product Design, UI/UX & Technopreneur Intelligence Agent Skills",
+  "type": "module",
+  "main": "index.js",
+  "bin": {
+    "agentway": "./bin/cli.js"
+  },
+  "scripts": {
+    "start": "node ./bin/cli.js"
+  },
+  "keywords": [
+    "ai",
+    "agent",
+    "skills",
+    "claude",
+    "antigravity",
+    "product-design"
+  ],
+  "author": "Wahyudi (@uwayxt)",
+  "license": "MIT",
+  "dependencies": {
+    "@clack/prompts": "^0.7.0",
+    "picocolors": "^1.1.0"
+  },
+  "files": [
+    "bin",
+    ".agents",
+    "docs",
+    "skills-lock.json",
+    "LICENSE-PRODUCT-SKILLS.md",
+    "README.md"
+  ]
+}

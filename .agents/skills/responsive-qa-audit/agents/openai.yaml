@@ -1,0 +1,3 @@
+interface:
+  display_name: "Responsive QA Audit"
+  short_description: "Audit cross-device layouts at every breakpoint before shipping"

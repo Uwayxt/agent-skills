@@ -1,0 +1,3 @@
+interface:
+  display_name: "PRD Traceability Matrix"
+  short_description: "Map PRD requirements to UI elements and track implementation status"

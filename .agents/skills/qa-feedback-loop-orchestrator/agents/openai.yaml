@@ -1,0 +1,3 @@
+interface:
+  display_name: "QA Feedback Loop Orchestrator"
+  short_description: "Orchestrate closed-loop QA: collect, fix, retest, escalate"

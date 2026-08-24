@@ -1,0 +1,3 @@
+interface:
+  display_name: "Cross-Functional Review"
+  short_description: "Review through business, UX, UI, and technical lenses before shipping"

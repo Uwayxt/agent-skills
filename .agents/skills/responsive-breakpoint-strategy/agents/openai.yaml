@@ -1,0 +1,3 @@
+interface:
+  display_name: "Responsive Breakpoint Strategy"
+  short_description: "Define breakpoints and grid for cross-device layouts"

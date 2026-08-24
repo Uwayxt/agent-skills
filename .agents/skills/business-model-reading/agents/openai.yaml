@@ -1,0 +1,3 @@
+interface:
+  display_name: "Business Model Reading"
+  short_description: "Derive product modules from the business model"

@@ -1,0 +1,215 @@
+{
+  "version": 1,
+  "skills": {
+    "product-discovery": {
+      "source": "uwayxt/product-design-skills",
+      "sourceType": "github",
+      "skillPath": "skills/product-thinking/product-discovery/SKILL.md",
+      "computedHash": "4908f191955dbc248f310216584f7b3ed9f00bd6efe270c861f4208ba3939860"
+    },
+    "product-strategy": {
+      "source": "uwayxt/product-design-skills",
+      "sourceType": "github",
+      "skillPath": "skills/product-thinking/product-strategy/SKILL.md",
+      "computedHash": "42eea5fcb213e5ad3a2565e6244a030307bfe9bd376eb32ea721a9582c563a82"
+    },
+    "business-model-thinking": {
+      "source": "uwayxt/product-design-skills",
+      "sourceType": "github",
+      "skillPath": "skills/product-thinking/business-model-thinking/SKILL.md",
+      "computedHash": "ddb6b96fc63f1930c9e19e7aa8c6b2cb22fdecb0e34e97498ccebe49058c609c"
+    },
+    "mvp-scoping": {
+      "source": "uwayxt/product-design-skills",
+      "sourceType": "github",
+      "skillPath": "skills/product-thinking/mvp-scoping/SKILL.md",
+      "computedHash": "948aa7c5f466ecb2c349c2b9b29bc729138bac9195e88cbbc8bd2c02c748564e"
+    },
+    "stakeholder-requirement-mapping": {
+      "source": "uwayxt/product-design-skills",
+      "sourceType": "github",
+      "skillPath": "skills/product-thinking/stakeholder-requirement-mapping/SKILL.md",
+      "computedHash": "96ebfeabfdbf8ccf94e8914546a3a8d70f0e84189113b0e8a930559250811a1e"
+    },
+    "business-model-reading": {
+      "source": "uwayxt/product-design-skills",
+      "sourceType": "github",
+      "skillPath": "skills/product-thinking/business-model-reading/SKILL.md",
+      "computedHash": "0b360f375c6e44867f619f459805d0cc496041019e4167e43236aadd34aaff0a"
+    },
+    "user-flow-mapping": {
+      "source": "uwayxt/product-design-skills",
+      "sourceType": "github",
+      "skillPath": "skills/ux/user-flow-mapping/SKILL.md",
+      "computedHash": "a2a5b3e98d8a7105169a8d51111db9345fb6fcaeac3ca3dcdcb830fac4ab99d7"
+    },
+    "information-architecture": {
+      "source": "uwayxt/product-design-skills",
+      "sourceType": "github",
+      "skillPath": "skills/ux/information-architecture/SKILL.md",
+      "computedHash": "fe2d11e3ec760e588c0e569974c819422d2a55c2cbbfb57537229ee77ea0a7cc"
+    },
+    "user-research-synthesis": {
+      "source": "uwayxt/product-design-skills",
+      "sourceType": "github",
+      "skillPath": "skills/ux/user-research-synthesis/SKILL.md",
+      "computedHash": "89893c44cea7395aa363533a9a612666ce8f95b46634327fc1a9ddf651db82db"
+    },
+    "accessibility-review": {
+      "source": "uwayxt/product-design-skills",
+      "sourceType": "github",
+      "skillPath": "skills/ux/accessibility-review/SKILL.md",
+      "computedHash": "9658af3de051037f28bf9d3db77a28749bca9cdf55f88ae686a12beeb0ff1086"
+    },
+    "usability-heuristics-check": {
+      "source": "uwayxt/product-design-skills",
+      "sourceType": "github",
+      "skillPath": "skills/ux/usability-heuristics-check/SKILL.md",
+      "computedHash": "244da0cd5aac9b7b495a1071653932f41fe1427b800dcafab2f1bfa98cd11d7b"
+    },
+    "design-tokens": {
+      "source": "uwayxt/product-design-skills",
+      "sourceType": "github",
+      "skillPath": "skills/ui/design-tokens/SKILL.md",
+      "computedHash": "aab9e351934d539b06fff8e1e8c4228213524a306e5194f940ee1465b82a1beb"
+    },
+    "typography-system": {
+      "source": "uwayxt/product-design-skills",
+      "sourceType": "github",
+      "skillPath": "skills/ui/typography-system/SKILL.md",
+      "computedHash": "3ff755a7a351de03558acba988fc799e530f707f7ea13f7b504b1a84b00e65d9"
+    },
+    "design-system-builder": {
+      "source": "uwayxt/product-design-skills",
+      "sourceType": "github",
+      "skillPath": "skills/ui/design-system-builder/SKILL.md",
+      "computedHash": "ee91092f7458bf6bc19d0424325e43efd27f08f29d1d7cb7d28bc093c4075ed6"
+    },
+    "component-style-guide": {
+      "source": "uwayxt/product-design-skills",
+      "sourceType": "github",
+      "skillPath": "skills/ui/component-style-guide/SKILL.md",
+      "computedHash": "9a4467cb610ec95b7bfdb8ca1fce6bdc8e36b5a7c7480a31d01af60cbc035ca7"
+    },
+    "dashboard-layout-patterns": {
+      "source": "uwayxt/product-design-skills",
+      "sourceType": "github",
+      "skillPath": "skills/ui/dashboard-layout-patterns/SKILL.md",
+      "computedHash": "ca5822d5acd2fe78a3c35bcfb5dcfa1f7e285581edee4e119b66c4719a5acf4f"
+    },
+    "visual-hierarchy-review": {
+      "source": "uwayxt/product-design-skills",
+      "sourceType": "github",
+      "skillPath": "skills/ui/visual-hierarchy-review/SKILL.md",
+      "computedHash": "1a430eb6710ebd290c7684c5a981f8e67c33a0a575b876c250a5b8b63858b89a"
+    },
+    "micro-interaction-motion-design": {
+      "source": "uwayxt/product-design-skills",
+      "sourceType": "github",
+      "skillPath": "skills/ui/micro-interaction-motion-design/SKILL.md",
+      "computedHash": "4027036fd849152f5b66438def28b55a137b87ba4da3f0121844477719de9510"
+    },
+    "design-to-code-handoff": {
+      "source": "uwayxt/product-design-skills",
+      "sourceType": "github",
+      "skillPath": "skills/delivery/design-to-code-handoff/SKILL.md",
+      "computedHash": "b3e3e9c3dd5f365c8f35f89b63fa6ad4a54f8deed60160fef4b3b850a98c5d1b"
+    },
+    "cross-functional-review": {
+      "source": "uwayxt/product-design-skills",
+      "sourceType": "github",
+      "skillPath": "skills/delivery/cross-functional-review/SKILL.md",
+      "computedHash": "8494182c1a51b354e9ee660ddd45d8b117ef2639c77bf23f092643dc2424f62e"
+    },
+    "module-registry-sync": {
+      "source": "uwayxt/product-design-skills",
+      "sourceType": "github",
+      "skillPath": "skills/growth-aware/module-registry-sync/SKILL.md",
+      "computedHash": "84ac09f9af5a27669572f0dac385151aa570db90e548da5c43557686acc89ca0"
+    },
+    "dashboard-scaffolding-contract": {
+      "source": "uwayxt/product-design-skills",
+      "sourceType": "github",
+      "skillPath": "skills/growth-aware/dashboard-scaffolding-contract/SKILL.md",
+      "computedHash": "a920e4d95d86bb6f2444b8820df8e1f0420e01d3a9591c9eca3f57d90ca768e4"
+    },
+    "route-integrity-checker": {
+      "source": "uwayxt/product-design-skills",
+      "sourceType": "github",
+      "skillPath": "skills/growth-aware/route-integrity-checker/SKILL.md",
+      "computedHash": "58a063e822edb2694cf4aae90a69765ade692890d2413bf1bc4a9246ad974301"
+    },
+    "growth-impact-review": {
+      "source": "uwayxt/product-design-skills",
+      "sourceType": "github",
+      "skillPath": "skills/growth-aware/growth-impact-review/SKILL.md",
+      "computedHash": "18006ba174bceefe7d7ea19f4540d4f127e9aa53d9f15ea17631337b3f53a7b5"
+    },
+    "responsive-breakpoint-strategy": {
+      "source": "uwayxt/product-design-skills",
+      "sourceType": "github",
+      "skillPath": "skills/responsive/responsive-breakpoint-strategy/SKILL.md",
+      "computedHash": "af65a66a4c2caf2720f11b1b382c8bb8004c9631fdfc4a915f7dc37cde6af23e"
+    },
+    "adaptive-component-behavior": {
+      "source": "uwayxt/product-design-skills",
+      "sourceType": "github",
+      "skillPath": "skills/responsive/adaptive-component-behavior/SKILL.md",
+      "computedHash": "48deb5f9e63ea00c7c956080d6fd3c3465b86ffc8283f83ac0996bd3221be1ef"
+    },
+    "touch-gesture-interaction": {
+      "source": "uwayxt/product-design-skills",
+      "sourceType": "github",
+      "skillPath": "skills/responsive/touch-gesture-interaction/SKILL.md",
+      "computedHash": "ee8abed4c95ad8a18020625a7582d67d2123f8b441c270d4d90f0146abef1b20"
+    },
+    "perceived-performance-loading": {
+      "source": "uwayxt/product-design-skills",
+      "sourceType": "github",
+      "skillPath": "skills/responsive/perceived-performance-loading/SKILL.md",
+      "computedHash": "538c648d6cad059850a79d646c0b9f34d58990fcbec7fd0d714f75b899d552ac"
+    },
+    "responsive-qa-audit": {
+      "source": "uwayxt/product-design-skills",
+      "sourceType": "github",
+      "skillPath": "skills/responsive/responsive-qa-audit/SKILL.md",
+      "computedHash": "eb3577e7fe01564119b573ecb0baf604a96409ecb7a4ec639ea6cc49feff66b3"
+    },
+    "prd-traceability-matrix": {
+      "source": "uwayxt/product-design-skills",
+      "sourceType": "github",
+      "skillPath": "skills/qa-autonomous/prd-traceability-matrix/SKILL.md",
+      "computedHash": "b5a14c6f25a98e6961f972bd755016e190540bb1bcaffd473102e49cb3d3df2e"
+    },
+    "interactive-element-audit": {
+      "source": "uwayxt/product-design-skills",
+      "sourceType": "github",
+      "skillPath": "skills/qa-autonomous/interactive-element-audit/SKILL.md",
+      "computedHash": "e5bc39f23f24cd391e99445b99240b9379ac97942c2e6f4929be9d8eb3cca52f"
+    },
+    "flow-based-functional-testing": {
+      "source": "uwayxt/product-design-skills",
+      "sourceType": "github",
+      "skillPath": "skills/qa-autonomous/flow-based-functional-testing/SKILL.md",
+      "computedHash": "0eebbdae140e82973ab6b132bbb60d0a92d49dabfe787df5bb1cca79100da70d"
+    },
+    "visual-responsive-regression-testing": {
+      "source": "uwayxt/product-design-skills",
+      "sourceType": "github",
+      "skillPath": "skills/qa-autonomous/visual-responsive-regression-testing/SKILL.md",
+      "computedHash": "c26a72b68ee5214b2b01ae5fde40c3f0920ffc0710d2b0e862e20bf5045db516"
+    },
+    "accessibility-runtime-audit": {
+      "source": "uwayxt/product-design-skills",
+      "sourceType": "github",
+      "skillPath": "skills/qa-autonomous/accessibility-runtime-audit/SKILL.md",
+      "computedHash": "f06a0e1c9018d26d2deb1656a8fbcee6b18d48013b6737304370c2a1956b3804"
+    },
+    "qa-feedback-loop-orchestrator": {
+      "source": "uwayxt/product-design-skills",
+      "sourceType": "github",
+      "skillPath": "skills/qa-autonomous/qa-feedback-loop-orchestrator/SKILL.md",
+      "computedHash": "c4fe807dcdaf2d9d57f0872416c7ea87b53051d1c18fcaf90f1cd5d675634b69"
+    }
+  }
+}

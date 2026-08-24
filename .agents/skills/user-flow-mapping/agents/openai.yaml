@@ -1,0 +1,3 @@
+interface:
+  display_name: "User Flow Mapping"
+  short_description: "Map user decisions from entry to goal"

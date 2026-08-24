@@ -1,0 +1,3 @@
+interface:
+  display_name: "Dashboard Layout Patterns"
+  short_description: "Choose and configure dashboard shell, grid, and responsive behavior"

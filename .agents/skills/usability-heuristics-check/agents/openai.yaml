@@ -1,0 +1,3 @@
+interface:
+  display_name: "Usability Heuristics Check"
+  short_description: "Evaluate UI against Nielsen's 10 usability heuristics"

@@ -1,0 +1,3 @@
+interface:
+  display_name: "Adaptive Component Behavior"
+  short_description: "Transform component patterns across devices, not just size"

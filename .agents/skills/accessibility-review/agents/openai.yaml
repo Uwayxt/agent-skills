@@ -1,0 +1,3 @@
+interface:
+  display_name: "Accessibility Review"
+  short_description: "Audit against WCAG 2.1 AA across perceivable, operable, understandable, robust"

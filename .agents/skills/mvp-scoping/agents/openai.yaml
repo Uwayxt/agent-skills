@@ -1,0 +1,3 @@
+interface:
+  display_name: "MVP Scoping"
+  short_description: "Define the smallest product that tests the riskiest assumption"

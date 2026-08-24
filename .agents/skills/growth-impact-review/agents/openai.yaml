@@ -1,0 +1,3 @@
+interface:
+  display_name: "Growth Impact Review"
+  short_description: "Trace ripple effects when modules or pages are added"

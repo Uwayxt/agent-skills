@@ -1,0 +1,3 @@
+interface:
+  display_name: "Visual Hierarchy Review"
+  short_description: "Audit layout for focal point, contrast, rhythm, and CTA hierarchy"

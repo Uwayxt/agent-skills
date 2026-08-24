@@ -1,0 +1,3 @@
+interface:
+  display_name: "Typography System"
+  short_description: "Define type scale, font pairing, and text hierarchy"

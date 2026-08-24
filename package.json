@@ -1,25 +1,51 @@
 {
   "name": "@uwayxt/agent-skills",
   "version": "1.1.0",
-  "description": "Product Design, UI/UX & Technopreneur Intelligence Agent Skills",
+  "description": "35 Product Design Agent Skills for AI coding agents. Covers Product Thinking, UX, UI/Design Systems, Responsive, QA Autonomous, and Growth-Aware workflows. Compatible with Claude Code and Google Antigravity IDE.",
   "type": "module",
   "main": "index.js",
   "bin": {
-    "agentway": "./bin/cli.js"
+    "agentway": "bin/cli.js"
   },
   "scripts": {
     "start": "node ./bin/cli.js"
   },
   "keywords": [
-    "ai",
-    "agent",
-    "skills",
-    "claude",
-    "antigravity",
-    "product-design"
+    "ai-agent",
+    "agent-skills",
+    "agentway",
+    "product-design",
+    "ux-design",
+    "ui-design",
+    "design-system",
+    "design-tokens",
+    "claude-code",
+    "antigravity-ide",
+    "product-thinking",
+    "technopreneur",
+    "responsive-design",
+    "qa-automation",
+    "model-agnostic",
+    "multi-ide",
+    "user-flow",
+    "information-architecture",
+    "accessibility",
+    "mobile-first"
   ],
-  "author": "Wahyudi (@uwayxt)",
+  "author": {
+    "name": "Wahyudi",
+    "email": "",
+    "url": "https://github.com/Uwayxt"
+  },
   "license": "MIT",
+  "homepage": "https://github.com/Uwayxt/agent-skills#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Uwayxt/agent-skills.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Uwayxt/agent-skills/issues"
+  },
   "dependencies": {
     "@clack/prompts": "^0.7.0",
     "picocolors": "^1.1.0"
@@ -31,5 +57,8 @@
     "skills-lock.json",
     "LICENSE-PRODUCT-SKILLS.md",
     "README.md"
-  ]
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  }
 }

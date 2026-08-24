@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src=".github/banner.png" alt="Agentway — Think. Design. Build. Test." width="100%" />
+<img src="https://raw.githubusercontent.com/Uwayxt/agent-skills/main/.github/banner.png" alt="Agentway — Think. Design. Build. Test." width="100%" />
 
 # Agentway
 

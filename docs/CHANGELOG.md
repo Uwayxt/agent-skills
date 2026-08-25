@@ -7,6 +7,14 @@ Versions follow [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [1.2.1] — 2026-08-26
+
+### Fixed
+- Fixed package metadata author email schema validation in `package.json`.
+- Updated CLI list categorized groupings and local version comparison logic.
+
+---
+
 ## [1.2.0] — 2026-08-26
 
 ### 🚀 Major Architecture Milestone — 41 Agent Skills & Visual Intelligence

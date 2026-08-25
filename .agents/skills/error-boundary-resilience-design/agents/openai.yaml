@@ -1,0 +1,3 @@
+interface:
+  display_name: "Error Boundary & Resilience Design"
+  short_description: "Design empty, error, degraded, and offline states for robust UX"

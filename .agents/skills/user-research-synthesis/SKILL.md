@@ -3,32 +3,47 @@ name: user-research-synthesis
 description: Turn raw user data into ranked design insights. Use when synthesize interviews, user feedback, what did users say, research findings, analyze survey, or interview notes.
 ---
 
-# Synthesis Finds the Pattern That Tells You What to Build
+**Synthesis is the translation of raw user noise into ranked, actionable product decisions.** Summarizing repeats what people said; synthesis uncovers the underlying behavioral patterns that dictate what you must build.
 
-Raw user data is noise until it's grouped, weighted, and turned into decisions. Synthesis is not summarizing — it's finding the pattern that tells you what to build next.
+### 1. Collect & classify data by type
+Separate input signals into two complementary streams:
+- **Qualitative Data**: User interview transcripts, open-ended support tickets, usability test session notes, observational recordings.
+- **Quantitative Telemetry**: Funnel drop-off percentages, feature click rates, search query logs, NPS scores, time-on-task metrics.
 
-### 1. Collect the Raw Data
-Gather interview transcripts, survey responses, support tickets, analytics, session recordings notes. Accept whatever format the user provides.
+### 2. Triangulate qualitative insights with quantitative baselines
+Never analyze qualitative complaints in a vacuum. Pair the "What" with the "Why":
+- Example: *"Users abandon at Checkout Step 2"* (Quantitative: 42% drop-off) + *"I didn't trust that my credit card info was secure without a lock badge"* (Qualitative: 7/10 users) = **Single High-Confidence Insight**.
 
-### 2. Extract Observations
-Pull individual data points: one observation = one thing one user said or did. "User #3 couldn't find the export button" is an observation. "Users don't like the UI" is not — it's a conclusion wearing observation clothes.
+### 3. Extract atomic observations
+Break transcripts and notes into atomic observations (1 observation = 1 discrete action, quote, or blocker).
+- *Valid atomic observation*: "User #4 clicked the disabled 'Next' button 5 times because the required checkbox was scrolled out of view."
+- *Invalid vague summary*: "User was confused by the form."
 
-### 3. Affinity Grouping
-Cluster observations by theme. Don't pre-define themes; let them emerge from the data. Common clusters: onboarding friction, feature gaps, workflow inefficiencies, trust issues.
+### 4. Affinity clustering & thematic grouping
+Group atomic observations into emerging behavioral themes (e.g. Mental Model Mismatch, Discoverability Gap, Trust Deficit, Operational Friction).
 
-### 4. Weigh by Frequency and Severity
-A pain point mentioned by 8/10 users matters more than one mentioned by 1/10. A pain point that blocks a sale matters more than one that causes mild annoyance. Build a 2×2: frequency × severity.
+### 5. Weigh by Frequency × Severity Matrix
+Plot themes on a 2×2 grid:
+- **Frequency**: Isolated (1 user) ↔ Pervasive (≥ 70% of sample).
+- **Severity**: Annoyance (cosmetic) ↔ Task Blocker (churn risk / fatal drop-off).
+Themes in **Pervasive + Task Blocker** are critical release-blocking priorities.
 
-### 5. Derive Insights
-Each cluster produces one insight: a statement about user behavior that implies a design action. Format: "[Users/Segment] [behavior] because [reason], which means we should [implication]."
+### 6. Derive actionable Insight Statements
+Formulate structured insight statements:
+`"[Target Segment] experiences [struggle/behavior] because [underlying root cause], which means we should [specific design/architectural remediation]."`
 
-### 6. Rank Recommendations
-Rank design actions by impact (how many users, how severe) and effort. Top of the list = highest impact, lowest effort.
+## Completion Criteria
+- [ ] Raw input parsed into discrete atomic observations (not premature conclusions)
+- [ ] Qualitative feedback triangulated with quantitative telemetry where available
+- [ ] Frequency × Severity matrix calculated for all identified clusters
+- [ ] Insight statements follow the `[Segment] + [Behavior] + [Root Cause] + [Remediation]` formula
+- [ ] Prioritized design recommendations ranked by impact and implementation effort
 
 ## Output Format
-- Research synthesis document containing: observations table, affinity clusters, frequency×severity matrix, insight statements, and ranked recommendations.
+A `research_synthesis_report.md` artifact containing the raw observation catalog, thematic clusters, Frequency × Severity matrix, and ranked actionable design recommendations.
 
 ## Anti-patterns
-- Treating one user's opinion as a pattern.
-- Summarizing without grouping.
-- Mistaking feature requests for insights ("Users want feature X"). Always ask: what *problem* does feature X solve for them?
+- Treating one vocal enterprise customer's feature demand as a universal product pattern.
+- Reporting raw transcript quotes without extracting the underlying root need.
+- Confusing feature requests ("they asked for an Excel export") with user needs ("reporting is fragmented across tools").
+- Ignoring quantitative baseline data when qualitative feedback contradicts real telemetry behavior.

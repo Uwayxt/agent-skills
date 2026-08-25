@@ -5,62 +5,79 @@ description: Audit the product across all breakpoints before shipping. Use when 
 
 **A layout that looks correct in a browser resize is not a tested layout. Test at real breakpoints, with real content, with real fingers.**
 
-### 1. Set up the audit environment
-Test at each defined breakpoint from responsive-breakpoint-strategy. Use browser DevTools device simulation for each breakpoint, PLUS a physical device test for at least the smallest supported screen size and one tablet.
+### 1. Set up the audit environment & viewports
+Test across all defined breakpoints from `responsive-breakpoint-strategy`:
+- Mobile Small (375×667 - iPhone SE)
+- Mobile Standard (393×852 - iPhone 15 / Pixel 8)
+- Tablet (768×1024 - iPad Mini/Air)
+- Desktop (1280×800)
+- Ultra-wide (1440×900+)
 
-### 2. Run the overflow audit
-At each breakpoint:
-- No element extends beyond the viewport width (check `document.body.scrollWidth > window.innerWidth`)
-- No text overflows its container
-- No images break out of their parent
-- No fixed-width elements cause horizontal scroll
+### 2. Automated Playwright overflow & layout test
+Run automated checks to detect un-intended horizontal overflows and viewport clipping:
+```javascript
+// tests/responsive-overflow.spec.js
+import { test, expect } from '@playwright/test';
 
-### 3. Run the tap target audit
+const VIEWPORTS = [
+  { name: 'mobile-sm', width: 375, height: 667 },
+  { name: 'mobile-std', width: 393, height: 852 },
+  { name: 'tablet', width: 768, height: 1024 },
+  { name: 'desktop', width: 1280, height: 800 },
+];
+
+for (const vp of VIEWPORTS) {
+  test(`No horizontal overflow at ${vp.name} (${vp.width}px)`, async ({ page }) => {
+    await page.setViewportSize({ width: vp.width, height: vp.height });
+    await page.goto('/');
+
+    const hasOverflow = await page.evaluate(() => {
+      return document.documentElement.scrollWidth > window.innerWidth;
+    });
+
+    expect(hasOverflow).toBe(false);
+  });
+}
+```
+
+### 3. Run tap target & thumb-zone audit
 On mobile breakpoints:
-- Every interactive element ≥ 44×44px (use DevTools to inspect computed size)
-- No two interactive elements closer than 8px apart
-- Form inputs large enough to tap without zooming
+- Verify all interactive targets ≥ 44×44 CSS pixels.
+- Minimum 8px spacing between adjacent touch elements.
+- Primary CTA located within the thumb reach zone (lower 40% of viewport).
 
-### 4. Run the typography audit
-At each breakpoint:
-- Body text ≥ 14px on mobile (16px preferred)
-- No text smaller than 12px anywhere
-- Line length between 45–75 characters for body copy
-- Headings scale down proportionally (not same size as desktop)
+### 4. Typography & line-length check
+- Body text ≥ 14px (16px strongly recommended on mobile).
+- Reading line-length between 45–75 characters per line (no runaway text containers).
+- Headings scale fluidly using `clamp()` or breakpoint tokens.
 
-### 5. Run the navigation audit
-At mobile breakpoints:
-- Primary navigation is reachable without scrolling
-- No navigation hidden in a hover state (no hover on touch)
-- Back/cancel actions are always accessible
-- Keyboard (virtual keyboard) does not obscure primary actions when open
+### 5. Component transformation audit
+Verify component state against `adaptive-component-behavior`:
+- Data tables transform into stacked card lists on mobile.
+- Desktop sticky sidebar transforms into mobile bottom-bar or sliding drawer.
+- Modals transform into bottom action-sheets (`drawer-bottom`).
 
-### 6. Run the component transformation audit
-Cross-reference against adaptive-component-behavior transformation table:
-- Every "transform required" component has transformed (not just shrunk)
-- Bottom-nav appears where sidebar was
-- Tables are card-lists on mobile
-- Modals are fullscreen on mobile
+### 6. Mobile viewport edge-case testing
+- **Virtual Keyboard**: Ensure inputs stay visible above the virtual keyboard without covering the submit CTA.
+- **Safe Area Insets**: Verify `padding-bottom: env(safe-area-inset-bottom)` prevents content collision with OS home indicator bars.
+- **Landscape Orientation**: Verify layout does not break when rotated horizontally on mobile.
 
-### 7. Run the image and content audit
-- Images are not pixelated or over-compressed at any breakpoint
-- Content priority is correct (most important content first on mobile)
-- Safe-area insets are respected on devices with notches/home indicators
+### 7. Remote & real device testing strategy
+- For teams without physical hardware, execute cloud testing via BrowserStack or Playwright WebKit mobile emulation.
+- Physical device spot-check mandatory on at least 1 iOS Safari device and 1 Android Chrome device before production shipping.
 
-### Completion Criteria
-- Audit run at every defined breakpoint
-- Zero overflow violations
-- Zero tap target violations
-- All component transformations verified
-- Physical device test completed for smallest supported size
-- Findings documented with breakpoint, element, and fix required
+## Completion Criteria
+- [ ] Automated Playwright overflow test passes across all 4+ viewport configurations
+- [ ] Tap targets ≥ 44×44px with zero touch target overlap
+- [ ] Component transformations verified (table -> cards, sidebar -> bottom-nav)
+- [ ] Safe-area insets (`env(safe-area-inset-*)`) tested on notched devices
+- [ ] Virtual keyboard open state tested on form inputs
 
-### Output
-Responsive QA report (breakpoint × check × pass/fail/issue). Each issue includes: breakpoint, element, description, screenshot reference, recommended fix.
+## Output
+A `responsive-qa-report.md` artifact detailing pass/fail status per breakpoint, automated Playwright test scripts, and actionable remediation tasks.
 
-### Anti-patterns
-- Testing only at 375px and 1440px (misses tablet and intermediate states)
-- Using only browser resize instead of actual device simulation
-- Marking audit "passed" because there is no horizontal scroll (overflow hidden can mask the problem)
-- Not testing with a real virtual keyboard open
-- Skipping the physical device test (DevTools simulation is not 100% accurate for touch)
+## Anti-patterns
+- Testing only at desktop (1440px) and a single mobile width (375px), skipping tablets.
+- Relying on `overflow-x: hidden` to hide horizontal layout overflow instead of fixing the root element width.
+- Forgetting iOS Safari address bar height variations when calculating `100vh` (use `100dvh`).
+- Using hover tooltips to convey critical data on touch devices.

@@ -1,0 +1,3 @@
+interface:
+  display_name: "Security & Privacy Review"
+  short_description: "Audit interfaces for data exposure, auth boundaries, and privacy UX"

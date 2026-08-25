@@ -37,4 +37,4 @@ Every component must account for its lifecycle: Default, Hover, Active, Disabled
 - [ ] Interactive elements specify motion token behaviors.
 
 ## Output Format
-A comprehensive Figma library or code component registry, accompanied by a Markdown inventory mapping components to their token dependencies.
+A **component registry** — code-based or design-tool-agnostic — accompanied by a Markdown inventory mapping every component to its token dependencies, state matrix, and motion behaviors. If a design tool is used (Figma, Penpot, Sketch, or any other), the component registry is the source of truth — the design tool is a communication layer, not the canonical source.

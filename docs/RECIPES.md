@@ -4,6 +4,52 @@ Worked examples of how Agentway skills combine for real product scenarios.
 Use these as starting points when you begin a new project.
 
 ---
+---
+
+## 📊 Recipe Telemetry & Benchmark Matrix
+
+| Recipe | Primary Objective | Skills Chain | Est. Agent Turns | Primary Output Artifacts | Dev Time Saved |
+| :--- | :--- | :--- | :---: | :--- | :---: |
+| **Recipe 0** | **Visual Reference Matching** | `visual-style-extractor` ➔ `design-tokens` ➔ `design-system-builder` | 3–4 turns | `style-extraction.json`, `tokens.css`, Fidelity Report | **~8 hours** |
+| **Recipe 1** | **SaaS from Scratch** | `product-discovery` ➔ `mvp-scoping` ➔ `IA` ➔ `tokens` ➔ `scaffolding` | 6–8 turns | `discovery_synthesis.md`, `sitemap.md`, Scaffolding | **~24 hours** |
+| **Recipe 2** | **Mobile & Touch Adaptation** | `responsive-breakpoints` ➔ `adaptive-behavior` ➔ `touch-gestures` | 4–6 turns | `TRANSFORMATION-TABLE.md`, Mobile Viewport tokens | **~12 hours** |
+| **Recipe 3** | **Pre-Launch Full QA Loop** | `prd-traceability` ➔ `flow-testing` ➔ `a11y-runtime` ➔ `qa-orchestrator` | 4–8 turns | Live PRD Matrix, Playwright specs, A11y report | **~16 hours** |
+| **Recipe 4** | **Adding Scalable Feature Modules** | `business-model-reading` ➔ `module-registry` ➔ `growth-review` | 3–5 turns | `module.manifest.json`, Updated route intents | **~6 hours** |
+| **Recipe 5** | **Self-Healing QA Bug Fixing** | `interactive-element-audit` ➔ `route-integrity` ➔ `qa-orchestrator` | 3–5 turns | Auto-fixed markup, Closed feedback loop log | **~10 hours** |
+| **Recipe 6** | **Design System Unification** | `design-tokens` ➔ `typography-system` ➔ `component-style-guide` | 4–6 turns | Unified `design-tokens.json`, Component state matrix | **~14 hours** |
+| **Recipe 7** | **Stakeholder Priority Alignment** | `stakeholder-mapping` ➔ `product-strategy` ➔ `mvp-scoping` | 2–3 turns | Prioritized RICE table with OKR validation | **~6 hours** |
+| **Recipe 8** | **Dual-Theme Dark Mode System** | `design-tokens` ➔ `dark-mode-theming` ➔ `regression-testing` | 3–5 turns | 4-tier dark elevation tokens, Theme switcher script | **~8 hours** |
+| **Recipe 9** | **AI Feature & Streaming UX** | `ai-feature-ux` ➔ `error-boundary-resilience` ➔ `flow-testing` | 3–4 turns | AI spec, Streaming controls, 5-state resilience | **~10 hours** |
+| **Recipe 10**| **Global Localization & RTL** | `i18n-localization` ➔ `adaptive-behavior` ➔ `responsive-qa` | 3–4 turns | Translation schema, CSS logical properties rules | **~8 hours** |
+
+---
+
+## Recipe 0: Matching a Visual Reference Image or Screenshot
+
+**Situation:** You have a screenshot or design mockup of an interface you love. You want the agent to extract the exact design language, components, colors, and typography so generated UI matches the reference with high fidelity.
+
+**Prompt sequence:**
+
+```
+1. "Here is a screenshot of our reference design: [upload image]. Extract the full visual style, colors, typography scale, spacing base, and component inventory."
+
+2. "Generate the design token system using the extracted style-extraction.json manifest."
+
+3. "Build the component style guide for our core components matching the extracted style DNA."
+
+4. "Run the fidelity checklist against the original reference image. What is our fidelity score?"
+```
+
+**Skills activated in order:**
+`visual-style-extractor` -> `design-tokens` -> `typography-system` -> `design-system-builder` -> `component-style-guide`
+
+**What you get after this sequence:**
+- `style-extraction.json` with extracted primitive and semantic tokens
+- Precision-matched `design-tokens.json` and CSS variables
+- Component inventory aligned with the reference radius, elevation, and typography
+- Verified Fidelity Score (target >= 20/25) confirming near-identical visual resonance
+
+---
 
 ## Recipe 1: Starting a SaaS from Scratch
 
@@ -194,3 +240,62 @@ Each finding is automatically linked to the PRD requirement it violates. The QA 
 `stakeholder-requirement-mapping` → `product-strategy` → `mvp-scoping`
 
 **Output:** A ranked requirements list with RICE scores and a clear, documented rationale for what is in-scope and what is deferred — something you can show every stakeholder without subjective judgment.
+
+---
+
+## Recipe 8: Building a Dual-Theme (Dark Mode) System
+
+**Situation:** You have a working light theme and need to add dark mode without color vibration, halation, or invisible drop shadows.
+
+**Prompt sequence:**
+
+```
+1. "Audit our design tokens and define the dark mode semantic layer using dark-mode-theming-system."
+
+2. "Map our 4 surface elevation tiers for dark mode with surface lightness instead of shadows."
+
+3. "Adjust our brand accent vibrancy to guarantee WCAG 4.5:1 contrast on dark surfaces."
+
+4. "Generate the [data-theme="dark"] CSS custom property overrides and anti-flicker head script."
+```
+
+**Skills activated in order:**
+`design-tokens` -> `dark-mode-theming-system` -> `component-style-guide` -> `visual-responsive-regression-testing`
+
+---
+
+## Recipe 9: Designing AI-Enabled Features & Streaming UX
+
+**Situation:** You are adding generative AI, chat assistants, or automated suggestions into your product. You need to ensure the streaming UX is responsive and users can override hallucinations.
+
+**Prompt sequence:**
+
+```
+1. "Design the AI interaction patterns for our assistant feature using ai-feature-ux-patterns. Include streaming tokens, thinking state, and cancel affordances."
+
+2. "Define the human override and inline editing controls for AI-generated drafts."
+
+3. "Design the resilience states using error-boundary-resilience-design for AI rate limits and timeout failures."
+```
+
+**Skills activated in order:**
+`ai-feature-ux-patterns` -> `error-boundary-resilience-design` -> `flow-based-functional-testing`
+
+---
+
+## Recipe 10: Preparing for Global Internationalization & RTL
+
+**Situation:** Your product is expanding to international markets requiring Right-to-Left (Arabic/Hebrew) support and long-string translations (German/French).
+
+**Prompt sequence:**
+
+```
+1. "Architect our translation token namespace and RTL logical properties strategy using i18n-localization-strategy."
+
+2. "Audit our layout containers for 40% text expansion tolerance."
+
+3. "Run responsive QA audit with RTL directionality enabled."
+```
+
+**Skills activated in order:**
+`i18n-localization-strategy` -> `adaptive-component-behavior` -> `responsive-qa-audit`

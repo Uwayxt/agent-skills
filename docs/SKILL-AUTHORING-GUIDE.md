@@ -167,6 +167,23 @@ Before submitting a skill, verify:
 
 ---
 
+---
+
+## 📊 Skill Quality Scoring & Token Budget Standards
+
+Every skill in the Agentway registry is audited against strict token efficiency and structural standards:
+
+| Dimension | Target Specification | Hard Limit | Quality Metric / Rationale |
+| :--- | :--- | :--- | :--- |
+| **Main File Length** | **80–180 lines** | **< 250 lines** | Keeps context injection lean; heavy reference moves to sibling files |
+| **Description Length**| **100–140 characters** | **< 160 characters** | Optimizes IDE skill trigger search indexing and token consumption |
+| **Imperative Action Ratio** | **100% active voice** | **0 passive sentences** | Eliminates ambiguity during autonomous LLM execution |
+| **Verification Checklists**| **5–10 testable checkboxes**| **$\ge 4$ checkboxes** | Ensures deterministic self-evaluation before task completion |
+| **Anti-Patterns Catalog** | **3–6 common failure cases**| **$\ge 2$ anti-patterns** | Prevents recurrent model hallucinations and bad UI practices |
+| **Model Neutrality** | **100% Model Agnostic** | **Zero vendor names** | Ensures identical performance on Claude, GPT, Gemini, and DeepSeek |
+
+---
+
 ## Example: A Well-Written Skill
 
 ```markdown

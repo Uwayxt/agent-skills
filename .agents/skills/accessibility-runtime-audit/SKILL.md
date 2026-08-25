@@ -5,76 +5,75 @@ description: Run accessibility checks on the actual built product, not just the 
 
 **A design that meets WCAG on paper can still fail in the browser. Runtime accessibility audit runs against the DOM that users actually experience — not the design file, not the code review, the live product.**
 
-### 1. Run automated axe-core scan
-Use axe-core (via Playwright or browser extension) to scan every route for automated WCAG violations. Generate and save the report.
+### 1. Run automated axe-core scan (WCAG 2.2 AA target)
+Use axe-core via Playwright to scan every route for automated violations.
 ```javascript
 // Playwright + axe-core scaffold
-import { checkA11y } from 'axe-playwright';
-test('Accessibility audit: Homepage', async ({ page }) => {
+import { test, expect } from '@playwright/test';
+import AxeBuilder from '@axe-core/playwright';
+
+test('Accessibility audit (WCAG 2.2 AA)', async ({ page }) => {
   await page.goto('/');
-  await checkA11y(page, null, {
-    runOnly: ['wcag2a', 'wcag2aa'],
-    detailedReport: true,
-    detailedReportOptions: { html: true }
-  });
+  const accessibilityScanResults = await new AxeBuilder({ page })
+    .withTags(['wcag2a', 'wcag2aa', 'wcag21aa', 'wcag22aa'])
+    .analyze();
+
+  expect(accessibilityScanResults.violations).toEqual([]);
 });
 ```
-Scope: run against all routes defined in information-architecture sitemap.
 
-### 2. Manual keyboard navigation test
-Automated tools miss many keyboard issues. Manually verify:
-- Tab order follows visual reading order (left-to-right, top-to-bottom)
-- Every interactive element is reachable by Tab
-- Focus is visible at all times (never disappears between elements)
-- `Escape` closes modals, dropdowns, and drawers
-- `Enter` and `Space` activate buttons and toggle controls
-- No keyboard trap (user cannot be stuck inside a component)
+### 2. Manual keyboard navigation & focus appearance test
+Automated tools catch only ~30% of accessibility issues. Manually verify:
+- **Tab order**: Follows logical reading order (left-to-right, top-to-bottom).
+- **Focus visibility & contrast (WCAG 2.2 Focus Appearance)**: Focus ring must have at least a 3:1 contrast ratio against both the focused element and the surrounding background, with a minimum 2px thickness. Never use `outline: none` without a high-contrast replacement.
+- **Keyboard traps**: Verify user can tab in AND out of all modals, dropdowns, code blocks, and data tables.
+- **Escape / Enter / Space**: `Escape` dismisses overlays; `Enter`/`Space` activates buttons and toggles.
 
-### 3. Verify contrast ratios on actual rendered colors
-design-tokens define colors, but CSS overrides, opacity, and background layering can change actual contrast in the browser. Test with the browser color picker:
-- Body text on background: >= 4.5:1 (WCAG AA)
-- Large text (>=18pt or bold >=14pt) on background: >= 3:1
-- Interactive element boundaries: >= 3:1
-- Disabled text is exempt but should still be readable
+### 3. Verify WCAG 2.2 Target Size & Dragging Alternatives
+- **Target Size (Minimum 2.5.8)**: All interactive targets (buttons, links, icon toggles) must be at least 24×24 CSS pixels, or have sufficient spacing offset, unless inline within a sentence.
+- **Dragging Movements (2.5.7)**: Any drag-and-drop flow (e.g. Kanban boards, reordering lists) must offer a single-pointer alternative (e.g. "Move Up", "Move Down" buttons or keyboard shortcuts).
 
-### 4. Audit ARIA attributes
-Common ARIA mistakes to check:
-- `role` attributes are valid and appropriate
-- All ARIA `labelledby` and `describedby` references point to existing elements
-- Dynamic content updates use `aria-live` regions where appropriate
-- Icons without text have `aria-label` or `aria-hidden="true"` (never both missing)
-- Custom components implement the correct ARIA pattern (e.g., custom dropdown uses `role="combobox"` correctly)
+### 4. Verify rendered contrast ratios
+Measure actual computed pixel colors in the browser (accounting for opacity and alpha blending):
+- Body text (< 18pt normal): ≥ 4.5:1 (WCAG AA)
+- Large text (≥ 18pt normal or ≥ 14pt bold): ≥ 3:1
+- UI components and graphical objects: ≥ 3:1
 
-### 5. Screen reader spot-check
-Use VoiceOver (macOS/iOS) or NVDA (Windows) for at minimum the critical path:
-- Announce meaningful content in the correct order
-- Buttons announce their purpose (not just "button")
-- Form errors are announced when they appear
-- Loading states are announced
-- Images have meaningful alt text (or are marked decorative)
+### 5. Audit ARIA attributes & live regions
+- Dynamic asynchronous updates (toasts, streaming tokens, search counts) must use `aria-live="polite"` (or `assertive` for urgent alerts).
+- Icon buttons without text MUST have `aria-label` or `<title>`.
+- Decorative graphics must have `aria-hidden="true"` or `alt=""`.
 
-### 6. Classify violations by severity
-axe-core uses: critical / serious / moderate / minor. At minimum:
-- Critical and serious violations are release blockers
-- Moderate violations should be fixed in the same release
-- Minor violations are tracked for next iteration
+### 6. Screen reader spot-check
+Conduct a walkthrough on the critical path using native screen readers:
 
-### Completion Criteria
-- axe-core scan run on all routes, zero critical/serious violations
-- Keyboard navigation manually verified for critical path
-- Contrast ratios verified on actual rendered output
-- ARIA audit complete
-- Screen reader spot-check done on critical path
-- All violations classified and tracked
+#### macOS VoiceOver Quick Reference:
+- **Toggle VoiceOver**: `Cmd + F5`
+- **Read next element**: `Ctrl + Option + Right Arrow`
+- **Activate element**: `Ctrl + Option + Space`
+- **Rotor (Headings/Landmarks menu)**: `Ctrl + Option + U`
+- **Read from top**: `Ctrl + Option + Home`
 
-### Output
-- axe-core Playwright test files (`a11y-audit/*.spec.js`)
-- Accessibility audit report (violation x severity x route x recommended fix)
-- Keyboard navigation checklist (completed)
+#### Windows NVDA Quick Reference:
+- **Next element**: `Down Arrow`
+- **Next heading**: `H`
+- **Next button**: `B`
+- **Next landmark**: `D`
 
-### Anti-patterns
-- Treating automated axe-core as a complete a11y audit — it catches ~30% of WCAG issues
-- Testing only with keyboard, ignoring screen readers (different experience)
-- Using `aria-label` on everything instead of proper semantic HTML (masks the real problem)
-- Marking contrast as "passed" based on design file colors without checking actual rendered output
-- Fixing violations by hiding elements from accessibility tree (`aria-hidden`) instead of making them accessible
+## Completion Criteria
+- [ ] axe-core scan completed with 0 critical or serious violations against WCAG 2.2 AA
+- [ ] Focus indicator clearly visible on all interactive elements (≥ 3:1 contrast against surface)
+- [ ] All interactive touch/click targets meet WCAG 2.2 minimum 24×24px requirement
+- [ ] Drag-and-drop workflows provide keyboard/click alternative actions
+- [ ] ARIA live regions tested for asynchronous updates
+- [ ] VoiceOver or NVDA spot-check completed on critical path (Login -> Core Task -> Success)
+
+## Output
+- Playwright automated audit suite (`tests/a11y.spec.js`)
+- `a11y-runtime-report.md` classifying all findings by severity (Critical / Serious / Moderate / Minor) with explicit WCAG 2.2 criterion tags and DOM selector locations.
+
+## Anti-patterns
+- Treating automated axe-core as 100% test coverage (misses keyboard traps and logical reading flow).
+- Using `outline: none` in CSS to remove the default browser ring without custom focus styling.
+- Slapping `aria-label` on every container instead of using semantic HTML5 elements (`<main>`, `<nav>`, `<button>`).
+- Silencing screen readers with blanket `aria-hidden="true"` on complex interactive widgets.

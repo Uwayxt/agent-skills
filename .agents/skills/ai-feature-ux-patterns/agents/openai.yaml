@@ -1,0 +1,3 @@
+interface:
+  display_name: "AI Feature UX Patterns"
+  short_description: "Design streaming, confidence cues, human overrides, and AI interfaces"

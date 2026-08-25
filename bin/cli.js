@@ -34,7 +34,17 @@ async function checkForUpdate() {
       const data = await res.json();
       const latestVersion = data.version;
       
-      if (currentVersion !== latestVersion) {
+      // Simple semver compare (only alert if remote > local)
+      const parseSemver = (v) => v.split('.').map(n => parseInt(n, 10) || 0);
+      const [curMaj, curMin, curPat] = parseSemver(currentVersion);
+      const [latMaj, latMin, latPat] = parseSemver(latestVersion);
+      
+      const isRemoteNewer = 
+        latMaj > curMaj || 
+        (latMaj === curMaj && latMin > curMin) || 
+        (latMaj === curMaj && latMin === curMin && latPat > curPat);
+      
+      if (isRemoteNewer) {
         console.log(pc.yellow(`\n📦 UPDATE AVAILABLE! v${currentVersion} → v${latestVersion}`));
         console.log(pc.cyan(`Please run: `) + pc.bold(pc.white(`npm install -g ${pkg.name}@latest`)));
         console.log(pc.cyan(`Then run:   `) + pc.bold(pc.white(`agentway init`)) + pc.cyan(` to apply the latest skills.\n`));
@@ -44,6 +54,7 @@ async function checkForUpdate() {
     // Abaikan jika tidak ada koneksi internet
   }
 }
+
 
 // Helper: Copy Directory
 async function copyDir(src, dest) {
@@ -160,29 +171,49 @@ async function runList() {
     const data = JSON.parse(lockData);
     const skills = Object.keys(data.skills);
     
-    console.log(pc.white(`Found ${pc.bold(pc.green(skills.length))} active skills across 5 categories:\n`));
+    console.log(pc.white(`Found ${pc.bold(pc.green(skills.length))} active skills across 9 domains:\n`));
     
     // Grouping by reading path
     const categories = {
-      'Product Thinking': [],
+      'Visual Intelligence': [],
+      'Product Thinking & Strategy': [],
       'UX (User Experience)': [],
       'UI & Design System': [],
-      'Delivery': [],
-      'Growth-Aware': []
+      'Modern Platform Patterns': [],
+      'Responsive & Adaptive': [],
+      'Growth-Aware Architecture': [],
+      'Delivery & Security': [],
+      'QA Autonomous & Traceability': []
     };
     
     skills.forEach(s => {
-      const pathStr = data.skills[s].skillPath;
-      if (pathStr.includes('product-thinking')) categories['Product Thinking'].push(s);
-      else if (pathStr.includes('/ux/')) categories['UX (User Experience)'].push(s);
-      else if (pathStr.includes('/ui/')) categories['UI & Design System'].push(s);
-      else if (pathStr.includes('delivery')) categories['Delivery'].push(s);
-      else if (pathStr.includes('growth-aware')) categories['Growth-Aware'].push(s);
+      const pathStr = data.skills[s].skillPath || '';
+      if (pathStr.includes('visual-intelligence') || s === 'visual-style-extractor') {
+        categories['Visual Intelligence'].push(s);
+      } else if (pathStr.includes('product-thinking') || s.startsWith('product-') || s.includes('business-model') || s === 'mvp-scoping' || s.includes('stakeholder')) {
+        categories['Product Thinking & Strategy'].push(s);
+      } else if (pathStr.includes('/ux/') || s === 'user-flow-mapping' || s === 'information-architecture' || s === 'user-research-synthesis' || s === 'accessibility-review' || s === 'usability-heuristics-check') {
+        categories['UX (User Experience)'].push(s);
+      } else if (pathStr.includes('/ui/') || s === 'design-tokens' || s === 'typography-system' || s === 'design-system-builder' || s === 'component-style-guide' || s === 'dashboard-layout-patterns' || s === 'visual-hierarchy-review' || s === 'micro-interaction-motion-design') {
+        categories['UI & Design System'].push(s);
+      } else if (s === 'dark-mode-theming-system' || s === 'error-boundary-resilience-design' || s === 'ai-feature-ux-patterns' || s === 'i18n-localization-strategy') {
+        categories['Modern Platform Patterns'].push(s);
+      } else if (pathStr.includes('responsive') || s.includes('touch-gesture') || s.includes('adaptive-component') || s.includes('perceived-performance') || s === 'responsive-qa-audit') {
+        categories['Responsive & Adaptive'].push(s);
+      } else if (pathStr.includes('growth-aware') || s.includes('module-registry') || s.includes('dashboard-scaffolding') || s.includes('route-integrity') || s.includes('growth-impact')) {
+        categories['Growth-Aware Architecture'].push(s);
+      } else if (pathStr.includes('delivery') || s === 'design-to-code-handoff' || s === 'cross-functional-review' || s === 'security-privacy-review') {
+        categories['Delivery & Security'].push(s);
+      } else if (pathStr.includes('qa-autonomous') || s.startsWith('prd-') || s.includes('interactive-element') || s.includes('flow-based') || s.includes('visual-responsive') || s.includes('accessibility-runtime') || s.includes('qa-feedback')) {
+        categories['QA Autonomous & Traceability'].push(s);
+      } else {
+        categories['UI & Design System'].push(s);
+      }
     });
 
     for (const [cat, items] of Object.entries(categories)) {
       if (items.length > 0) {
-        console.log(pc.bold(pc.cyan(`● ${cat}`)));
+        console.log(pc.bold(pc.cyan(`● ${cat} (${items.length})`)));
         items.forEach(item => console.log(pc.gray(`  ├─ `) + pc.white(item)));
         console.log('');
       }

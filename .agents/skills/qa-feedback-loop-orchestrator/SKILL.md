@@ -29,12 +29,34 @@ Never send one round-trip per finding — always batch.
 
 ### 3. Classify findings by auto-fixability
 Three classes:
-- **Auto-fixable**: findings with a clear, deterministic fix (missing `data-testid`, missing `aria-label`, link with `href="#"` where the route is known from route-integrity-checker). Proceed to Step 4.
+- **Auto-fixable**: findings with a clear, deterministic fix (missing `data-testid`, missing `aria-label`, link with `href="#"` where the route is known from route-integrity-checker). Proceed to Step 3a.
 - **Agent-fixable**: findings that require the builder agent to make a code change (add an event handler, implement a missing flow step). Trigger the relevant builder skill. Proceed to Step 5.
 - **Escalate**: findings that require a human decision (ambiguous requirement, conflicting priorities, 3rd-party dependency). Proceed to Step 6.
 
+### 3a. Auto-Fix Decision Rules (Mandatory Before Applying Any Fix)
+Before applying any auto-fix, verify ALL three conditions. If any condition fails, reclassify as agent-fixable or escalate.
+
+**Condition 1 — The correct value is unambiguous:** The fix value must be deterministically derivable from existing project artifacts (route-intents.json, IA sitemap, PRD matrix, design spec). If deriving the value requires judgment or interpretation, it is NOT auto-fixable.
+
+**Condition 2 — The fix is reversible:** Auto-fixes must be undoable via a single file revert with zero side effects on other components or shared state.
+
+**Condition 3 — The fix scope is isolated:** The change affects only the flagged element, not shared components, design tokens, or global state.
+
+**Auto-fix catalogue (deterministic cases only):**
+- `data-testid` missing: generate from element label + route slug (e.g., button labeled "Submit" on `/checkout` → `btn-submit-checkout`)
+- `aria-label` missing on icon-only button: derive from the visible tooltip text OR from the button's documented purpose in the design spec. If neither exists → escalate, do not guess.
+- `href="#"` on a link: replace with the connected route from route-intents.json if status is `connected`. If status is `pending` → escalate.
+- Missing `lang` attribute on `<html>`: set to the project's declared primary language from the discovery artifacts. If not declared → escalate.
+- Missing `alt` attribute on purely decorative image: set `alt=""` and `aria-hidden="true"`. For informational images → escalate.
+
+**Do NOT auto-fix:**
+- Any value requiring interpretation of design intent not captured in a file
+- Contrast ratios (color decisions require design review, not auto-correction)
+- Missing event handlers (these are logic decisions — agent-fixable, not auto-fixable)
+- Components with conflicting token references
+
 ### 4. Apply auto-fixes
-For each auto-fixable finding, apply the fix directly. Update the relevant file. Mark the finding as `AUTO-FIXED` in the report.
+For each auto-fixable finding that passes all three conditions in Step 3a, apply the fix directly. Update the relevant file. Mark the finding as `AUTO-FIXED` in the report, and record which condition evidence was used to derive the value.
 
 ### 5. Trigger builder skills for agent-fixable findings
 Send the finding batch to the relevant builder skill with full context:

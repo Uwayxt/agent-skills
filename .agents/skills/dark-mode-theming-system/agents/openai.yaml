@@ -1,0 +1,3 @@
+interface:
+  display_name: "Dark Mode & Theming System"
+  short_description: "Define surface elevation, contrast, and tokens for light and dark themes"

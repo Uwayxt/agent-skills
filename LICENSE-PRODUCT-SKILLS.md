@@ -58,6 +58,16 @@ Product Designer Agent upgrade PRD v2.4:
 - `accessibility-runtime-audit`
 - `qa-feedback-loop-orchestrator`
 
+### Category H — Visual Intelligence Engine
+- `visual-style-extractor`
+
+### Category I — Modern Platform Patterns
+- `dark-mode-theming-system`
+- `error-boundary-resilience-design`
+- `security-privacy-review`
+- `ai-feature-ux-patterns`
+- `i18n-localization-strategy`
+
 ## Runtime Compatibility
 
 These skills are model-agnostic and runtime-agnostic. They may be used in any IDE
@@ -65,3 +75,4 @@ or agent runtime that supports the Agent Skills format, including but not limite
 Claude Code, Google Antigravity IDE, and other compatible runtimes.
 
 Use of these skills in any runtime does not transfer ownership or alter the license.
+

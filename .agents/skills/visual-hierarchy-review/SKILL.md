@@ -28,3 +28,19 @@ One primary CTA per view (filled, high-contrast). Supporting actions are seconda
 
 ## Output
 Visual hierarchy audit: focal point assessment, size hierarchy check, contrast ratio check, spacing rhythm check, alignment check, CTA hierarchy check. Per-issue: observation → severity → fix recommendation.
+
+## Completion Criteria
+- [ ] Squint test performed — primary focal point named explicitly
+- [ ] Every screen's most important element confirmed as the visually dominant element
+- [ ] Size hierarchy verified against typography-system token scale (no two elements of different importance at the same size)
+- [ ] Color contrast ratios checked for primary, secondary, and destructive CTA variants
+- [ ] Spacing rhythm verified: section gap > group gap > item gap at every level
+- [ ] Alignment verified against grid — any grid breaks are intentional and documented
+- [ ] CTA hierarchy verified: maximum 1 primary-styled CTA per view
+- [ ] Every violation rated with severity (critical / major / minor) and a fix recommendation
+
+## Anti-patterns
+- Treating contrast ratio issues as hierarchy issues — they are separate dimensions (accessibility vs. visual priority)
+- Flagging a layout as broken when there is intentionally no single focal point (e.g., a gallery, a settings page) — flat hierarchy is sometimes correct
+- Recommending font size increases as the default fix for hierarchy issues — weight, color, and spacing are often more effective
+- Checking only headings and ignoring interactive element hierarchy (buttons, links, badges can break hierarchy too)

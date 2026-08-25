@@ -19,6 +19,7 @@ lerna-debug.log*
 tmp/
 temp/
 scratch/
+scripts/
 
 # Testing & Coverage
 coverage/

@@ -8,9 +8,9 @@
     "agentway": "bin/cli.js"
   },
   "scripts": {
-    "start": "node ./bin/cli.js",
-    "sync-wiki": "node ./scripts/sync-wiki.js"
+    "start": "node ./bin/cli.js"
   },
+
   "keywords": [
     "ai-agent",
     "agent-skills",

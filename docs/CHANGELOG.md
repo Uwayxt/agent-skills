@@ -7,6 +7,28 @@ Versions follow [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [1.3.0] — 2026-08-26
+
+### ⚡ Feature Release — Expert Automation Tools & Engineering Contracts
+
+This release equips Agentway with **4 built-in CLI automation engines** and **deep sibling engineering contracts** to convert skills from passive guidelines into active, zero-token generation power-tools.
+
+#### Added — CLI Automation Engines
+- `agentway tokens:build [inputFile] [outputDir]`: Compiles JSON design tokens into Vanilla CSS Variables (Light/Dark dual-theme), Tailwind CSS config extension, and TypeScript definitions.
+- `agentway scaffold:module <name> [baseDir]`: Scaffolds a modular feature slice with manifest, route intent, and 5-state resilience React/JSX container.
+- `agentway audit:routes [scanDir]`: Audits codebase for dead links (`href="#"`), orphaned buttons without action handlers, and missing `aria-label` tags.
+- `agentway gen:playwright [outDir]`: Generates Playwright automated test suites covering WCAG 2.2 AA and multi-viewport responsive checks (`375px`, `393px`, `768px`, `1280px`).
+
+#### Added — Sibling Engineering Contracts
+- `dark-mode-theming-system/THEME-SWITCHER-RUNTIME.js`: Zero-flicker client-side theme switcher script.
+- `dark-mode-theming-system/ELEVATION-CALCULATOR.md`: 4-tier dark surface elevation and text contrast math.
+- `error-boundary-resilience-design/RESILIENCE-CONTRACTS.md`: 5-state module resilience lifecycle blueprint.
+- `ai-feature-ux-patterns/STREAMING-UI-RECIPES.md`: Autoscroll lock, thinking animations, and non-destructive diffs.
+- `qa-feedback-loop-orchestrator/AUTO-FIX-RECIPES.md`: Deterministic AST & regex transform rules for auto-fixing.
+- `visual-style-extractor/COLOR-HARMONY-ALGO.md`: Relative luminance and contrast ratio mathematics.
+
+---
+
 ## [1.2.1] — 2026-08-26
 
 ### Fixed

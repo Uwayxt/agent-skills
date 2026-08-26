@@ -83,7 +83,7 @@
       "source": "uwayxt/product-design-skills",
       "sourceType": "github",
       "skillPath": "skills/ui/design-system-builder/SKILL.md",
-      "computedHash": "ee91092f7458bf6bc19d0424325e43efd27f08f29d1d7cb7d28bc093c4075ed6"
+      "computedHash": "22b0c7dd31d19bf489379d70050db8b0af4b211d2564a69c2090740524bd7084"
     },
     "component-style-guide": {
       "source": "uwayxt/product-design-skills",
@@ -101,7 +101,7 @@
       "source": "uwayxt/product-design-skills",
       "sourceType": "github",
       "skillPath": "skills/ui/visual-hierarchy-review/SKILL.md",
-      "computedHash": "1a430eb6710ebd290c7684c5a981f8e67c33a0a575b876c250a5b8b63858b89a"
+      "computedHash": "14286f118c677c77f406d727203e76fc14402372534075b3b0e00b3e2ea2c53f"
     },
     "micro-interaction-motion-design": {
       "source": "uwayxt/product-design-skills",
@@ -209,7 +209,7 @@
       "source": "uwayxt/product-design-skills",
       "sourceType": "github",
       "skillPath": "skills/qa-autonomous/qa-feedback-loop-orchestrator/SKILL.md",
-      "computedHash": "c4fe807dcdaf2d9d57f0872416c7ea87b53051d1c18fcaf90f1cd5d675634b69"
+      "computedHash": "a08b21f13ea492dc39318ef95100d92fb8e0cbafe2e7473a5dbee711ce0edd1d"
     },
     "visual-style-extractor": {
       "source": "uwayxt/product-design-skills",

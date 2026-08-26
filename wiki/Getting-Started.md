@@ -53,12 +53,15 @@ Your agent will automatically detect and load `visual-style-extractor`, execute 
 ## 🔍 CLI Utility Reference
 
 ```bash
-# View active skill count and categories
-agentway list
+# Core Commands
+agentway list                  # View active skill count and categories
+agentway update                # Check for updates and sync skills-lock
+agentway init                  # Provision skills locally or globally
 
-# Check for updates and sync skills-lock
-agentway update
-
-# Display command help manual
-agentway help
+# ⚡ Expert Automation Tools
+agentway tokens:build          # Compile design tokens to CSS Vars, Tailwind & TS
+agentway scaffold:module <name> # Scaffold modular slice with 5-state resilience
+agentway audit:routes          # Audit codebase for dead links & orphaned buttons
+agentway gen:playwright        # Generate Playwright WCAG 2.2 multi-viewport tests
 ```
+

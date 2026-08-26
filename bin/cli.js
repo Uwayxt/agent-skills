@@ -233,16 +233,105 @@ async function runUpdate() {
   await checkForUpdate();
 }
 
+// --- IMPORT GENERATORS ---
+import { buildTokens } from './generators/tokens-builder.js';
+import { scaffoldModule } from './generators/module-scaffolder.js';
+import { auditRoutes } from './generators/route-auditor.js';
+import { generateQATests } from './generators/qa-generator.js';
+
+// --- COMMAND: TOKENS:BUILD ---
+async function runTokensBuild(args) {
+  const inputFile = args[1] || 'design-tokens.json';
+  const outputDir = args[2] || './styles';
+  console.log(pc.cyan('\n⚡ AGENTWAY TOKENS BUILDER\n'));
+  try {
+    const res = buildTokens(inputFile, outputDir);
+    if (res) {
+      console.log(pc.green('✔ Design tokens compiled successfully:'));
+      console.log(pc.gray(`  ├─ CSS Variables: `) + pc.white(res.css));
+      console.log(pc.gray(`  ├─ Tailwind Config: `) + pc.white(res.tailwind));
+      console.log(pc.gray(`  └─ TypeScript Types: `) + pc.white(res.dts) + '\n');
+    }
+  } catch (e) {
+    console.error(pc.red('Error compiling tokens:'), e.message);
+  }
+}
+
+// --- COMMAND: SCAFFOLD:MODULE ---
+async function runScaffoldModule(args) {
+  const moduleName = args[1];
+  const baseDir = args[2] || './src/modules';
+  if (!moduleName) {
+    console.log(pc.red('\n❌ Error: Please specify a module name.'));
+    console.log(pc.yellow('Usage: agentway scaffold:module <module-name> [baseDir]'));
+    console.log(pc.gray('Example: agentway scaffold:module billing\n'));
+    return;
+  }
+
+  console.log(pc.cyan(`\n⚡ AGENTWAY MODULE SCAFFOLDER: ${pc.bold(moduleName)}\n`));
+  try {
+    const res = scaffoldModule(moduleName, baseDir);
+    console.log(pc.green(`✔ Module [${moduleName}] scaffolded with 5-state resilience:`));
+    console.log(pc.gray(`  Directory: `) + pc.white(res.moduleDir));
+    res.files.forEach(f => console.log(pc.gray(`  ├─ `) + pc.white(f)));
+    console.log('');
+  } catch (e) {
+    console.error(pc.red('Error scaffolding module:'), e.message);
+  }
+}
+
+// --- COMMAND: AUDIT:ROUTES ---
+async function runAuditRoutes(args) {
+  const scanDir = args[1] || '.';
+  console.log(pc.cyan(`\n🔍 AGENTWAY ROUTE & A11Y AUDITOR\n`));
+  console.log(pc.gray(`Scanning directory: ${scanDir}...`));
+  try {
+    const issues = auditRoutes(scanDir);
+    if (issues.length === 0) {
+      console.log(pc.green('\n✔ All routes and interactive elements are healthy! Zero dead links found.\n'));
+    } else {
+      console.log(pc.yellow(`\n⚠ Found ${issues.length} interactive / route issue(s):\n`));
+      issues.forEach((iss, i) => {
+        const badge = iss.severity === 'HIGH' ? pc.bgRed(pc.white(` ${iss.type} `)) : pc.bgYellow(pc.black(` ${iss.type} `));
+        console.log(`${badge} ${pc.bold(iss.file)}:${pc.cyan(iss.line)}`);
+        console.log(pc.gray(`  └─ ${iss.message}`));
+      });
+      console.log('');
+    }
+  } catch (e) {
+    console.error(pc.red('Error auditing routes:'), e.message);
+  }
+}
+
+// --- COMMAND: GEN:PLAYWRIGHT ---
+async function runGenPlaywright(args) {
+  const outDir = args[1] || './e2e';
+  console.log(pc.cyan('\n⚡ AGENTWAY QA TEST GENERATOR\n'));
+  try {
+    const res = generateQATests(outDir);
+    console.log(pc.green('✔ Playwright multi-viewport & WCAG 2.2 test suite generated:'));
+    console.log(pc.gray(`  Directory: `) + pc.white(res.testDir));
+    res.files.forEach(f => console.log(pc.gray(`  ├─ `) + pc.white(f)));
+    console.log(pc.gray('\nRun tests with: ') + pc.bold(pc.white('npx playwright test\n')));
+  } catch (e) {
+    console.error(pc.red('Error generating test suites:'), e.message);
+  }
+}
+
 // --- COMMAND: HELP ---
 function showHelp() {
   console.log(pc.cyan(ASCII_ART));
-  console.log(pc.bold(pc.white('Usage: agentway <command>\n')));
-  console.log(pc.white('Commands:'));
-  console.log(`  ${pc.green('init')}    Provision the skills to your local project or globally.`);
-  console.log(`  ${pc.green('list')}    View all available Agent Skills in the registry.`);
-  console.log(`  ${pc.green('update')}  Check for updates and view update instructions.`);
-  console.log(`  ${pc.green('help')}    Show this help menu.\n`);
-  console.log(pc.gray('Example: npx @uwayxt/agent-skills init'));
+  console.log(pc.bold(pc.white('Usage: agentway <command> [options]\n')));
+  console.log(pc.white('Core Commands:'));
+  console.log(`  ${pc.green('init')}                   Provision skills locally or globally.`);
+  console.log(`  ${pc.green('list')}                   View all 41 skills across 9 domains.`);
+  console.log(`  ${pc.green('update')}                 Check for registry updates.\n`);
+  console.log(pc.white('Expert Automation Tools:'));
+  console.log(`  ${pc.green('tokens:build')} [file]     Compile design tokens to CSS Vars, Tailwind & TS.`);
+  console.log(`  ${pc.green('scaffold:module')} <name>  Scaffold a modular slice with 5-state resilience.`);
+  console.log(`  ${pc.green('audit:routes')} [dir]      Audit codebase for dead links & orphaned buttons.`);
+  console.log(`  ${pc.green('gen:playwright')} [dir]    Generate Playwright WCAG 2.2 multi-viewport tests.\n`);
+  console.log(`  ${pc.green('help')}                   Show this help menu.\n`);
 }
 
 // --- ROUTER ---
@@ -262,6 +351,22 @@ async function main() {
     case 'update':
       await runUpdate();
       break;
+    case 'tokens:build':
+    case 'tokens':
+      await runTokensBuild(args);
+      break;
+    case 'scaffold:module':
+    case 'scaffold':
+      await runScaffoldModule(args);
+      break;
+    case 'audit:routes':
+    case 'audit':
+      await runAuditRoutes(args);
+      break;
+    case 'gen:playwright':
+    case 'gen:qa':
+      await runGenPlaywright(args);
+      break;
     case 'help':
     default:
       showHelp();
@@ -270,3 +375,4 @@ async function main() {
 }
 
 main();
+

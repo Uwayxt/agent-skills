@@ -21,7 +21,12 @@ Agentway is evolving to become the unified operating system for autonomous produ
 - Reached **41 production skills**.
 - Upgraded A11y to **WCAG 2.2 AA**.
 
+### ✅ v1.3.0 — Expert Automation Engines & Sibling Contracts (2026-08-26)
+- Added 4 built-in CLI automation engines (`tokens:build`, `scaffold:module`, `audit:routes`, `gen:playwright`).
+- Injected deep sibling engineering contracts across Dark Mode, Error Resilience, AI UX, Color Harmony, and QA Loop.
+
 ---
+
 
 ## 🔮 Future Roadmap (v2.0 Vision)
 

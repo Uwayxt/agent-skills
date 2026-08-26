@@ -320,12 +320,22 @@ $ agentway list
 agentway <command> [options]
 ```
 
+### Core Commands
 | Command | Description |
 | :--- | :--- |
 | `agentway init` | Interactive installer — configures local project or global agent environment. |
 | `agentway list` | Lists all 41 skills categorized by domain with active trigger phrases. |
 | `agentway update` | Checks for skill registry updates and updates `.agents/skills-lock.json`. |
 | `agentway help` | Displays comprehensive command manual and runtime configuration options. |
+
+### ⚡ Expert Automation Tools
+| Command | Description |
+| :--- | :--- |
+| `agentway tokens:build [file]` | Compiles JSON design tokens into Vanilla CSS Variables, Tailwind v4 config, and TypeScript definitions. |
+| `agentway scaffold:module <name>` | Scaffolds a modular feature slice with manifest, route intent, and 5-state resilience React/JSX container. |
+| `agentway audit:routes [dir]` | Audits codebase for dead links (`href="#"`), orphaned buttons without handlers, and missing `aria-label`. |
+| `agentway gen:playwright [dir]` | Generates automated Playwright test suites covering WCAG 2.2 AA and multi-viewport responsive checks. |
+
 
 ---
 

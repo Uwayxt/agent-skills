@@ -64,7 +64,7 @@ With Agentway:    Prompt ──► Discovery ──► Tokens ──► Scaffold
 ---
 <div align="center">
 
-![Skills](https://img.shields.io/badge/Skills-41-6f42c1?style=for-the-badge)
+![Skills](https://img.shields.io/badge/Skills-42-6f42c1?style=for-the-badge)
 ![Categories](https://img.shields.io/badge/Categories-9-0969da?style=for-the-badge)
 ![Compatible IDEs](https://img.shields.io/badge/Compatible%20IDEs-2-1f883d?style=for-the-badge)
 ![Model Agnostic](https://img.shields.io/badge/Model--Agnostic-Yes-d97706?style=for-the-badge)
@@ -102,7 +102,7 @@ npx @uwayxt/agent-skills init
 ```
 
 ### 2. Global Installation (Recommended)
-Keep all 41 skills persistently available across all your projects:
+Keep all 42 skills persistently available across all your projects:
 
 ```bash
 npm install -g @uwayxt/agent-skills
@@ -162,6 +162,7 @@ $ agentway list
 | Skill | Trigger Phrases | Key Artifacts & Capabilities |
 | :--- | :--- | :--- |
 | **`visual-style-extractor`** | `"reference image"`, `"match this design"`, `"copy this style"`, `"extract colors from screenshot"` | Generates `style-extraction.json` mapping colors, font pairings, 4pt/8pt spacing, border-radius, and components with a **25-Point Fidelity Score**. |
+| **`cognitive-load-heatmap-prediction`** | `"cognitive load"`, `"attention heatmap"`, `"eye tracking"`, `"CTA hierarchy"`, `"decision overload"` | Predicts visual attention paths (Z/F-Pattern, Gutenberg), calculates Fitts's Law (ID), Hick's Law (RT), and outputs a **Cognitive Friction Index (CFI/100)** score. |
 
 </details>
 
@@ -324,7 +325,7 @@ agentway <command> [options]
 | Command | Description |
 | :--- | :--- |
 | `agentway init` | Interactive installer — configures local project or global agent environment. |
-| `agentway list` | Lists all 41 skills categorized by domain with active trigger phrases. |
+| `agentway list` | Lists all 42 skills categorized by domain with active trigger phrases. |
 | `agentway update` | Checks for skill registry updates and updates `.agents/skills-lock.json`. |
 | `agentway help` | Displays comprehensive command manual and runtime configuration options. |
 
@@ -342,7 +343,7 @@ agentway <command> [options]
 ## 📖 Official Documentation
 
 - **[📖 Skill Authoring Guide](./docs/SKILL-AUTHORING-GUIDE.md)** — Architectural standards for contributing new skills.
-- **[🗺️ Complete Skill Map](./docs/SKILL-MAP.md)** — Comprehensive dependency flow & trigger catalog across all 41 skills.
+- **[🗺️ Complete Skill Map](./docs/SKILL-MAP.md)** — Comprehensive dependency flow & trigger catalog across all 42 skills.
 - **[🍳 Practical Recipes](./docs/RECIPES.md)** — 10 end-to-end recipes (Image Matching, Dark Mode, AI UX, SaaS Scaffolding).
 - **[📜 Version Changelog](./docs/CHANGELOG.md)** — Release notes and historical upgrade timeline.
 

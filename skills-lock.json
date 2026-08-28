@@ -246,6 +246,21 @@
       "sourceType": "github",
       "skillPath": "skills/responsive-adaptive/i18n-localization-strategy/SKILL.md",
       "computedHash": "a2cae9c20764e5b8b71b4cfdb423fd109d9a4f93a8785aec9d887ae23ab81f58"
+    },
+    "cognitive-load-heatmap-prediction": {
+      "description": "Predict visual attention paths and audit cognitive friction using Fitts's Law, Hick's Law, and CFI scoring.",
+      "domain": "H \u2014 Visual Intelligence Engine",
+      "version": "1.0.0",
+      "skillPath": ".agents/skills/cognitive-load-heatmap-prediction/SKILL.md",
+      "computedHash": "92d8a6ba5d6902b6835f762d9dbcab3814fc97e5573ff01a2f0b1fb9986d1fbe",
+      "triggerPhrases": [
+        "cognitive load",
+        "attention heatmap",
+        "eye tracking",
+        "CTA hierarchy",
+        "decision overload",
+        "first 500ms attention"
+      ]
     }
   }
 }

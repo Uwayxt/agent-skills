@@ -7,7 +7,29 @@ Versions follow [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [1.4.0] — 2026-08-28
+
+### 🧠 Cognitive Intelligence Release — Heatmap Prediction & CFI Engine
+
+This release introduces the first **cognitive science-based audit tool** in the Agentway registry — the `cognitive-load-heatmap-prediction` skill and `agentway audit:cognitive` CLI engine.
+
+#### Added — Skill
+- `cognitive-load-heatmap-prediction`: Predicts visual attention heatmap paths (Z-Pattern, F-Pattern, Single-Column Spine, Gutenberg Diagram). Calculates **Hick's Law Reaction Time** ($RT = b \cdot \log_2(n+1)$), **Fitts's Law Index of Difficulty** ($ID = \log_2(2D/W)$), **Visual Saliency Weight Ratio** (SWR), and outputs a unified **Cognitive Friction Index (CFI)** score (0–100, Grade A–F).
+
+#### Added — Sibling Contracts
+- `COGNITIVE-MATH-SPEC.md`: Full mathematical derivations for Hick-Hyman Law, Fitts's Law (Shannon + Welford formulations), Visual Saliency Score, CFI formula, Shannon Information Entropy, and Miller's Magic Number ($7 \pm 2$).
+- `EYE-TRACKING-SIMULATION.md`: Foveal/peripheral vision anatomy, 4 scanning pattern maps (Z, F, Single-Column, Gutenberg), fixation/saccade sequence predictions, and 5-level heatmap zone classification system.
+
+#### Added — CLI Automation Engine
+- `agentway audit:cognitive [dir]`: Scans UI files (HTML/JSX/TSX/Vue/Svelte) for decision density, competing Primary CTAs, form walls > 6 fields, dead zone anchors, and icon buttons missing `aria-label`. Outputs CFI score per file and aggregate summary.
+
+#### Registry Milestone
+- Total skills: **42** across **9 domains**.
+
+---
+
 ## [1.3.0] — 2026-08-26
+
 
 ### ⚡ Feature Release — Expert Automation Tools & Engineering Contracts
 

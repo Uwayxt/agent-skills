@@ -238,6 +238,7 @@ import { buildTokens } from './generators/tokens-builder.js';
 import { scaffoldModule } from './generators/module-scaffolder.js';
 import { auditRoutes } from './generators/route-auditor.js';
 import { generateQATests } from './generators/qa-generator.js';
+import { run as runCognitiveEval } from './generators/cognitive-evaluator.js';
 
 // --- COMMAND: TOKENS:BUILD ---
 async function runTokensBuild(args) {
@@ -318,20 +319,27 @@ async function runGenPlaywright(args) {
   }
 }
 
+// --- COMMAND: AUDIT:COGNITIVE ---
+async function runAuditCognitive(args) {
+  const scanDir = args[1] || '.';
+  runCognitiveEval(scanDir);
+}
+
 // --- COMMAND: HELP ---
 function showHelp() {
   console.log(pc.cyan(ASCII_ART));
   console.log(pc.bold(pc.white('Usage: agentway <command> [options]\n')));
   console.log(pc.white('Core Commands:'));
-  console.log(`  ${pc.green('init')}                   Provision skills locally or globally.`);
-  console.log(`  ${pc.green('list')}                   View all 41 skills across 9 domains.`);
-  console.log(`  ${pc.green('update')}                 Check for registry updates.\n`);
+  console.log(`  ${pc.green('init')}                    Provision skills locally or globally.`);
+  console.log(`  ${pc.green('list')}                    View all 42 skills across 9 domains.`);
+  console.log(`  ${pc.green('update')}                  Check for registry updates.\n`);
   console.log(pc.white('Expert Automation Tools:'));
-  console.log(`  ${pc.green('tokens:build')} [file]     Compile design tokens to CSS Vars, Tailwind & TS.`);
-  console.log(`  ${pc.green('scaffold:module')} <name>  Scaffold a modular slice with 5-state resilience.`);
-  console.log(`  ${pc.green('audit:routes')} [dir]      Audit codebase for dead links & orphaned buttons.`);
-  console.log(`  ${pc.green('gen:playwright')} [dir]    Generate Playwright WCAG 2.2 multi-viewport tests.\n`);
-  console.log(`  ${pc.green('help')}                   Show this help menu.\n`);
+  console.log(`  ${pc.green('tokens:build')} [file]      Compile design tokens to CSS Vars, Tailwind & TS.`);
+  console.log(`  ${pc.green('scaffold:module')} <name>   Scaffold a modular slice with 5-state resilience.`);
+  console.log(`  ${pc.green('audit:routes')} [dir]       Audit codebase for dead links & orphaned buttons.`);
+  console.log(`  ${pc.green('audit:cognitive')} [dir]    Audit cognitive friction: Hick's Law, Fitts's Law, CFI score.`);
+  console.log(`  ${pc.green('gen:playwright')} [dir]     Generate Playwright WCAG 2.2 multi-viewport tests.\n`);
+  console.log(`  ${pc.green('help')}                    Show this help menu.\n`);
 }
 
 // --- ROUTER ---
@@ -360,8 +368,11 @@ async function main() {
       await runScaffoldModule(args);
       break;
     case 'audit:routes':
-    case 'audit':
       await runAuditRoutes(args);
+      break;
+    case 'audit:cognitive':
+    case 'cognitive':
+      await runAuditCognitive(args);
       break;
     case 'gen:playwright':
     case 'gen:qa':

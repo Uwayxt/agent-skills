@@ -157,7 +157,7 @@ Every skill must comply with our strict quality and token efficiency standards:
 ## 💖 Sponsorship & Donations
 
 If you'd like to support the ongoing development and open-source maintenance of Agentway:
-- ☕ **Saweria:** [Support on Saweria](https://saweria.co/widgets/qr?streamKey=fec16e11208ec84149f95f4194556cfa)
+- ☕ **Saweria:** [Support on Saweria](https://saweria.co/uwayxt)
 - 🐙 **GitHub Sponsors:** [sponsor @uwayxt](https://github.com/sponsors/uwayxt)
 
 ---

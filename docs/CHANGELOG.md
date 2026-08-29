@@ -19,7 +19,7 @@ This release solidifies Agentway's open-source legal foundation, establishes con
 - `SECURITY.md`: Responsible vulnerability disclosure policy, supported version matrix, and triage SLA.
 - `CODE_OF_CONDUCT.md`: Contributor Covenant v2.1 standard.
 - `RELEASE_GUIDE.md`: Official release engineering playbook (SemVer, pre-flight checklists, OTP publishing).
-- `.github/FUNDING.yml`: Integrated GitHub Sponsors and **Saweria** support channel (`https://saweria.co/widgets/qr?streamKey=fec16e11208ec84149f95f4194556cfa`).
+- `.github/FUNDING.yml`: Integrated GitHub Sponsors and **Saweria** support channel (`https://saweria.co/uwayxt`).
 - `.github/ISSUE_TEMPLATE/`: Turnkey templates for `bug_report.md`, `feature_request.md`, and `skill_proposal.md`.
 - `.github/PULL_REQUEST_TEMPLATE.md`: Standardized PR checklist and validation requirements.
 

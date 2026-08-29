@@ -16,7 +16,7 @@
   <a href="https://www.npmjs.com/package/@uwayxt/agent-skills"><img src="https://img.shields.io/npm/dm/@uwayxt/agent-skills?style=for-the-badge&logo=npm&color=00C7B7&logoColor=white&label=Monthly" alt="Monthly Downloads" /></a>
   <a href="https://www.npmjs.com/package/@uwayxt/agent-skills"><img src="https://img.shields.io/npm/dw/@uwayxt/agent-skills?style=for-the-badge&logo=npm&color=339933&logoColor=white&label=Weekly" alt="Weekly Downloads" /></a>
   <a href="https://packagephobia.com/result?p=@uwayxt/agent-skills"><img src="https://img.shields.io/bundlephobia/minzip/@uwayxt/agent-skills?style=for-the-badge&color=8A2BE2&label=Gzipped%20Size" alt="Package Size" /></a>
-  <a href="https://saweria.co/widgets/qr?streamKey=fec16e11208ec84149f95f4194556cfa"><img src="https://img.shields.io/badge/Donate-Saweria-FFA500?style=for-the-badge&logo=kofi&logoColor=white" alt="Donate on Saweria" /></a>
+  <a href="https://saweria.co/uwayxt"><img src="https://img.shields.io/badge/Donate-Saweria-FFA500?style=for-the-badge&logo=kofi&logoColor=white" alt="Donate on Saweria" /></a>
 </p>
 
 ---
@@ -362,13 +362,14 @@ Agentway is an independently maintained, open-source engineering initiative. If 
 
 <div align="center">
 
-[![Donate via Saweria](https://img.shields.io/badge/Support%20via-Saweria-FFA500?style=for-the-badge&logo=kofi&logoColor=white)](https://saweria.co/widgets/qr?streamKey=fec16e11208ec84149f95f4194556cfa)
+[![Donate via Saweria](https://img.shields.io/badge/Support%20via-Saweria-FFA500?style=for-the-badge&logo=kofi&logoColor=white)](https://saweria.co/uwayxt)
 [![GitHub Sponsors](https://img.shields.io/badge/Sponsor-GitHub-EA4AAA?style=for-the-badge&logo=github&logoColor=white)](https://github.com/sponsors/uwayxt)
 
 <br/>
 
-**Saweria Donation Widget & QR Code:**  
-👉 [https://saweria.co/widgets/qr?streamKey=fec16e11208ec84149f95f4194556cfa](https://saweria.co/widgets/qr?streamKey=fec16e11208ec84149f95f4194556cfa)
+**Saweria Donation:**  
+👉 [https://saweria.co/uwayxt](https://saweria.co/uwayxt)
+
 
 </div>
 

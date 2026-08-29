@@ -9,7 +9,7 @@ Agentway equips AI agents (Claude Code, Google Antigravity, Cursor, Windsurf, Op
 [![NPM Version](https://img.shields.io/npm/v/@uwayxt/agent-skills?style=for-the-badge&color=CB3837)](https://www.npmjs.com/package/@uwayxt/agent-skills)
 [![Total Downloads](https://img.shields.io/npm/dt/@uwayxt/agent-skills?style=for-the-badge&color=4B9EDB)](https://www.npmjs.com/package/@uwayxt/agent-skills)
 [![License](https://img.shields.io/badge/License-MIT-F5A623?style=for-the-badge)](https://github.com/Uwayxt/agent-skills/blob/main/LICENSE-PRODUCT-SKILLS.md)
-[![Donate via Saweria](https://img.shields.io/badge/Support-Saweria-FFA500?style=for-the-badge&logo=kofi&logoColor=white)](https://saweria.co/widgets/qr?streamKey=fec16e11208ec84149f95f4194556cfa)
+[![Donate via Saweria](https://img.shields.io/badge/Support-Saweria-FFA500?style=for-the-badge&logo=kofi&logoColor=white)](https://saweria.co/uwayxt)
 [![A11y Standard](https://img.shields.io/badge/A11y-WCAG%202.2%20AA-008080?style=for-the-badge)](Skill-Catalog#domain-g--qa-autonomous--traceability-loop)
 
 </div>
@@ -39,7 +39,8 @@ Agentway equips AI agents (Claude Code, Google Antigravity, Cursor, Windsurf, Op
 - **Visual Extraction Fidelity:** `≥ 95% token accuracy`
 - **Accessibility Standard:** `WCAG 2.2 AA Audited`
 - **Package Distribution:** `@uwayxt/agent-skills` on NPM & GitHub
-- **Sponsorship & Donations:** [Support via Saweria](https://saweria.co/widgets/qr?streamKey=fec16e11208ec84149f95f4194556cfa)
+- **Sponsorship & Donations:** [Support via Saweria](https://saweria.co/uwayxt)
+
 
 ---
 

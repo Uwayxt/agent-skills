@@ -7,7 +7,15 @@ Versions follow [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [1.4.2] — 2026-08-30
+
+### 💖 Documentation & Sponsorship URL Polish
+- Updated Saweria sponsorship links across all documentation, funding configs, and wiki pages to clean profile URL (`https://saweria.co/uwayxt`).
+
+---
+
 ## [1.4.1] — 2026-08-30
+
 
 ### 🏛️ Corporate Governance, Sponsorship & Community Standards
 

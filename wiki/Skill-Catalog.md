@@ -1,10 +1,11 @@
-# 🗺️ Complete Skill Catalog (41 Skills)
+# 🗺️ Complete Skill Catalog (42 Skills)
 
-This encyclopedia lists all **41 production-grade skills** across the 9 specialized domains of Agentway.
+This encyclopedia lists all **42 production-grade skills** across the 9 specialized domains of Agentway.
 
 # Skill Map
 
-A reference for understanding how Agentway 41 skills relate to each other — which skills feed data into which, and which order they activate in a typical product workflow.
+A reference for understanding how Agentway 42 skills relate to each other — which skills feed data into which, and which order they activate in a typical product workflow.
+
 
 ---
 
@@ -129,7 +130,7 @@ Skills are not independent. Each skill output becomes the input for downstream s
 
 | Domain | Skill Count | Primary Artifact Outputs | Upstream Input Required | Downstream Consumers |
 | :--- | :---: | :--- | :--- | :--- |
-| **Domain H: Visual Intelligence** | 1 | `style-extraction.json` | Reference Image / Mockup | `design-tokens`, `typography-system` |
+| **Domain H: Visual Intelligence** | 2 | `style-extraction.json`, `cognitive-audit.md` | Reference Image / Mockup | `design-tokens`, `typography-system` |
 | **Domain A: Product Thinking** | 6 | `discovery_synthesis.md`, `product_strategy_one_pager.md` | Business Model / Idea | `user-flow-mapping`, `information-architecture` |
 | **Domain B: User Experience** | 4 | User Flow Diagrams, `sitemap.md`, Insight Matrices | Discovery synthesis | `design-tokens`, `dashboard-scaffolding` |
 | **Domain C: UI & Design Systems** | 8 | `design-tokens.json`, `tokens.css`, Component Inventories | Extraction / Brand Brief | `adaptive-component-behavior`, `design-to-code` |
@@ -138,7 +139,7 @@ Skills are not independent. Each skill output becomes the input for downstream s
 | **Domain F: Responsive & Adaptive** | 5 | `TRANSFORMATION-TABLE.md`, Viewport tokens | Design tokens, Screen flows | `responsive-qa-audit`, Mobile UI code |
 | **Domain D: Delivery & Integration** | 2 | `handoff-spec.md`, 4-Pass Launch Review | Components & Scaffolding | Engineering execution & Ship verdict |
 | **Domain G: Autonomous QA Loop** | 6 | Playwright specs, `a11y-report.md`, PRD Matrix | Live DOM, Route intents | `qa-feedback-loop-orchestrator` |
-| **TOTAL** | **41 Skills** | **100% Interconnected Architecture** | **Continuous Flow** | **Autonomous Delivery** |
+| **TOTAL** | **42 Skills** | **100% Interconnected Architecture** | **Continuous Flow** | **Autonomous Delivery** |
 
 ---
 
@@ -147,8 +148,8 @@ Skills are not independent. Each skill output becomes the input for downstream s
 Typical autonomous agent turn budget and artifact yield when executing Agentway end-to-end:
 
 | Workflow Phase | Typical Agent Turns | Key Output Files | Primary Quality Verification Gate |
-| :--- | :---: | :--- | :--- |
-| **Phase 0: Visual Extraction** | 1–2 turns | `style-extraction.json` | 25-Point Fidelity Score ($\ge 20/25$) |
+| :--- | :--- :--- | :--- | :--- |
+| **Phase 0: Visual Extraction** | 1–2 turns | `style-extraction.json`, `cognitive-audit.md` | 25-Point Fidelity Score ($\ge 20/25$) |
 | **Phase 1: Problem Framing** | 2–3 turns | `discovery_synthesis.md`, Strategy doc | RICE prioritization + Riskiest Assumption isolated |
 | **Phase 2: Product Architecture** | 2–3 turns | `sitemap.md`, Flow diagrams | Max 7 top-level hubs, $\le 3$ tree depth |
 | **Phase 3: Visual & Themes** | 2–3 turns | `design-tokens.json`, `tokens.css` | Light/Dark dual-theme parity + 4pt/8pt grid lock |
@@ -166,7 +167,9 @@ Use this table to quickly find the right skill for a given task.
 | Intent | Skill to invoke |
 |--------|----------------|
 | Extract tokens and components from an uploaded reference image | `visual-style-extractor` |
+| Predict first-500ms visual attention, Hick's Law decision time & CFI | `cognitive-load-heatmap-prediction` |
 | Validate a business idea before building | `product-discovery` |
+
 | Understand the business model and derive modules | `business-model-reading` |
 | Figure out what to build first | `mvp-scoping` + `product-strategy` |
 | Map how users navigate the product | `user-flow-mapping` + `information-architecture` |

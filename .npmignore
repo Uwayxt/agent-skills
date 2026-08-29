@@ -1,5 +1,13 @@
 .git
+.github
 node_modules
+wiki
+scripts
+.wiki-git-sync
+tmp
+scratch
+coverage
+.playwright
+*.log
 .DS_Store
 .npmignore
-*.log

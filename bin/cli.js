@@ -188,7 +188,7 @@ async function runList() {
     
     skills.forEach(s => {
       const pathStr = data.skills[s].skillPath || '';
-      if (pathStr.includes('visual-intelligence') || s === 'visual-style-extractor') {
+      if (pathStr.includes('visual-intelligence') || s === 'visual-style-extractor' || s === 'cognitive-load-heatmap-prediction') {
         categories['Visual Intelligence'].push(s);
       } else if (pathStr.includes('product-thinking') || s.startsWith('product-') || s.includes('business-model') || s === 'mvp-scoping' || s.includes('stakeholder')) {
         categories['Product Thinking & Strategy'].push(s);

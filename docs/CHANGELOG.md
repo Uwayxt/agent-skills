@@ -7,7 +7,31 @@ Versions follow [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [1.4.1] — 2026-08-30
+
+### 🏛️ Corporate Governance, Sponsorship & Community Standards
+
+This release solidifies Agentway's open-source legal foundation, establishes contributor governance, integrates sponsorship channels, and unifies all project metrics and documentation.
+
+#### Added — Governance & Community
+- `LICENSE` & `LICENSE-PRODUCT-SKILLS.md`: Standardized under official **MIT License** covering the CLI tooling suite, 42 modular agent skills, and mathematical specifications.
+- `CONTRIBUTING.md`: Comprehensive contributor guide covering Conventional Commits v1.0.0, branch naming, skill token budget benchmarks, and PR review SLA.
+- `SECURITY.md`: Responsible vulnerability disclosure policy, supported version matrix, and triage SLA.
+- `CODE_OF_CONDUCT.md`: Contributor Covenant v2.1 standard.
+- `RELEASE_GUIDE.md`: Official release engineering playbook (SemVer, pre-flight checklists, OTP publishing).
+- `.github/FUNDING.yml`: Integrated GitHub Sponsors and **Saweria** support channel (`https://saweria.co/widgets/qr?streamKey=fec16e11208ec84149f95f4194556cfa`).
+- `.github/ISSUE_TEMPLATE/`: Turnkey templates for `bug_report.md`, `feature_request.md`, and `skill_proposal.md`.
+- `.github/PULL_REQUEST_TEMPLATE.md`: Standardized PR checklist and validation requirements.
+
+#### Changed
+- `README.md`: Added Saweria sponsorship badge and dedicated support section; integrated all 5 expert automation tools (`tokens:build`, `scaffold:module`, `audit:routes`, `audit:cognitive`, `gen:playwright`); harmonized all counts to 42 skills across 9 domains.
+- `wiki/`: Synchronized `Home.md`, `Skill-Catalog.md`, `_Footer.md`, and `Roadmap-and-Vision.md` with v1.4.1 and Saweria donation links.
+- `.npmignore`: Enhanced package isolation to exclude internal caches, test suites, and repository sync artifacts.
+
+---
+
 ## [1.4.0] — 2026-08-28
+
 
 ### 🧠 Cognitive Intelligence Release — Heatmap Prediction & CFI Engine
 

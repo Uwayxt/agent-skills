@@ -25,7 +25,13 @@ Agentway is evolving to become the unified operating system for autonomous produ
 - Added 4 built-in CLI automation engines (`tokens:build`, `scaffold:module`, `audit:routes`, `gen:playwright`).
 - Injected deep sibling engineering contracts across Dark Mode, Error Resilience, AI UX, Color Harmony, and QA Loop.
 
+### ✅ v1.4.0 & v1.4.1 — Cognitive Intelligence, Governance & Sponsorship (2026-08-30)
+- Added 42nd skill: `cognitive-load-heatmap-prediction` (First-500ms attention, Hick's Law, Fitts's Law, CFI score).
+- Built 5th CLI automation engine: `agentway audit:cognitive`.
+- Standardized under official MIT License, established contributor governance (`CONTRIBUTING.md`, `SECURITY.md`, `CODE_OF_CONDUCT.md`), and integrated Saweria sponsorship.
+
 ---
+
 
 
 ## 🔮 Future Roadmap (v2.0 Vision)

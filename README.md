@@ -6,7 +6,7 @@
 ### *The Autonomous Product Design, Architecture & QA Engine for AI Coding Agents*
 
 <p align="center">
-  <strong>41 Production-Grade Skills • 9 Specialized Domains • Zero Context Bloat • 100% Model-Agnostic</strong>
+  <strong>42 Production-Grade Skills • 9 Specialized Domains • Zero Context Bloat • 100% Model-Agnostic</strong>
 </p>
 
 <!-- Live NPM & Package Metrics -->
@@ -16,11 +16,12 @@
   <a href="https://www.npmjs.com/package/@uwayxt/agent-skills"><img src="https://img.shields.io/npm/dm/@uwayxt/agent-skills?style=for-the-badge&logo=npm&color=00C7B7&logoColor=white&label=Monthly" alt="Monthly Downloads" /></a>
   <a href="https://www.npmjs.com/package/@uwayxt/agent-skills"><img src="https://img.shields.io/npm/dw/@uwayxt/agent-skills?style=for-the-badge&logo=npm&color=339933&logoColor=white&label=Weekly" alt="Weekly Downloads" /></a>
   <a href="https://packagephobia.com/result?p=@uwayxt/agent-skills"><img src="https://img.shields.io/bundlephobia/minzip/@uwayxt/agent-skills?style=for-the-badge&color=8A2BE2&label=Gzipped%20Size" alt="Package Size" /></a>
+  <a href="https://saweria.co/widgets/qr?streamKey=fec16e11208ec84149f95f4194556cfa"><img src="https://img.shields.io/badge/Donate-Saweria-FFA500?style=for-the-badge&logo=kofi&logoColor=white" alt="Donate on Saweria" /></a>
 </p>
 
 ---
 
-<img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&size=18&pause=1200&center=true&vCenter=true&width=600&height=40&color=4B9EDB&lines=41+Agent+Skills+%E2%80%A2+Product+Design+to+QA;Multi-IDE+%E2%80%A2+Model-Agnostic;Claude+Code+%E2%80%A2+Google+Antigravity+IDE" alt="Agentway tagline" />
+<img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&size=18&pause=1200&center=true&vCenter=true&width=600&height=40&color=4B9EDB&lines=42+Agent+Skills+%E2%80%A2+Product+Design+to+QA;Multi-IDE+%E2%80%A2+Model-Agnostic;Claude+Code+%E2%80%A2+Google+Antigravity+IDE" alt="Agentway tagline" />
 
 *Transform your AI coding agent into an autonomous Product Designer, UX Researcher, and QA Engineer.*
 
@@ -43,7 +44,7 @@
 ---
 
 ### 🌐 Quick Navigation
-[⚡ Quick Start](#-quick-start) • [📊 System Telemetry](#-system-telemetry--key-metrics) • [🗺️ Skill Directory (41 Skills)](#-skill-directory) • [🔄 End-to-End Workflow](#-the-end-to-end-workflow) • [💻 CLI Commands](#-cli-reference) • [📖 Official Docs](#-official-documentation)
+[⚡ Quick Start](#-quick-start) • [📊 System Telemetry](#-system-telemetry--key-metrics) • [🗺️ Skill Directory (42 Skills)](#-skill-directory) • [🔄 End-to-End Workflow](#-the-end-to-end-workflow) • [💻 CLI Commands](#-cli-reference) • [📖 Official Docs](#-official-documentation) • [💖 Sponsorship](#-sponsorship--donations)
 
 ---
 
@@ -59,14 +60,14 @@ Standard Agent:   Prompt ──────────────────�
 With Agentway:    Prompt ──► Discovery ──► Tokens ──► Scaffolding ──► Code ──► Autonomous QA Loop ──► Ship Verdict
 ```
 
-**Agentway equips any agent with 41 modular engineering contracts.** By leveraging *Progressive Disclosure*, instructions are loaded into context **only when relevant** — maintaining a 0ms runtime footprint with zero token pollution.
+**Agentway equips any agent with 42 modular engineering contracts.** By leveraging *Progressive Disclosure*, instructions are loaded into context **only when relevant** — maintaining a 0ms runtime footprint with zero token pollution.
 
 ---
 <div align="center">
 
 ![Skills](https://img.shields.io/badge/Skills-42-6f42c1?style=for-the-badge)
 ![Categories](https://img.shields.io/badge/Categories-9-0969da?style=for-the-badge)
-![Compatible IDEs](https://img.shields.io/badge/Compatible%20IDEs-2-1f883d?style=for-the-badge)
+![Compatible IDEs](https://img.shields.io/badge/Compatible%20IDEs-4-1f883d?style=for-the-badge)
 ![Model Agnostic](https://img.shields.io/badge/Model--Agnostic-Yes-d97706?style=for-the-badge)
 
 </div>
@@ -79,7 +80,7 @@ With Agentway:    Prompt ──► Discovery ──► Tokens ──► Scaffold
 
 | Metric | Specification | Realized Impact |
 | :--- | :--- | :--- |
-| 📦 **Active Skills** | **41 Modular Protocols** | Full coverage from customer discovery to Playwright QA |
+| 📦 **Active Skills** | **42 Modular Protocols** | Full coverage from customer discovery to Playwright QA |
 | 🏷️ **Domain Coverage** | **9 Specialized Pillars** | Product, UX, UI, Delivery, Growth, Mobile, QA, Visual, Modern |
 | 🧠 **Context Overhead** | **0 tokens idle** | On-demand progressive loading; never bloats active context |
 | 🖼️ **Visual Extraction** | **8-Stage Precision Engine** | Extracts tokens from UI screenshots with **≥ 95% visual fidelity** |
@@ -124,12 +125,13 @@ $ agentway list
  ██╔══██║██║   ██║██╔══╝  ██║╚██╗██║   ██║   ██║███╗██║██╔══██║  ╚██╔╝  
  ██║  ██║╚██████╔╝███████╗██║ ╚████║   ██║   ╚███╔███╔╝██║  ██║   ██║   
 
-  ✔ 41 Agent Skills Verified & Active across 9 Domains
+  ✔ 42 Agent Skills Verified & Active across 9 Domains
   ✔ Model Compatibility: Claude 3.7 Sonnet, GPT-4o, Gemini 2.0 Flash/Pro, DeepSeek V3
   ✔ Skills Lock: .agents/skills-lock.json (Integrity Verified)
 
   [Domain H: Visual Intelligence]
   └─ visual-style-extractor ......... Extract design tokens & components from reference images
+  └─ cognitive-load-heatmap-prediction First-500ms attention, Fitts/Hick's Law & CFI score
   
   [Domain A: Product Thinking]
   └─ product-discovery .............. Jobs-to-be-Done, actor mapping & assumption tests
@@ -335,6 +337,7 @@ agentway <command> [options]
 | `agentway tokens:build [file]` | Compiles JSON design tokens into Vanilla CSS Variables, Tailwind v4 config, and TypeScript definitions. |
 | `agentway scaffold:module <name>` | Scaffolds a modular feature slice with manifest, route intent, and 5-state resilience React/JSX container. |
 | `agentway audit:routes [dir]` | Audits codebase for dead links (`href="#"`), orphaned buttons without handlers, and missing `aria-label`. |
+| `agentway audit:cognitive [dir]` | Audits cognitive friction: Hick's Law decision time, Fitts's motor effort, and Cognitive Friction Index (CFI/100). |
 | `agentway gen:playwright [dir]` | Generates automated Playwright test suites covering WCAG 2.2 AA and multi-viewport responsive checks. |
 
 
@@ -342,30 +345,54 @@ agentway <command> [options]
 
 ## 📖 Official Documentation
 
-- **[📖 Skill Authoring Guide](./docs/SKILL-AUTHORING-GUIDE.md)** — Architectural standards for contributing new skills.
+- **[📖 Skill Authoring Guide](./docs/SKILL-AUTHORING-GUIDE.md)** — Architectural standards and token budget benchmarks for authoring skills.
 - **[🗺️ Complete Skill Map](./docs/SKILL-MAP.md)** — Comprehensive dependency flow & trigger catalog across all 42 skills.
-- **[🍳 Practical Recipes](./docs/RECIPES.md)** — 10 end-to-end recipes (Image Matching, Dark Mode, AI UX, SaaS Scaffolding).
+- **[🍳 Practical Recipes](./docs/RECIPES.md)** — 11 production recipes (SaaS from Scratch, Dark Mode, AI Streaming UX, RTL).
 - **[📜 Version Changelog](./docs/CHANGELOG.md)** — Release notes and historical upgrade timeline.
+- **[🤝 Contribution Guidelines](./CONTRIBUTING.md)** — Corporate standards, branching flow, and Conventional Commits.
+- **[🛡️ Security Policy](./SECURITY.md)** — Vulnerability reporting, supported versions, and responsible disclosure SLA.
+- **[📜 Code of Conduct](./CODE_OF_CONDUCT.md)** — Community covenant and ethical participation standards.
+- **[🚀 Release Playbook](./RELEASE_GUIDE.md)** — SemVer guidelines, tagging protocol, and NPM publishing procedure.
+
+---
+
+## 💖 Sponsorship & Support
+
+Agentway is an independently maintained, open-source engineering initiative. If Agentway saves your team time, improves your front-end architecture, or superpowers your AI coding workflows, please consider supporting the project:
+
+<div align="center">
+
+[![Donate via Saweria](https://img.shields.io/badge/Support%20via-Saweria-FFA500?style=for-the-badge&logo=kofi&logoColor=white)](https://saweria.co/widgets/qr?streamKey=fec16e11208ec84149f95f4194556cfa)
+[![GitHub Sponsors](https://img.shields.io/badge/Sponsor-GitHub-EA4AAA?style=for-the-badge&logo=github&logoColor=white)](https://github.com/sponsors/uwayxt)
+
+<br/>
+
+**Saweria Donation Widget & QR Code:**  
+👉 [https://saweria.co/widgets/qr?streamKey=fec16e11208ec84149f95f4194556cfa](https://saweria.co/widgets/qr?streamKey=fec16e11208ec84149f95f4194556cfa)
+
+</div>
 
 ---
 
 ## 🤝 Contributing
 
-Agentway is open to community-contributed skills. Before submitting:
-1. Review the **[Skill Authoring Guide](./docs/SKILL-AUTHORING-GUIDE.md)**.
-2. Ensure skills are **100% model-agnostic** with zero vendor-specific dependencies.
-3. Include test assertions and completion criteria checklists.
-4. Submit a Pull Request targeting `main`.
+We welcome community contributions, skill proposals, and CLI enhancements! Please review our **[Contribution Guide](./CONTRIBUTING.md)** and **[Code of Conduct](./CODE_OF_CONDUCT.md)** before submitting a pull request.
+
+1. Fork the repo and create your branch (`feat/skill-<name>` or `fix/<description>`).
+2. Adhere to the **[Skill Quality Scoring & Token Budget Standards](./docs/SKILL-AUTHORING-GUIDE.md)**.
+3. Ensure all skills are **100% model-agnostic** with zero vendor dependencies.
+4. Verify SHA-256 integrity in `skills-lock.json`.
+5. Submit a Pull Request following our [PR Template](.github/PULL_REQUEST_TEMPLATE.md).
 
 ---
 
 <div align="center">
 
-## 📄 License & Attribution
+## 📄 License & Legal Attribution
 
-**Skills Registry:** © Wahyudi ([@uwayxt](https://github.com/uwayxt)) — [MIT License](./LICENSE-PRODUCT-SKILLS.md)  
-**CLI Tooling:** MIT License
+**Agentway Skills Registry & CLI Suite:** © 2026 Wahyudi ([@uwayxt](https://github.com/uwayxt))  
+Licensed under the [MIT License](./LICENSE-PRODUCT-SKILLS.md).
 
-*Designed with obsession for engineering precision and autonomous AI workflows.*
+*Engineered with mathematical precision for autonomous AI coding agents and human product teams.*
 
 </div>

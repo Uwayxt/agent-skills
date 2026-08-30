@@ -187,26 +187,32 @@ async function runList() {
     };
     
     skills.forEach(s => {
-      const pathStr = data.skills[s].skillPath || '';
-      if (pathStr.includes('visual-intelligence') || s === 'visual-style-extractor' || s === 'cognitive-load-heatmap-prediction') {
+      // Domain H: Visual Intelligence
+      if (['visual-style-extractor', 'cognitive-load-heatmap-prediction'].includes(s)) {
         categories['Visual Intelligence'].push(s);
-      } else if (pathStr.includes('product-thinking') || s.startsWith('product-') || s.includes('business-model') || s === 'mvp-scoping' || s.includes('stakeholder')) {
+      // Domain A: Product Thinking & Strategy
+      } else if (['product-discovery', 'product-strategy', 'business-model-thinking', 'mvp-scoping', 'stakeholder-requirement-mapping', 'business-model-reading'].includes(s)) {
         categories['Product Thinking & Strategy'].push(s);
-      } else if (pathStr.includes('/ux/') || s === 'user-flow-mapping' || s === 'information-architecture' || s === 'user-research-synthesis' || s === 'accessibility-review' || s === 'usability-heuristics-check') {
+      // Domain B: UX (User Experience)
+      } else if (['user-flow-mapping', 'information-architecture', 'user-research-synthesis', 'accessibility-review', 'usability-heuristics-check'].includes(s)) {
         categories['UX (User Experience)'].push(s);
-      } else if (pathStr.includes('/ui/') || s === 'design-tokens' || s === 'typography-system' || s === 'design-system-builder' || s === 'component-style-guide' || s === 'dashboard-layout-patterns' || s === 'visual-hierarchy-review' || s === 'micro-interaction-motion-design') {
+      // Domain C & I: UI & Design Systems + Modern Platform Patterns
+      } else if (['design-tokens', 'typography-system', 'design-system-builder', 'component-style-guide', 'visual-hierarchy-review', 'micro-interaction-motion-design', 'dashboard-layout-patterns', 'dark-mode-theming-system', 'error-boundary-resilience-design', 'ai-feature-ux-patterns', 'i18n-localization-strategy', 'security-privacy-review'].includes(s)) {
         categories['UI & Design System'].push(s);
-      } else if (s === 'dark-mode-theming-system' || s === 'error-boundary-resilience-design' || s === 'ai-feature-ux-patterns' || s === 'i18n-localization-strategy') {
-        categories['Modern Platform Patterns'].push(s);
-      } else if (pathStr.includes('responsive') || s.includes('touch-gesture') || s.includes('adaptive-component') || s.includes('perceived-performance') || s === 'responsive-qa-audit') {
+      // Domain F: Responsive & Adaptive
+      } else if (['responsive-breakpoint-strategy', 'adaptive-component-behavior', 'touch-gesture-interaction', 'perceived-performance-loading', 'responsive-qa-audit'].includes(s)) {
         categories['Responsive & Adaptive'].push(s);
-      } else if (pathStr.includes('growth-aware') || s.includes('module-registry') || s.includes('dashboard-scaffolding') || s.includes('route-integrity') || s.includes('growth-impact')) {
+      // Domain E: Growth-Aware Architecture
+      } else if (['dashboard-scaffolding-contract', 'module-registry-sync', 'route-integrity-checker', 'growth-impact-review'].includes(s)) {
         categories['Growth-Aware Architecture'].push(s);
-      } else if (pathStr.includes('delivery') || s === 'design-to-code-handoff' || s === 'cross-functional-review' || s === 'security-privacy-review') {
+      // Domain D: Delivery & Integration
+      } else if (['design-to-code-handoff', 'cross-functional-review'].includes(s)) {
         categories['Delivery & Security'].push(s);
-      } else if (pathStr.includes('qa-autonomous') || s.startsWith('prd-') || s.includes('interactive-element') || s.includes('flow-based') || s.includes('visual-responsive') || s.includes('accessibility-runtime') || s.includes('qa-feedback')) {
+      // Domain G: QA Autonomous & Traceability
+      } else if (['prd-traceability-matrix', 'interactive-element-audit', 'flow-based-functional-testing', 'visual-responsive-regression-testing', 'accessibility-runtime-audit', 'qa-feedback-loop-orchestrator', 'ux-chaos-monkey'].includes(s)) {
         categories['QA Autonomous & Traceability'].push(s);
       } else {
+        // Fallback — should never trigger with all 43 registered
         categories['UI & Design System'].push(s);
       }
     });
@@ -239,6 +245,7 @@ import { scaffoldModule } from './generators/module-scaffolder.js';
 import { auditRoutes } from './generators/route-auditor.js';
 import { generateQATests } from './generators/qa-generator.js';
 import { run as runCognitiveEval } from './generators/cognitive-evaluator.js';
+import { injectChaos } from './generators/chaos-injector.js';
 
 // --- COMMAND: TOKENS:BUILD ---
 async function runTokensBuild(args) {
@@ -325,19 +332,39 @@ async function runAuditCognitive(args) {
   runCognitiveEval(scanDir);
 }
 
+// --- COMMAND: CHAOS:INJECT ---
+async function runChaosInject(args) {
+  const targetDir = args[1] || '.';
+  console.log(pc.cyan(`\n🎭 AGENTWAY CHAOS MONKEY — STRESS TEST GENERATOR\n`));
+  console.log(pc.gray(`Injecting chaos vectors into: ${pc.white(targetDir)}...\n`));
+  try {
+    const res = injectChaos(targetDir);
+    console.log(pc.green('✔ Chaos test suite generated:'));
+    res.files.forEach(f => console.log(pc.gray(`  ├─ `) + pc.white(f)));
+    console.log(pc.gray('\nVectors injected:'));
+    console.log(pc.gray('  ├─ ') + pc.white('Protocol 1: Text Explosion') + pc.gray(' — German, Russian, Finnish, Emoji, 300% oversize'));
+    console.log(pc.gray('  ├─ ') + pc.white('Protocol 2: Data Extremes') + pc.gray(' — Currency, XSS, identity, date edge-cases'));
+    console.log(pc.gray('  └─ ') + pc.white('Protocol 3: Flaky Network') + pc.gray(' — Offline, timeout, mid-stream, rapid-toggle'));
+    console.log(pc.gray('\nRun chaos tests with: ') + pc.bold(pc.white('npx playwright test chaos-tests/\n')));
+  } catch (e) {
+    console.error(pc.red('Error generating chaos tests:'), e.message);
+  }
+}
+
 // --- COMMAND: HELP ---
 function showHelp() {
   console.log(pc.cyan(ASCII_ART));
   console.log(pc.bold(pc.white('Usage: agentway <command> [options]\n')));
   console.log(pc.white('Core Commands:'));
   console.log(`  ${pc.green('init')}                    Provision skills locally or globally.`);
-  console.log(`  ${pc.green('list')}                    View all 42 skills across 9 domains.`);
+  console.log(`  ${pc.green('list')}                    View all 43 skills across 9 domains.`);
   console.log(`  ${pc.green('update')}                  Check for registry updates.\n`);
   console.log(pc.white('Expert Automation Tools:'));
   console.log(`  ${pc.green('tokens:build')} [file]      Compile design tokens to CSS Vars, Tailwind & TS.`);
   console.log(`  ${pc.green('scaffold:module')} <name>   Scaffold a modular slice with 5-state resilience.`);
   console.log(`  ${pc.green('audit:routes')} [dir]       Audit codebase for dead links & orphaned buttons.`);
   console.log(`  ${pc.green('audit:cognitive')} [dir]    Audit cognitive friction: Hick's Law, Fitts's Law, CFI score.`);
+  console.log(`  ${pc.green('chaos:inject')} [dir]       Generate chaos test suite: text explosion, data extremes & network.`);
   console.log(`  ${pc.green('gen:playwright')} [dir]     Generate Playwright WCAG 2.2 multi-viewport tests.\n`);
   console.log(`  ${pc.green('help')}                    Show this help menu.\n`);
 }
@@ -377,6 +404,10 @@ async function main() {
     case 'gen:playwright':
     case 'gen:qa':
       await runGenPlaywright(args);
+      break;
+    case 'chaos:inject':
+    case 'chaos':
+      await runChaosInject(args);
       break;
     case 'help':
     default:

@@ -23,7 +23,7 @@ $$\text{Version} = \text{MAJOR}.\text{MINOR}.\text{PATCH}$$
 Before tagging any release or running `npm publish`:
 
 1. **Lockfile Hash Verification:**
-   Ensure all 42 skills have exact SHA-256 hashes in `skills-lock.json`:
+   Ensure all 43 skills have exact SHA-256 hashes in `skills-lock.json`:
    ```bash
    python3 -c "import json, subprocess, os; lock=json.load(open('skills-lock.json')); [meta.update({'computedHash': subprocess.run(['shasum', '-a', '256', f'.agents/skills/{k}/SKILL.md'], stdout=subprocess.PIPE, text=True).stdout.split()[0]}) for k, meta in lock['skills'].items() if os.path.exists(f'.agents/skills/{k}/SKILL.md')]; json.dump(lock, open('skills-lock.json', 'w'), indent=2); print('All hashes synced.')"
    ```

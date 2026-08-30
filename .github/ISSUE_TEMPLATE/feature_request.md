@@ -2,7 +2,7 @@
 name: "💡 Feature Request"
 about: Suggest an idea or architectural improvement for Agentway
 title: "[FEAT]: "
-labels: ["enhancement"]
+labels: ["type:enhancement"]
 assignees: ["uwayxt"]
 ---
 

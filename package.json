@@ -1,16 +1,14 @@
 {
   "name": "@uwayxt/agent-skills",
-  "version": "1.4.2",
-  "description": "42 Product Design Agent Skills for AI coding agents. Covers Visual Intelligence, Product Thinking, UX, UI/Design Systems, Modern Platform Patterns, Responsive, QA Autonomous, and Growth-Aware workflows. Compatible with Claude Code and Google Antigravity IDE.",
+  "version": "1.5.0",
+  "description": "43 Product Design Agent Skills for AI coding agents. Covers Visual Intelligence, Product Thinking, UX, UI/Design Systems, Modern Platform Patterns, Responsive, QA Autonomous (incl. UX Chaos Monkey stress testing), and Growth-Aware workflows. Compatible with Claude Code and Google Antigravity IDE.",
   "type": "module",
-  "main": "index.js",
   "bin": {
     "agentway": "bin/cli.js"
   },
   "scripts": {
     "start": "node ./bin/cli.js"
   },
-
   "keywords": [
     "ai-agent",
     "agent-skills",
@@ -54,7 +52,10 @@
   "files": [
     "bin",
     ".agents",
-    "docs",
+    "docs/CHANGELOG.md",
+    "docs/RECIPES.md",
+    "docs/SKILL-AUTHORING-GUIDE.md",
+    "docs/SKILL-MAP.md",
     "skills-lock.json",
     "LICENSE-PRODUCT-SKILLS.md",
     "README.md"

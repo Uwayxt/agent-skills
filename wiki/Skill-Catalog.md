@@ -1,10 +1,10 @@
-# 🗺️ Complete Skill Catalog (42 Skills)
+# 🗺️ Complete Skill Catalog (43 Skills)
 
-This encyclopedia lists all **42 production-grade skills** across the 9 specialized domains of Agentway.
+This encyclopedia lists all **43 production-grade skills** across the 9 specialized domains of Agentway.
 
 # Skill Map
 
-A reference for understanding how Agentway 42 skills relate to each other — which skills feed data into which, and which order they activate in a typical product workflow.
+A reference for understanding how Agentway 43 skills relate to each other — which skills feed data into which, and which order they activate in a typical product workflow.
 
 
 ---
@@ -22,6 +22,10 @@ Skills are not independent. Each skill output becomes the input for downstream s
 |                         v                                           |
 |             visual-style-extractor                                  |
 |             (outputs style-extraction.json token & component seed)  |
+|                         |                                           |
+|                         v                                           |
+|         cognitive-load-heatmap-prediction                           |
+|         (Hick's Law RT, Fitts's Law ID, CFI score 0–100)           |
 +-------------------------+-------------------------------------------+
                           |
                           v
@@ -138,8 +142,8 @@ Skills are not independent. Each skill output becomes the input for downstream s
 | **Domain E: Growth-Aware Design** | 4 | `module.manifest.json`, `.agents/route-intents.json` | Information architecture | `growth-impact-review`, Navigation shell |
 | **Domain F: Responsive & Adaptive** | 5 | `TRANSFORMATION-TABLE.md`, Viewport tokens | Design tokens, Screen flows | `responsive-qa-audit`, Mobile UI code |
 | **Domain D: Delivery & Integration** | 2 | `handoff-spec.md`, 4-Pass Launch Review | Components & Scaffolding | Engineering execution & Ship verdict |
-| **Domain G: Autonomous QA Loop** | 6 | Playwright specs, `a11y-report.md`, PRD Matrix | Live DOM, Route intents | `qa-feedback-loop-orchestrator` |
-| **TOTAL** | **42 Skills** | **100% Interconnected Architecture** | **Continuous Flow** | **Autonomous Delivery** |
+| **Domain G: Autonomous QA Loop** | 7 | Playwright specs, `a11y-report.md`, PRD Matrix | Live DOM, Route intents | `qa-feedback-loop-orchestrator` |
+| **TOTAL** | **43 Skills** | **100% Interconnected Architecture** | **Continuous Flow** | **Autonomous Delivery** |
 
 ---
 
@@ -195,6 +199,7 @@ Use this table to quickly find the right skill for a given task.
 | Audit mobile layout before shipping | `responsive-qa-audit` |
 | Orchestrate all QA and auto-fix findings | `qa-feedback-loop-orchestrator` |
 | Do a final review before shipping | `cross-functional-review` |
+| Stress-test UI with extreme data, long text, network failure | `ux-chaos-monkey` |
 
 ---
 
@@ -203,7 +208,7 @@ Use this table to quickly find the right skill for a given task.
 Not every project needs every skill. Here is which skills are relevant by product type.
 
 ### SaaS / Web Application
-**All 41 skills apply.** Follow the complete end-to-end flow.
+**All 43 skills apply.** Follow the complete end-to-end flow.
 
 ### Mobile-First Product (iOS/Android/PWA)
 Priority skills:

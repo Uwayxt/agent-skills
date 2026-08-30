@@ -3,6 +3,7 @@
 node_modules
 wiki
 scripts
+articles
 .wiki-git-sync
 tmp
 scratch
@@ -11,3 +12,14 @@ coverage
 *.log
 .DS_Store
 .npmignore
+docs/assets
+docs/assets/**
+
+.env
+.env.*
+
+docs/assets/*.jpg
+docs/assets/*.png
+docs/assets/*.jpeg
+docs/assets/*.gif
+docs/assets/*.webp

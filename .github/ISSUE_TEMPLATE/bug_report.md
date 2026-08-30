@@ -2,7 +2,7 @@
 name: "🐛 Bug Report"
 about: Report unexpected behavior in Agentway CLI or skills
 title: "[BUG]: "
-labels: ["bug", "triage"]
+labels: ["type:bug", "status:triage"]
 assignees: ["uwayxt"]
 ---
 

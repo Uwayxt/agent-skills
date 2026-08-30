@@ -2,7 +2,7 @@
 name: "🧠 Skill Proposal"
 about: Propose a new engineering skill for the Agentway registry
 title: "[SKILL PROPOSAL]: "
-labels: ["skill-proposal", "needs-review"]
+labels: ["type:skill-proposal", "status:needs-review"]
 assignees: ["uwayxt"]
 ---
 

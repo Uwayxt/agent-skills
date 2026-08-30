@@ -46,6 +46,7 @@ The orchestrator classifies QA findings into deterministic fixes vs human escala
 | **Touch Ergonomics**| Tap target $< 44	imes 44	ext{pt}$ or missing safe-area inset | **Auto-Fix with token padding** |
 | **Responsive Overflow**| Horizontal scrollbar on mobile ($w \le 393	ext{px}$) | **Auto-Fix `max-w-full` / flex wrap** |
 | **Broken Routes** | `href="#"` or unhandled button click handler | **Auto-Fix route-intent mapping** |
+| **Chaos & Edge Cases**| Extreme long text overflow / unhandled negative numbers | **Auto-Fix `truncate` / fallback `—`** |
 | **Business Logic** | Missing workflow step or conflicting PRD requirements | **Escalate to Human** |
 
 ---

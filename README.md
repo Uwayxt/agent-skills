@@ -6,7 +6,7 @@
 ### *The Autonomous Product Design, Architecture & QA Engine for AI Coding Agents*
 
 <p align="center">
-  <strong>42 Production-Grade Skills • 9 Specialized Domains • Zero Context Bloat • 100% Model-Agnostic</strong>
+  <strong>43 Production-Grade Skills • 9 Specialized Domains • Zero Context Bloat • 100% Model-Agnostic</strong>
 </p>
 
 <!-- Live NPM & Package Metrics -->
@@ -15,13 +15,13 @@
   <a href="https://www.npmjs.com/package/@uwayxt/agent-skills"><img src="https://img.shields.io/npm/dt/@uwayxt/agent-skills?style=for-the-badge&logo=npm&color=4B9EDB&logoColor=white&label=Total%20Downloads" alt="Total Downloads" /></a>
   <a href="https://www.npmjs.com/package/@uwayxt/agent-skills"><img src="https://img.shields.io/npm/dm/@uwayxt/agent-skills?style=for-the-badge&logo=npm&color=00C7B7&logoColor=white&label=Monthly" alt="Monthly Downloads" /></a>
   <a href="https://www.npmjs.com/package/@uwayxt/agent-skills"><img src="https://img.shields.io/npm/dw/@uwayxt/agent-skills?style=for-the-badge&logo=npm&color=339933&logoColor=white&label=Weekly" alt="Weekly Downloads" /></a>
-  <a href="https://packagephobia.com/result?p=@uwayxt/agent-skills"><img src="https://img.shields.io/bundlephobia/minzip/@uwayxt/agent-skills?style=for-the-badge&color=8A2BE2&label=Gzipped%20Size" alt="Package Size" /></a>
+  <a href="https://www.npmjs.com/package/@uwayxt/agent-skills"><img src="https://img.shields.io/npm/unpacked-size/@uwayxt/agent-skills?style=for-the-badge&color=8A2BE2&logo=npm&logoColor=white" alt="Unpacked Size" /></a>
   <a href="https://saweria.co/uwayxt"><img src="https://img.shields.io/badge/Donate-Saweria-FFA500?style=for-the-badge&logo=kofi&logoColor=white" alt="Donate on Saweria" /></a>
 </p>
 
 ---
 
-<img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&size=18&pause=1200&center=true&vCenter=true&width=600&height=40&color=4B9EDB&lines=42+Agent+Skills+%E2%80%A2+Product+Design+to+QA;Multi-IDE+%E2%80%A2+Model-Agnostic;Claude+Code+%E2%80%A2+Google+Antigravity+IDE" alt="Agentway tagline" />
+<img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&size=18&pause=1200&center=true&vCenter=true&width=600&height=40&color=4B9EDB&lines=43+Agent+Skills+%E2%80%A2+Product+Design+to+QA;Multi-IDE+%E2%80%A2+Model-Agnostic;Claude+Code+%E2%80%A2+Google+Antigravity+IDE" alt="Agentway tagline" />
 
 *Transform your AI coding agent into an autonomous Product Designer, UX Researcher, and QA Engineer.*
 
@@ -31,6 +31,7 @@
 
 <!-- Runtime & Ecosystem Compatibility -->
 <p align="center">
+  <a href="https://github.com/Uwayxt/agent-skills/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/Uwayxt/agent-skills/ci.yml?branch=main&style=flat-square&logo=githubactions&logoColor=white&label=CI" alt="CI Status" /></a>
   <a href="https://claude.ai/code"><img src="https://img.shields.io/badge/Claude%20Code-Compatible-D97757?style=flat-square&logo=anthropic&logoColor=white" alt="Claude Code" /></a>
   <a href="https://deepmind.google/antigravity"><img src="https://img.shields.io/badge/Google%20Antigravity-Verified-4285F4?style=flat-square&logo=google&logoColor=white" alt="Antigravity IDE" /></a>
   <a href="https://cursor.com"><img src="https://img.shields.io/badge/Cursor%20IDE-Ready-000000?style=flat-square&logo=cursor&logoColor=white" alt="Cursor IDE" /></a>
@@ -44,7 +45,7 @@
 ---
 
 ### 🌐 Quick Navigation
-[⚡ Quick Start](#-quick-start) • [📊 System Telemetry](#-system-telemetry--key-metrics) • [🗺️ Skill Directory (42 Skills)](#-skill-directory) • [🔄 End-to-End Workflow](#-the-end-to-end-workflow) • [💻 CLI Commands](#-cli-reference) • [📖 Official Docs](#-official-documentation) • [💖 Sponsorship](#-sponsorship--donations)
+[⚡ Quick Start](#-quick-start) • [📊 System Telemetry](#-system-telemetry--key-metrics) • [🗺️ Skill Directory (43 Skills)](#-skill-directory) • [🔄 End-to-End Workflow](#-the-end-to-end-workflow) • [💻 CLI Commands](#-cli-reference) • [📖 Official Docs](#-official-documentation) • [💖 Sponsorship](#-sponsorship--donations)
 
 ---
 
@@ -60,12 +61,12 @@ Standard Agent:   Prompt ──────────────────�
 With Agentway:    Prompt ──► Discovery ──► Tokens ──► Scaffolding ──► Code ──► Autonomous QA Loop ──► Ship Verdict
 ```
 
-**Agentway equips any agent with 42 modular engineering contracts.** By leveraging *Progressive Disclosure*, instructions are loaded into context **only when relevant** — maintaining a 0ms runtime footprint with zero token pollution.
+**Agentway equips any agent with 43 modular engineering contracts.** By leveraging *Progressive Disclosure*, instructions are loaded into context **only when relevant** — maintaining a 0ms runtime footprint with zero token pollution.
 
 ---
 <div align="center">
 
-![Skills](https://img.shields.io/badge/Skills-42-6f42c1?style=for-the-badge)
+![Skills](https://img.shields.io/badge/Skills-43-6f42c1?style=for-the-badge)
 ![Categories](https://img.shields.io/badge/Categories-9-0969da?style=for-the-badge)
 ![Compatible IDEs](https://img.shields.io/badge/Compatible%20IDEs-4-1f883d?style=for-the-badge)
 ![Model Agnostic](https://img.shields.io/badge/Model--Agnostic-Yes-d97706?style=for-the-badge)
@@ -80,7 +81,7 @@ With Agentway:    Prompt ──► Discovery ──► Tokens ──► Scaffold
 
 | Metric | Specification | Realized Impact |
 | :--- | :--- | :--- |
-| 📦 **Active Skills** | **42 Modular Protocols** | Full coverage from customer discovery to Playwright QA |
+| 📦 **Active Skills** | **43 Modular Protocols** | Full coverage from customer discovery to Playwright QA |
 | 🏷️ **Domain Coverage** | **9 Specialized Pillars** | Product, UX, UI, Delivery, Growth, Mobile, QA, Visual, Modern |
 | 🧠 **Context Overhead** | **0 tokens idle** | On-demand progressive loading; never bloats active context |
 | 🖼️ **Visual Extraction** | **8-Stage Precision Engine** | Extracts tokens from UI screenshots with **≥ 95% visual fidelity** |
@@ -103,7 +104,7 @@ npx @uwayxt/agent-skills init
 ```
 
 ### 2. Global Installation (Recommended)
-Keep all 42 skills persistently available across all your projects:
+Keep all 43 skills persistently available across all your projects:
 
 ```bash
 npm install -g @uwayxt/agent-skills
@@ -125,7 +126,7 @@ $ agentway list
  ██╔══██║██║   ██║██╔══╝  ██║╚██╗██║   ██║   ██║███╗██║██╔══██║  ╚██╔╝  
  ██║  ██║╚██████╔╝███████╗██║ ╚████║   ██║   ╚███╔███╔╝██║  ██║   ██║   
 
-  ✔ 42 Agent Skills Verified & Active across 9 Domains
+  ✔ 43 Agent Skills Verified & Active across 9 Domains
   ✔ Model Compatibility: Claude 3.7 Sonnet, GPT-4o, Gemini 2.0 Flash/Pro, DeepSeek V3
   ✔ Skills Lock: .agents/skills-lock.json (Integrity Verified)
 
@@ -213,6 +214,7 @@ $ agentway list
 | :--- | :--- | :--- |
 | **`user-flow-mapping`** | `"user flow"`, `"journey map"`, `"how does the user get from A to B"` | Maps decision trees, happy paths, edge cases, and graceful error recovery loops. |
 | **`information-architecture`** | `"sitemap"`, `"navigation structure"`, `"organize features"` | Builds shallow sitemaps (≤3 levels, ≤7 items), RBAC navigation visibility overlays, and ⌘K Command Palette schemas. |
+| **`responsive-breakpoint-strategy`** | `"breakpoints"`, `"responsive design"`, `"fluid grid"`, `"container queries"` | Defines the breakpoint system, fluid grid strategy, and container-query patterns for cross-device layouts. |
 | **`i18n-localization-strategy`** | `"i18n"`, `"localization"`, `"RTL"`, `"multi-language"` | Architects string namespaces, CSS Logical Properties for seamless RTL flipping, and 40% text expansion tolerance. |
 | **`adaptive-component-behavior`** | `"adapt for mobile"`, `"sidebar to bottom-nav"`, `"component transformation"` | Forces pattern transformations per device (tables -> card stacks, sidebars -> bottom navigation). |
 | **`touch-gesture-interaction`** | `"touch targets"`, `"swipe gesture"`, `"thumb reachability"` | Enforces ≥ 44×44pt touch zones, thumb-reach layout ergonomics, and safe-area insets (`env(safe-area-inset-*)`). |
@@ -254,6 +256,7 @@ $ agentway list
 | **`accessibility-runtime-audit`** | `"a11y runtime check"`, `"WCAG on real build"`, `"screen reader"` | Executes axe-core against live DOM for **WCAG 2.2 AA** compliance + VoiceOver/NVDA validation. |
 | **`responsive-qa-audit`** | `"responsive QA"`, `"mobile audit"`, `"elements overflowing"` | Runs automated Playwright viewport tests across 4+ screen sizes to catch horizontal overflow. |
 | **`qa-feedback-loop-orchestrator`** | `"orchestrate QA"`, `"self-healing QA"`, `"close the feedback loop"` | Batches QA findings, executes deterministic auto-fixes, retries (max 3×), and escalates edge cases with full context. |
+| **`ux-chaos-monkey`** | `"stress test"`, `"chaos test"`, `"text overflow"`, `"extreme data"`, `"network failure"`, `"what if it disconnects"` | Injects Text Bombs (German/Russian/Finnish), Data Extremes ($0→$999M, NaN, 120-char names, XSS), and Flaky Network (offline, mid-stream cut, 30s timeout) to prove UI resilience. Generates Playwright chaos test suite via `agentway chaos:inject`. |
 
 </details>
 
@@ -327,7 +330,7 @@ agentway <command> [options]
 | Command | Description |
 | :--- | :--- |
 | `agentway init` | Interactive installer — configures local project or global agent environment. |
-| `agentway list` | Lists all 42 skills categorized by domain with active trigger phrases. |
+| `agentway list` | Lists all 43 skills categorized by domain with active trigger phrases. |
 | `agentway update` | Checks for skill registry updates and updates `.agents/skills-lock.json`. |
 | `agentway help` | Displays comprehensive command manual and runtime configuration options. |
 
@@ -346,7 +349,7 @@ agentway <command> [options]
 ## 📖 Official Documentation
 
 - **[📖 Skill Authoring Guide](./docs/SKILL-AUTHORING-GUIDE.md)** — Architectural standards and token budget benchmarks for authoring skills.
-- **[🗺️ Complete Skill Map](./docs/SKILL-MAP.md)** — Comprehensive dependency flow & trigger catalog across all 42 skills.
+- **[🗺️ Complete Skill Map](./docs/SKILL-MAP.md)** — Comprehensive dependency flow & trigger catalog across all 43 skills.
 - **[🍳 Practical Recipes](./docs/RECIPES.md)** — 11 production recipes (SaaS from Scratch, Dark Mode, AI Streaming UX, RTL).
 - **[📜 Version Changelog](./docs/CHANGELOG.md)** — Release notes and historical upgrade timeline.
 - **[🤝 Contribution Guidelines](./CONTRIBUTING.md)** — Corporate standards, branching flow, and Conventional Commits.

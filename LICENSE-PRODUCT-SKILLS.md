@@ -25,7 +25,7 @@ SOFTWARE.
 ### Scope & Coverage
 This MIT License applies to:
 1. **The Agentway CLI & Tooling Suite** (`bin/cli.js`, `bin/generators/`, etc.)
-2. **The 42 Modular Agent Skills** located in `.agents/skills/` across all 9 domains (Visual Intelligence, Product Thinking, UX, UI/Design Systems, Modern Platform Patterns, Responsive & Adaptive, Growth-Aware Architecture, Delivery & Security, and Autonomous QA Loop).
+2. **The 43 Modular Agent Skills** located in `.agents/skills/` across all 9 domains (Visual Intelligence, Product Thinking, UX, UI/Design Systems, Modern Platform Patterns, Responsive & Adaptive, Growth-Aware Architecture, Delivery & Security, and Autonomous QA Loop).
 3. **Engineering Specifications, Contracts & Mathematics** included in the repository.
 
 ### Attribution

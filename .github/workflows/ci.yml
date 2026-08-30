@@ -1,0 +1,126 @@
+name: CI / Quality Gate & Registry Integrity
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  # ─── 1. REGISTRY INTEGRITY & STRUCTURE VALIDATION ────────────────────────────
+  audit-registry:
+    name: 🛡️ Audit Skills Registry & SHA-256 Integrity
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Validate Skills Directory Structure
+        run: |
+          echo "Checking 43 skills directory structure..."
+          MISSING=0
+          SKILL_COUNT=0
+          for dir in .agents/skills/*/; do
+            SKILL_COUNT=$((SKILL_COUNT+1))
+            name=$(basename "$dir")
+            if [ ! -f "$dir/SKILL.md" ]; then
+              echo "❌ Missing SKILL.md in: $name"
+              MISSING=$((MISSING+1))
+            fi
+            if [ ! -f "$dir/agents/openai.yaml" ]; then
+              echo "❌ Missing agents/openai.yaml in: $name"
+              MISSING=$((MISSING+1))
+            fi
+          done
+          echo "Total skills detected: $SKILL_COUNT"
+          if [ $MISSING -gt 0 ]; then
+            echo "❌ Structure audit failed with $MISSING missing files."
+            exit 1
+          fi
+          echo "✅ All skills have valid SKILL.md and agents/openai.yaml."
+
+      - name: Verify Cryptographic SHA-256 Hashes
+        run: |
+          node << 'SCRIPT'
+          const fs = require('fs');
+          const crypto = require('crypto');
+          
+          const lock = JSON.parse(fs.readFileSync('skills-lock.json', 'utf8'));
+          let mismatches = 0;
+          let verified = 0;
+          
+          for (const [name, data] of Object.entries(lock.skills)) {
+            const skillPath = `.agents/skills/${name}/SKILL.md`;
+            if (!fs.existsSync(skillPath)) {
+              console.error(`❌ Lock entry skill file not found: ${skillPath}`);
+              mismatches++;
+              continue;
+            }
+            const content = fs.readFileSync(skillPath);
+            const hash = crypto.createHash('sha256').update(content).digest('hex');
+            if (hash !== data.computedHash) {
+              console.error(`❌ SHA-256 Mismatch for [${name}]: expected ${data.computedHash}, got ${hash}`);
+              mismatches++;
+            } else {
+              verified++;
+            }
+          }
+          
+          console.log(`Verified ${verified} SHA-256 skill signatures.`);
+          if (mismatches > 0) {
+            console.error(`❌ ${mismatches} skill signatures failed verification.`);
+            process.exit(1);
+          }
+          console.log('✅ All skill lockfile hashes verified 100%.');
+          SCRIPT
+
+      - name: Validate NPM Tarball & Size Budget
+        run: |
+          echo "Executing npm pack --dry-run..."
+          npm pack --dry-run
+
+  # ─── 2. CLI CROSS-PLATFORM & GENERATOR MATRIX ──────────────────────────────
+  test-cli-matrix:
+    name: ⚡ Test CLI on ${{ matrix.os }} (Node ${{ matrix.node-version }})
+    needs: audit-registry
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+        node-version: [18.x, 20.x, 22.x]
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Test Core CLI Router
+        run: |
+          node bin/cli.js help
+          node bin/cli.js list
+
+      - name: Test Automation Engines (Scaffolder, Tokens, Audits, Chaos, QA)
+        run: |
+          mkdir tmp_ci_test
+          node bin/cli.js tokens:build
+          node bin/cli.js scaffold:module TestSlice ./tmp_ci_test
+          node bin/cli.js audit:routes ./tmp_ci_test
+          node bin/cli.js audit:cognitive ./tmp_ci_test
+          node bin/cli.js chaos:inject ./tmp_ci_test
+          node bin/cli.js gen:playwright ./tmp_ci_test
+        shell: bash

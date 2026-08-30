@@ -7,7 +7,55 @@ Versions follow [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [1.5.0] — 2026-08-30
+
+### 🎭 New Skill: UX Chaos Monkey & Edge-Case Stress Testing
+
+The most destructive QA skill in Agentway — systematically engineers controlled catastrophes to prove your UI survives extreme conditions before real users find the breaks.
+
+#### Added — Skill #43: `ux-chaos-monkey`
+
+New skill folder: `.agents/skills/ux-chaos-monkey/` containing 5 files:
+
+- **`SKILL.md`** — Full 3-protocol stress testing system with deterministic pass/fail criteria and auto-fix rules
+- **`CHAOS-SCENARIOS.md`** — 30 predefined chaos scenarios (SC-001 ~ SC-030) across 4 stress vectors
+- **`DATA-INJECTION-LIBRARY.md`** — Structured data bomb library: Text Bombs (German/Russian/Finnish/Emoji), Numeric edge cases, XSS vectors, Date boundaries, RTL/BiDi mixed content, malformed strings
+- **`NETWORK-STATE-PROTOCOL.md`** — 5-phase network failure protocol: Baseline → 2G Throttle → 3s Latency Spike → Hard Disconnect (5 cut-points) → Reconnect & Sync Verification
+- **`agents/openai.yaml`** — Agent interface config
+
+**3 Protocols:**
+
+| Protocol | What it Tests |
+|---|---|
+| **Protocol 1: Text Explosion** | German compound nouns (45 chars), Russian inflected words, Finnish agglutinative (58 chars), emoji-only strings, 300% oversize labels injected into buttons, badges, table cells, breadcrumbs |
+| **Protocol 2: Data Extremes** | Currency (`$0` → `$999,999,999.99` → `NaN`), 120-char usernames, XSS vectors, invalid dates (`2024-02-30`), timezone edge cases (UTC±14), list extremes (0 to 10,000 items) |
+| **Protocol 3: Flaky Network** | Offline on load, mid-navigation cut, mid-form disconnect, mid-stream AI cut, 30s timeout, rapid online/offline toggle |
+
+#### Added — CLI Command: `agentway chaos:inject [dir]`
+
+Generates a ready-to-run Playwright chaos test suite into `[dir]/chaos-tests/`:
+- `text-explosion.test.ts` — SC-001, SC-002, SC-005, SC-006, SC-009
+- `data-extremes.test.ts` — SC-014, SC-015, SC-017, SC-019, SC-021
+- `network-chaos.test.ts` — SC-026, SC-027, SC-029, SC-030
+- `chaos-vectors.json` — complete injection data library in JSON format
+
+```bash
+agentway chaos:inject ./my-project
+npx playwright test chaos-tests/
+```
+
+#### Changed
+- `bin/cli.js`: Added `chaos:inject` / `chaos` aliases to command router; registered `ux-chaos-monkey` in Domain G (QA Autonomous); added entry to `showHelp()` output
+- `bin/generators/chaos-injector.js`: New generator module
+- `skills-lock.json`: Entry #43 for `ux-chaos-monkey`
+- `package.json`: Version `1.4.2` → `1.5.0`; updated description to reflect 43 skills
+- `docs/SKILL-MAP.md`: Added `ux-chaos-monkey` to Phase 7 QA Loop; updated Domain G count 6→7; total 42→43
+- `README.md`: Added `ux-chaos-monkey` row in Domain G table; updated all skill count references to 43
+
+---
+
 ## [1.4.2] — 2026-08-30
+
 
 ### 💖 Documentation & Sponsorship URL Polish
 - Updated Saweria sponsorship links across all documentation, funding configs, and wiki pages to clean profile URL (`https://saweria.co/uwayxt`).

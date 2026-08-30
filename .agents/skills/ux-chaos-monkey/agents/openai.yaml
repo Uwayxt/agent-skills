@@ -1,0 +1,3 @@
+interface:
+  display_name: "UX Chaos Monkey"
+  short_description: "Stress-test UI with text explosion, data extremes & flaky network injection"

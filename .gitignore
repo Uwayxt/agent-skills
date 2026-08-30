@@ -54,5 +54,3 @@ Thumbs.db
 .env.production.local
 
 # Agentway Configuration
-.agents/
-.claude/

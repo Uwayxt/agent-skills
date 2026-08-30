@@ -1,0 +1,3 @@
+interface:
+  display_name: "Cognitive Load & Heatmap Prediction"
+  short_description: "Predict visual attention paths, Hick's RT, Fitts's motor effort, and CFI score"

@@ -56,4 +56,3 @@ Thumbs.db
 # Agentway Configuration
 .agents/
 .claude/
-skills-lock.json

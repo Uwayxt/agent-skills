@@ -261,6 +261,12 @@
         "decision overload",
         "first 500ms attention"
       ]
+    },
+    "ux-chaos-monkey": {
+      "source": "uwayxt/product-design-skills",
+      "sourceType": "github",
+      "skillPath": "skills/qa-autonomous/ux-chaos-monkey/SKILL.md",
+      "computedHash": "1a96d01836d6f36c20a163af262e4aea9b0e2d5e4156b57c3996bae409a040ad"
     }
   }
 }

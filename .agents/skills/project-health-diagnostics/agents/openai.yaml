@@ -1,0 +1,60 @@
+openapi: "3.1.0"
+info:
+  title: project-health-diagnostics
+  description: >
+    Autonomous project health audit engine. Computes Token Adherence Index (TAI)
+    score across 4 dimensions: token coverage, WCAG compliance, resilience coverage,
+    and responsive architecture. Produces a Health Report Card with prioritized
+    skill prescription queue.
+  version: 1.6.0
+
+x-skill-metadata:
+  phase: 8
+  category: Project Intelligence & Drift Prevention
+  skill-number: 44
+  cli-command: "agentway doctor"
+  outputs:
+    - health-report.md
+    - health-report.json
+    - prescription.md
+  tai-formula: "(tokenCoverage × 0.40) + (wcagScore × 0.25) + (resilienceCoverage × 0.20) + (responsiveScore × 0.15)"
+  companion-skills:
+    - design-drift-detector
+    - design-tokens
+    - accessibility-review
+    - error-boundary-resilience-design
+
+x-agent-triggers:
+  - "health check"
+  - "health report"
+  - "diagnose my project"
+  - "TAI score"
+  - "token adherence"
+  - "what skills do I need"
+  - "agentway doctor"
+  - "project quality audit"
+  - "audit this codebase"
+  - "what's missing from my design system"
+
+x-protocol-steps:
+  - step: 1
+    name: Scan
+    description: "Detect token architecture, WCAG signals, resilience coverage, responsive patterns, AI drift indicators"
+  - step: 2
+    name: Score
+    description: "Compute TAI 0–100 using weighted formula across 4 sub-dimensions"
+  - step: 3
+    name: Identify
+    description: "Map below-threshold scores to responsible Agentway skill deficits"
+  - step: 4
+    name: Prescribe
+    description: "Output P0/P1/P2/P3 prioritized skill activation queue"
+  - step: 5
+    name: Report
+    description: "Generate health-report.md + health-report.json"
+
+x-tai-grades:
+  excellent: { min: 90, max: 100, label: "Production-ready, AI-safe" }
+  good: { min: 70, max: 89, label: "Minor gaps, advisory remediation" }
+  needs-work: { min: 50, max: 69, label: "Significant gaps, sprint-blocking" }
+  critical: { min: 0, max: 49, label: "Design system not enforced, high drift risk" }

@@ -13,7 +13,7 @@ $$\text{Version} = \text{MAJOR}.\text{MINOR}.\text{PATCH}$$
 | Increment | Trigger Condition | Example |
 | :--- | :--- | :--- |
 | **MAJOR (v2.0.0)** | Breaking changes to skill contracts, CLI command deprecations, or complete registry architectural shifts. | `1.4.0` → `2.0.0` |
-| **MINOR (v1.5.0)** | Adding new skills, new CLI generator subcommands, or major domain capabilities without breaking existing setups. | `1.4.0` → `1.5.0` |
+| **MINOR (v1.6.0)** | Adding new skills, new CLI generator subcommands, or major domain capabilities without breaking existing setups. | `1.4.0` → `1.6.0` |
 | **PATCH (v1.4.1)** | Bug fixes, typo corrections, mathematical formula adjustments, documentation updates, or non-breaking CLI patches. | `1.4.0` → `1.4.1` |
 
 ---
@@ -23,7 +23,7 @@ $$\text{Version} = \text{MAJOR}.\text{MINOR}.\text{PATCH}$$
 Before tagging any release or running `npm publish`:
 
 1. **Lockfile Hash Verification:**
-   Ensure all 43 skills have exact SHA-256 hashes in `skills-lock.json`:
+   Ensure all 45 skills have exact SHA-256 hashes in `skills-lock.json`:
    ```bash
    python3 -c "import json, subprocess, os; lock=json.load(open('skills-lock.json')); [meta.update({'computedHash': subprocess.run(['shasum', '-a', '256', f'.agents/skills/{k}/SKILL.md'], stdout=subprocess.PIPE, text=True).stdout.split()[0]}) for k, meta in lock['skills'].items() if os.path.exists(f'.agents/skills/{k}/SKILL.md')]; json.dump(lock, open('skills-lock.json', 'w'), indent=2); print('All hashes synced.')"
    ```

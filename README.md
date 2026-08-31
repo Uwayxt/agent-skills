@@ -45,7 +45,7 @@
 ---
 
 ### 🌐 Quick Navigation
-[⚡ Quick Start](#-quick-start) • [📊 System Telemetry](#-system-telemetry--key-metrics) • [🗺️ Skill Directory (43 Skills)](#-skill-directory) • [🔄 End-to-End Workflow](#-the-end-to-end-workflow) • [💻 CLI Commands](#-cli-reference) • [📖 Official Docs](#-official-documentation) • [💖 Sponsorship](#-sponsorship--donations)
+[⚡ Quick Start](#-quick-start) • [📊 System Telemetry](#-system-telemetry--key-metrics) • [🗺️ Skill Directory (45 Skills)](#-skill-directory) • [🔄 End-to-End Workflow](#-the-end-to-end-workflow) • [💻 CLI Commands](#-cli-reference) • [📖 Official Docs](#-official-documentation) • [💖 Sponsorship](#-sponsorship--donations)
 
 ---
 
@@ -104,7 +104,7 @@ npx @uwayxt/agent-skills init
 ```
 
 ### 2. Global Installation (Recommended)
-Keep all 43 skills persistently available across all your projects:
+Keep all 45 skills persistently available across all your projects:
 
 ```bash
 npm install -g @uwayxt/agent-skills
@@ -330,7 +330,7 @@ agentway <command> [options]
 | Command | Description |
 | :--- | :--- |
 | `agentway init` | Interactive installer — configures local project or global agent environment. |
-| `agentway list` | Lists all 43 skills categorized by domain with active trigger phrases. |
+| `agentway list` | Lists all 45 skills categorized by domain with active trigger phrases. |
 | `agentway update` | Checks for skill registry updates and updates `.agents/skills-lock.json`. |
 | `agentway help` | Displays comprehensive command manual and runtime configuration options. |
 
@@ -349,7 +349,7 @@ agentway <command> [options]
 ## 📖 Official Documentation
 
 - **[📖 Skill Authoring Guide](./docs/SKILL-AUTHORING-GUIDE.md)** — Architectural standards and token budget benchmarks for authoring skills.
-- **[🗺️ Complete Skill Map](./docs/SKILL-MAP.md)** — Comprehensive dependency flow & trigger catalog across all 43 skills.
+- **[🗺️ Complete Skill Map](./docs/SKILL-MAP.md)** — Comprehensive dependency flow & trigger catalog across all 45 skills.
 - **[🍳 Practical Recipes](./docs/RECIPES.md)** — 11 production recipes (SaaS from Scratch, Dark Mode, AI Streaming UX, RTL).
 - **[📜 Version Changelog](./docs/CHANGELOG.md)** — Release notes and historical upgrade timeline.
 - **[🤝 Contribution Guidelines](./CONTRIBUTING.md)** — Corporate standards, branching flow, and Conventional Commits.

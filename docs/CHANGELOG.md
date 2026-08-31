@@ -7,6 +7,44 @@ Versions follow [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [1.6.0] — 2026-08-31
+
+### Added — Phase 8: Project Intelligence & Drift Prevention
+
+#### Skill #44: `project-health-diagnostics`
+- **Token Adherence Index (TAI):** Mathematical health score (0–100) computed from 4 weighted dimensions: token coverage (40%), WCAG compliance (25%), resilience coverage (20%), responsive architecture (15%)
+- **5-Step Diagnostic Engine:** Scan → Score → Identify → Prescribe → Report
+- **Skill Recommender:** Decision tree mapping 40+ project symptoms to exact skill prescriptions
+- **45-Point Diagnostic Checklist:** Full audit across token architecture, WCAG, resilience, and responsive design
+- **Report Outputs:** `health-report.md` (human-readable) + `health-report.json` (CI-ready machine output) + `prescription.md`
+
+#### Skill #45: `design-drift-detector`
+- **7 Violation Categories:** Hardcoded colors (🔴 critical), spacing (🟠 high), typography (🟠 high), radius/shadow/z-index (🟡 medium), duration (🟢 low)
+- **50+ Pattern Signatures:** Regex-based detection library covering hex, rgb/rgba, named colors, magic number spacings, literal font sizes, and CSS anti-patterns
+- **Severity Matrix:** TAI penalty weights (-20 to -2 pts) with drift rate thresholds (< 5% clean, > 30% breakdown)
+- **Remediation Guide:** Auto-fix recipes with find-and-replace patterns and Node.js migration script
+- **Report Outputs:** `drift-report.md` + `drift-report.json` + `drift-fixes.md`
+
+#### CLI Generator #7: `agentway doctor [dir]`
+- Computes TAI score from project signals (token file presence, dependency detection, structure heuristics)
+- Generates `health-report.md`, `health-report.json`, and `prescription.md` with P0/P1/P2 prioritized skill queue
+
+#### CLI Generator #8: `agentway audit:drift [dir]`
+- Scans all CSS/SCSS files with 17 regex patterns across 7 drift categories
+- Generates `drift-report.md`, `drift-report.json`, and `drift-fixes.md` with token reference quick-map
+
+### Changed
+- **CLI `list`:** Updated domain count 9 → 10, added Phase 8 category
+- **CLI `help`:** New "Project Intelligence (v1.6.0)" section with `doctor` and `audit:drift` commands
+- **`skills-lock.json`:** Updated to 45 skills with SHA-256 integrity entries for #44 and #45
+
+### Security
+- Removed `.claude/` directory from git tracking (41 IDE symlinks that were unintentionally committed)
+- Added `.claude/`, `.cursor/`, `.aider*` to `.gitignore` to prevent future IDE config leakage
+
+---
+
+
 ## [1.5.0] — 2026-08-30
 
 ### 🎭 New Skill: UX Chaos Monkey & Edge-Case Stress Testing

@@ -2,7 +2,7 @@
 
 > **The Autonomous Product Design, Architecture & QA Engine for AI Coding Agents**
 
-Agentway equips AI agents (Claude Code, Google Antigravity, Cursor, Windsurf, OpenCode) with **43 production-grade engineering protocols** across 9 specialized domains.
+Agentway equips AI agents (Claude Code, Google Antigravity, Cursor, Windsurf, OpenCode) with **45 production-grade engineering protocols** across 9 specialized domains.
 
 <div align="center">
 
@@ -22,7 +22,7 @@ Agentway equips AI agents (Claude Code, Google Antigravity, Cursor, Windsurf, Op
 | :--- | :--- | :--- |
 | **[🚀 Getting Started](Getting-Started)** | Installation methods, IDE integration setup, and first CLI execution. | New users & setup |
 | **[🏛️ Architecture & Design](Architecture-and-Design)** | Deep-dive into Progressive Disclosure, zero idle token overhead, and contracts. | Architects & Engineers |
-| **[🗺️ Complete Skill Catalog](Skill-Catalog)** | Comprehensive encyclopedia of all 43 skills across 9 domains with triggers. | Prompt engineers & Builders |
+| **[🗺️ Complete Skill Catalog](Skill-Catalog)** | Comprehensive encyclopedia of all 45 skills across 9 domains with triggers. | Prompt engineers & Builders |
 | **[🖼️ Visual Intelligence Engine](Visual-Intelligence-Engine)** | Screenshot extraction protocol, design token generation, and 25-pt fidelity score. | UI/UX Designers & Devs |
 | **[🛡️ Autonomous QA Loop](Autonomous-QA-Loop)** | Closed-loop self-healing QA, Playwright test scaffolds, and 3× retry limits. | QA & Reliability Engineers |
 | **[🍳 Product Recipes](Recipes-and-Workflows)** | 11 worked scenarios (SaaS from Scratch, Dark Mode, AI Streaming UX, RTL). | Product Managers & Builders |
@@ -31,7 +31,7 @@ Agentway equips AI agents (Claude Code, Google Antigravity, Cursor, Windsurf, Op
 
 ---
 
-## 📊 Live Project Status & Telemetry (v1.5.0)
+## 📊 Live Project Status & Telemetry (v1.6.0)
 
 - **Total Active Skills:** `43 modular protocols`
 - **Domain Coverage:** `9 pillars` (Visual, Product, UX, UI, Modern, Responsive, Growth, Delivery, QA)

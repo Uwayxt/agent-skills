@@ -238,3 +238,25 @@ Focus on:
 - `visual-style-extractor` -> `design-tokens` -> `typography-system` -> `dark-mode-theming-system` -> `design-system-builder` -> `component-style-guide`
 - `micro-interaction-motion-design`
 - `visual-hierarchy-review`, `accessibility-review`
+
+---
+
+## Phase 8: Project Intelligence & Drift Prevention *(v1.6.0)*
+
+**Theme:** Autonomous quality monitoring — AI that can audit its own output for design system compliance.
+
+| # | Skill | Trigger | Output |
+| :---: | :--- | :--- | :--- |
+| 44 | `project-health-diagnostics` | "health check", "diagnose project", "TAI score" | `health-report.md` + `health-report.json` + `prescription.md` |
+| 45 | `design-drift-detector` | "audit:drift", "hardcoded CSS", "token drift" | `drift-report.md` + `drift-report.json` + `drift-fixes.md` |
+
+**CLI Generators (Phase 8):**
+| # | Command | Alias | Description |
+| :---: | :--- | :--- | :--- |
+| 7 | `agentway doctor [dir]` | `health` | Compute TAI score, generate Health Report Card |
+| 8 | `agentway audit:drift [dir]` | `drift` | Scan CSS for 50+ design token violations |
+
+**Token Adherence Index (TAI) Formula:**
+```
+TAI = (token_coverage × 0.40) + (wcag_score × 0.25) + (resilience × 0.20) + (responsive × 0.15)
+```

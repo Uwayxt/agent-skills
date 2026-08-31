@@ -58,3 +58,25 @@ The `accessibility-runtime-audit` executes axe-core checks covering:
 2. **Focus Appearance:** High contrast visible keyboard focus indicators.
 3. **Dragging Alternatives:** Single-pointer alternatives for drag-and-drop operations.
 4. **Contrast (Minimum):** $\ge 4.5:1$ text and $\ge 3:1$ UI components.
+
+### Generator #7: `agentway doctor` *(v1.6.0)*
+
+**Command:** `agentway doctor [dir]`
+**Alias:** `agentway health [dir]`
+
+Computes a **Token Adherence Index (TAI)** score from heuristic project signals and generates a three-part health report:
+- `health-report.md` — Human-readable report card with radar breakdown and prescription table
+- `health-report.json` — Machine-readable data for CI gate integration
+- `prescription.md` — Prioritized (P0/P1/P2) skill activation roadmap
+
+---
+
+### Generator #8: `agentway audit:drift` *(v1.6.0)*
+
+**Command:** `agentway audit:drift [dir]`
+**Alias:** `agentway drift [dir]`
+
+Scans all CSS/SCSS files in the target directory using 17 regex patterns across 7 drift categories. Severity-sorts violations and generates:
+- `drift-report.md` — Violation list with file:line references and fix hints
+- `drift-report.json` — Machine-readable data with per-category counts and drift rate
+- `drift-fixes.md` — Project-specific find-and-replace auto-fix recipes

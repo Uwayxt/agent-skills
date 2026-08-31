@@ -6,6 +6,8 @@ import fs from 'fs/promises';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import os from 'os';
+import { runHealthDoctor } from './generators/health-doctor.js';
+import { runDriftAuditor } from './generators/drift-auditor.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -171,10 +173,11 @@ async function runList() {
     const data = JSON.parse(lockData);
     const skills = Object.keys(data.skills);
     
-    console.log(pc.white(`Found ${pc.bold(pc.green(skills.length))} active skills across 9 domains:\n`));
+    console.log(pc.white(`Found ${pc.bold(pc.green(skills.length))} active skills across 10 domains:\n`));
     
     // Grouping by reading path
     const categories = {
+      'Project Intelligence & Drift Prevention': [],
       'Visual Intelligence': [],
       'Product Thinking & Strategy': [],
       'UX (User Experience)': [],
@@ -187,8 +190,11 @@ async function runList() {
     };
     
     skills.forEach(s => {
+      // Phase 8: Project Intelligence & Drift Prevention
+      if (['project-health-diagnostics', 'design-drift-detector'].includes(s)) {
+        categories['Project Intelligence & Drift Prevention'].push(s);
       // Domain H: Visual Intelligence
-      if (['visual-style-extractor', 'cognitive-load-heatmap-prediction'].includes(s)) {
+      } else if (['visual-style-extractor', 'cognitive-load-heatmap-prediction'].includes(s)) {
         categories['Visual Intelligence'].push(s);
       // Domain A: Product Thinking & Strategy
       } else if (['product-discovery', 'product-strategy', 'business-model-thinking', 'mvp-scoping', 'stakeholder-requirement-mapping', 'business-model-reading'].includes(s)) {
@@ -212,7 +218,7 @@ async function runList() {
       } else if (['prd-traceability-matrix', 'interactive-element-audit', 'flow-based-functional-testing', 'visual-responsive-regression-testing', 'accessibility-runtime-audit', 'qa-feedback-loop-orchestrator', 'ux-chaos-monkey'].includes(s)) {
         categories['QA Autonomous & Traceability'].push(s);
       } else {
-        // Fallback — should never trigger with all 43 registered
+        // Fallback — should never trigger with all 45 registered
         categories['UI & Design System'].push(s);
       }
     });
@@ -351,14 +357,29 @@ async function runChaosInject(args) {
   }
 }
 
+// --- COMMAND: DOCTOR ---
+async function runDoctor(args) {
+  const targetDir = args[1] || '.';
+  await runHealthDoctor(targetDir);
+}
+
+// --- COMMAND: AUDIT:DRIFT ---
+async function runAuditDrift(args) {
+  const targetDir = args[1] || '.';
+  await runDriftAuditor(targetDir);
+}
+
 // --- COMMAND: HELP ---
 function showHelp() {
   console.log(pc.cyan(ASCII_ART));
   console.log(pc.bold(pc.white('Usage: agentway <command> [options]\n')));
   console.log(pc.white('Core Commands:'));
   console.log(`  ${pc.green('init')}                    Provision skills locally or globally.`);
-  console.log(`  ${pc.green('list')}                    View all 43 skills across 9 domains.`);
+  console.log(`  ${pc.green('list')}                    View all 45 skills across 10 domains.`);
   console.log(`  ${pc.green('update')}                  Check for registry updates.\n`);
+  console.log(pc.white('Project Intelligence (v1.6.0):'));
+  console.log(`  ${pc.green('doctor')} [dir]             Compute TAI score, generate Health Report Card & prescription.`);
+  console.log(`  ${pc.green('audit:drift')} [dir]        Detect design token violations: hardcoded CSS, magic numbers.\n`);
   console.log(pc.white('Expert Automation Tools:'));
   console.log(`  ${pc.green('tokens:build')} [file]      Compile design tokens to CSS Vars, Tailwind & TS.`);
   console.log(`  ${pc.green('scaffold:module')} <name>   Scaffold a modular slice with 5-state resilience.`);
@@ -408,6 +429,14 @@ async function main() {
     case 'chaos:inject':
     case 'chaos':
       await runChaosInject(args);
+      break;
+    case 'doctor':
+    case 'health':
+      await runDoctor(args);
+      break;
+    case 'audit:drift':
+    case 'drift':
+      await runAuditDrift(args);
       break;
     case 'help':
     default:

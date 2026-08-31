@@ -1,0 +1,79 @@
+openapi: "3.1.0"
+info:
+  title: design-drift-detector
+  description: >
+    Scans codebases for design token violations across 7 categories and 50+ pattern
+    signatures. Produces severity-sorted drift reports with auto-fix recipes.
+    Feeds drift_rate into the TAI score from project-health-diagnostics.
+  version: 1.6.0
+
+x-skill-metadata:
+  phase: 8
+  category: Project Intelligence & Drift Prevention
+  skill-number: 45
+  cli-command: "agentway audit:drift"
+  outputs:
+    - drift-report.md
+    - drift-report.json
+    - drift-fixes.md
+  violation-categories: 7
+  pattern-signatures: 50+
+  parent-skill: project-health-diagnostics
+  tai-signal: E
+
+x-agent-triggers:
+  - "audit:drift"
+  - "agentway audit:drift"
+  - "hardcoded CSS"
+  - "find hardcoded values"
+  - "token drift"
+  - "design drift"
+  - "hardcoded colors"
+  - "magic numbers"
+  - "CSS violations"
+  - "token enforcement"
+  - "design system compliance"
+  - "non-token values"
+
+x-violation-categories:
+  - id: "C1"
+    name: "Hardcoded Colors"
+    severity: "critical"
+    patterns: ["hex", "rgb()", "rgba()", "hsl()", "hsla()", "named colors"]
+    tai-penalty: -20
+  - id: "C2"
+    name: "Hardcoded Spacing"
+    severity: "high"
+    patterns: ["margin: Npx", "padding: Npx", "gap: Npx"]
+    tai-penalty: -10
+  - id: "C3"
+    name: "Hardcoded Typography"
+    severity: "high"
+    patterns: ["font-size: Npx", "font-weight: N00", "line-height: Npx"]
+    tai-penalty: -10
+  - id: "C4"
+    name: "Hardcoded Radius"
+    severity: "medium"
+    patterns: ["border-radius: Npx"]
+    tai-penalty: -5
+  - id: "C5"
+    name: "Hardcoded Shadows"
+    severity: "medium"
+    patterns: ["box-shadow: N px"]
+    tai-penalty: -5
+  - id: "C6"
+    name: "Hardcoded Z-Index"
+    severity: "medium"
+    patterns: ["z-index: 9999", "z-index: N"]
+    tai-penalty: -5
+  - id: "C7"
+    name: "Hardcoded Duration"
+    severity: "low"
+    patterns: ["transition: 0.Ns", "animation-duration: Nms"]
+    tai-penalty: -2
+
+x-drift-thresholds:
+  clean: { max_rate: 5, label: "Token-compliant" }
+  warning: { max_rate: 15, label: "Minor drift" }
+  high: { max_rate: 30, label: "Significant drift" }
+  critical: { min_rate: 30, label: "Design system breakdown" }

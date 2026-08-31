@@ -239,3 +239,39 @@ Focus on:
 - `visual-style-extractor` -> `design-tokens` -> `typography-system` -> `dark-mode-theming-system` -> `design-system-builder` -> `component-style-guide`
 - `micro-interaction-motion-design`
 - `visual-hierarchy-review`, `accessibility-review`
+
+---
+
+## Phase 8: Project Intelligence & Drift Prevention *(v1.6.0 — 2 skills)*
+
+### Skill #44: `project-health-diagnostics`
+| Property | Value |
+| :--- | :--- |
+| **Number** | #44 |
+| **Phase** | 8 — Project Intelligence |
+| **Version** | v1.6.0 |
+| **Trigger** | "health check", "TAI score", "diagnose project", "agentway doctor" |
+| **CLI** | `agentway doctor [dir]` (alias: `health`) |
+| **Output** | `health-report.md` + `health-report.json` + `prescription.md` |
+| **TAI Formula** | `(token_coverage × 0.40) + (wcag × 0.25) + (resilience × 0.20) + (responsive × 0.15)` |
+
+**Grades:** 🟢 Excellent (90–100) · 🟡 Good (70–89) · 🟠 Needs Work (50–69) · 🔴 Critical (0–49)
+
+---
+
+### Skill #45: `design-drift-detector`
+| Property | Value |
+| :--- | :--- |
+| **Number** | #45 |
+| **Phase** | 8 — Project Intelligence |
+| **Version** | v1.6.0 |
+| **Trigger** | "audit:drift", "hardcoded CSS", "token drift", "design drift", "magic numbers" |
+| **CLI** | `agentway audit:drift [dir]` (alias: `drift`) |
+| **Output** | `drift-report.md` + `drift-report.json` + `drift-fixes.md` |
+| **Patterns** | 50+ regex signatures across 7 violation categories |
+
+**Violation Categories:**
+- 🔴 Critical: Hardcoded colors (hex, rgb, rgba, named CSS colors)
+- 🟠 High: Hardcoded spacing (margin/padding/gap), hardcoded typography (font-size, font-weight)
+- 🟡 Medium: Hardcoded radius, shadows, z-index, `!important` flags
+- 🟢 Low: Hardcoded transition/animation duration

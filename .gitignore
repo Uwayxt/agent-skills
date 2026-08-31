@@ -47,6 +47,11 @@ Thumbs.db
 *~
 
 # Environment & Local Secrets
+
+# IDE / AI Tool local configs (auto-generated, not for distribution)
+.claude/
+.cursor/
+.aider*
 .env
 .env.local
 .env.development.local

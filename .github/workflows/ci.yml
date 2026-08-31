@@ -29,7 +29,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Validate Skills Directory Structure (43 Skills)
+      - name: Validate Skills Directory Structure (45 Skills)
         run: |
           echo "Checking skills directory structure..."
           MISSING=0
@@ -56,8 +56,8 @@ jobs:
 
           echo "Total skills detected: $SKILL_COUNT"
 
-          if [ $SKILL_COUNT -lt 43 ]; then
-            echo "❌ Expected at least 43 skills, found $SKILL_COUNT."
+          if [ $SKILL_COUNT -lt 45 ]; then
+            echo "❌ Expected at least 45 skills, found $SKILL_COUNT."
             exit 1
           fi
 
@@ -104,9 +104,10 @@ jobs:
             }
             const content = fs.readFileSync(skillPath);
             const hash = crypto.createHash('sha256').update(content).digest('hex');
-            if (hash !== data.computedHash) {
+            const expectedHash = typeof data === 'string' ? data : data?.computedHash;
+            if (hash !== expectedHash) {
               console.error(`❌ SHA-256 Mismatch for [${name}]`);
-              console.error(`   Expected: ${data.computedHash}`);
+              console.error(`   Expected: ${expectedHash}`);
               console.error(`   Got:      ${hash}`);
               mismatches++;
             } else {
@@ -174,15 +175,17 @@ jobs:
           node bin/cli.js list
         shell: bash
 
-      - name: Test All 6 CLI Automation Generators
+      - name: Test All 8 CLI Automation Generators
         run: |
           mkdir -p tmp_ci_test
-          node bin/cli.js tokens:build            && echo "✅ tokens:build"
+          node bin/cli.js tokens:build                          && echo "✅ tokens:build"
           node bin/cli.js scaffold:module CISlice ./tmp_ci_test && echo "✅ scaffold:module"
           node bin/cli.js audit:routes ./tmp_ci_test            && echo "✅ audit:routes"
           node bin/cli.js audit:cognitive ./tmp_ci_test         && echo "✅ audit:cognitive"
           node bin/cli.js chaos:inject ./tmp_ci_test            && echo "✅ chaos:inject"
           node bin/cli.js gen:playwright ./tmp_ci_test          && echo "✅ gen:playwright"
+          node bin/cli.js doctor ./tmp_ci_test                  && echo "✅ doctor"
+          node bin/cli.js audit:drift ./tmp_ci_test             && echo "✅ audit:drift"
         shell: bash
 
       - name: Cleanup test artifacts

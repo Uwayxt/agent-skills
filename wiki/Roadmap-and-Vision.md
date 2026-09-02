@@ -41,10 +41,10 @@ Agentway is evolving to become the unified operating system for autonomous produ
 
 ### ✅ v1.6.0 — Project Intelligence & Drift Prevention (2026-08-31)
 - Added Skill #44: `project-health-diagnostics` (Token Adherence Index, 5-step diagnostic engine, SKILL-RECOMMENDER).
-- Added Skill #45: `design-drift-detector` (7 violation categories, 50+ pattern signatures, auto-fix recipes).
+- Added Skill #47: `design-drift-detector` (7 violation categories, 50+ pattern signatures, auto-fix recipes).
 - Built CLI Generator #7: `agentway doctor` (TAI score, Health Report Card, skill prescription queue).
 - Built CLI Generator #8: `agentway audit:drift` (severity-sorted drift report, drift-fixes.md).
-- Total: **45 skills** across **8 phases**, **8 CLI generators**.
+- Total: **47 skills** across **8 phases**, **8 CLI generators**.
 - Security: Removed `.claude/` symlinks from git tracking (IDE config separation).
 
 ## 🔮 Future Roadmap (v2.0 Vision)

@@ -1,0 +1,36 @@
+openapi: "3.1.0"
+info:
+  title: behavioral-pricing-psychology
+  description: >
+    Architects high-converting SaaS pricing tiers, paywall interaction models,
+    and value-gated UX based on behavioral economics, Decoy Effect asymmetric
+    dominance, and Loss Aversion copy framing.
+  version: 1.7.0
+
+x-skill-metadata:
+  phase: 9
+  category: Behavioral Psychology & Kinetic Motion
+  skill-number: 46
+  cli-command: "agentway gen:pricing"
+  outputs:
+    - pricing-matrix.json
+    - PricingTable.jsx
+    - pricing.css
+  companion-skills:
+    - business-model-thinking
+    - design-tokens
+    - micro-interaction-motion-design
+
+x-agent-triggers:
+  - "pricing table"
+  - "pricing page"
+  - "how should we price this"
+  - "pricing tiers"
+  - "decoy effect"
+  - "pricing psychology"
+  - "paywall UX"
+  - "upgrade modal"
+  - "feature gating"
+  - "freemium vs pro"
+  - "annual vs monthly toggle"
+  - "agentway gen:pricing"

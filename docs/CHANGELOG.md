@@ -7,6 +7,38 @@ Versions follow [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [1.7.0] — 2026-09-02
+
+### Added — Phase 9: Behavioral Psychology & Kinetic Motion
+
+#### Skill #46: `behavioral-pricing-psychology`
+- **Decoy Effect (Asymmetric Dominance):** Mathematical modeling to position an inferior decoy tier making the target Pro tier mathematically dominant ($	ext{Decoy Efficiency Ratio} > 3.0$).
+- **Loss Aversion Copywriting Engine:** Framing taxonomy highlighting foregone value rather than simple feature lists.
+- **Default Anchoring & Annual Toggle Math:** Centered visual prominence, badge psychology (`RECOMMENDED` / `MOST POPULAR`), and pre-selected annual billing with dynamic savings chips (`Save 20%` / `2 Months Free`).
+- **Feature Gating Hierarchy:** Distribution rules for Free vs. Starter vs. Pro vs. Enterprise tiers.
+- **Supporting Docs:** `PRICING-TIER-CALCULATOR.md`, `LOSS-AVERSION-PATTERNS.md`, `PAYWALL-UX-PATTERNS.md`.
+
+#### Skill #47: `kinematic-motion-choreography`
+- **Harmonic Spring Oscillator Model:** Physics formulas ($\zeta = c / 2\sqrt{km}$) replacing arbitrary linear CSS transitions with realistic mass, stiffness, and damping.
+- **Asymmetric Transitions:** Fast entrance ($\sim 150	ext{ms}$ `cubic-bezier(0.16, 1, 0.3, 1)`) paired with smooth, deliberate exit ($\sim 250	ext{ms}$ `cubic-bezier(0.7, 0, 0.84, 0)`).
+- **Cascading Stagger Timing:** Mathematical stagger intervals ($t_n = \min(n 	imes 35	ext{ms}, 350	ext{ms})$).
+- **Reduced-Motion Fallbacks:** Strict `@media (prefers-reduced-motion: reduce)` overrides.
+- **Supporting Docs:** `SPRING-PHYSICS-CALCULATOR.md`, `CHOREOGRAPHY-TIMELINE.md`, `KINEMATIC-TOKENS.md`.
+
+#### CLI Generator #9: `agentway gen:pricing [dir]`
+- Scaffolds `pricing-matrix.json`, `PricingTable.jsx` (with interactive annual/monthly billing toggle), and `pricing.css`.
+
+#### CLI Generator #10: `agentway gen:spring [dir]`
+- Scaffolds `spring-tokens.css` (physics-based CSS custom properties) and `motion-choreography.js` (harmonic oscillator solver).
+
+### Changed
+- **CLI Router:** Added `gen:pricing` and `gen:spring` command routes and aliases (`pricing`, `spring`).
+- **CLI List:** Grouping updated to 11 domains with Phase 9 category.
+- **Skills Lock:** Updated to **47 production skills** with SHA-256 integrity verification.
+
+---
+
+
 ## [1.6.0] — 2026-08-31
 
 ### Added — Phase 8: Project Intelligence & Drift Prevention

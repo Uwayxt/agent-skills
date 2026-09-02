@@ -260,3 +260,20 @@ Focus on:
 ```
 TAI = (token_coverage × 0.40) + (wcag_score × 0.25) + (resilience × 0.20) + (responsive × 0.15)
 ```
+
+---
+
+## Phase 9: Behavioral Psychology & Kinetic Motion *(v1.7.0)*
+
+**Theme:** Behavioral economics pricing optimization and harmonic spring physics animation.
+
+| # | Skill | Trigger | Output |
+| :---: | :--- | :--- | :--- |
+| 46 | `behavioral-pricing-psychology` | "pricing table", "decoy effect", "pricing psychology" | `pricing-matrix.json` + `PricingTable.jsx` + `pricing.css` |
+| 47 | `kinematic-motion-choreography` | "spring animation", "motion choreography", "asymmetric motion" | `spring-tokens.css` + `motion-choreography.js` + `KINEMATIC-TOKENS.md` |
+
+**CLI Generators (Phase 9):**
+| # | Command | Alias | Description |
+| :---: | :--- | :--- | :--- |
+| 9 | `agentway gen:pricing [dir]` | `pricing` | Scaffold pricing matrix & PricingTable with Decoy Effect |
+| 10 | `agentway gen:spring [dir]` | `spring` | Generate harmonic oscillator spring tokens & motion choreography |

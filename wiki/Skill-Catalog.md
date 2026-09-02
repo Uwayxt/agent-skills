@@ -242,14 +242,14 @@ Focus on:
 
 ---
 
-## Phase 8: Project Intelligence & Drift Prevention *(v1.6.0 — 2 skills)*
+## Phase 8: Project Intelligence & Drift Prevention *(v1.7.0 — 2 skills)*
 
 ### Skill #44: `project-health-diagnostics`
 | Property | Value |
 | :--- | :--- |
 | **Number** | #44 |
 | **Phase** | 8 — Project Intelligence |
-| **Version** | v1.6.0 |
+| **Version** | v1.7.0 |
 | **Trigger** | "health check", "TAI score", "diagnose project", "agentway doctor" |
 | **CLI** | `agentway doctor [dir]` (alias: `health`) |
 | **Output** | `health-report.md` + `health-report.json` + `prescription.md` |
@@ -259,12 +259,12 @@ Focus on:
 
 ---
 
-### Skill #45: `design-drift-detector`
+### Skill #47: `design-drift-detector`
 | Property | Value |
 | :--- | :--- |
-| **Number** | #45 |
+| **Number** | #47 |
 | **Phase** | 8 — Project Intelligence |
-| **Version** | v1.6.0 |
+| **Version** | v1.7.0 |
 | **Trigger** | "audit:drift", "hardcoded CSS", "token drift", "design drift", "magic numbers" |
 | **CLI** | `agentway audit:drift [dir]` (alias: `drift`) |
 | **Output** | `drift-report.md` + `drift-report.json` + `drift-fixes.md` |
@@ -275,3 +275,19 @@ Focus on:
 - 🟠 High: Hardcoded spacing (margin/padding/gap), hardcoded typography (font-size, font-weight)
 - 🟡 Medium: Hardcoded radius, shadows, z-index, `!important` flags
 - 🟢 Low: Hardcoded transition/animation duration
+
+---
+
+## 💡 Domain K — Behavioral Psychology & Kinetic Motion (Phase 9)
+
+### 46. `behavioral-pricing-psychology`
+- **Triggers:** `"pricing table"`, `"decoy effect"`, `"pricing psychology"`, `"paywall UX"`
+- **Purpose:** Decoy Effect (asymmetric dominance), Loss Aversion copywriting, and annual billing toggle savings math.
+- **Outputs:** `pricing-matrix.json`, `PricingTable.jsx`, `pricing.css`
+- **CLI Tool:** `agentway gen:pricing`
+
+### 47. `kinematic-motion-choreography`
+- **Triggers:** `"spring animation"`, `"spring physics"`, `"asymmetric motion"`, `"choreography"`
+- **Purpose:** Harmonic oscillator spring physics ($\zeta = c / 2\sqrt{km}$) and asymmetric entry/exit transitions.
+- **Outputs:** `spring-tokens.css`, `motion-choreography.js`, `KINEMATIC-TOKENS.md`
+- **CLI Tool:** `agentway gen:spring`

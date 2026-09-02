@@ -1,5 +1,5 @@
 {
-  "version": "1.6.0",
+  "version": "1.7.0",
   "skills": {
     "product-discovery": {
       "source": "uwayxt/product-design-skills",
@@ -279,8 +279,20 @@
       "sourceType": "github",
       "skillPath": ".agents/skills/design-drift-detector/SKILL.md",
       "computedHash": "bc2b7b8fbf532764e1320f07654e2fe9df38bf02e3b69aa116e9e0c2ac16d3dc"
+    },
+    "behavioral-pricing-psychology": {
+      "source": "uwayxt/product-design-skills",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/behavioral-pricing-psychology/SKILL.md",
+      "computedHash": "4307ee7f0338ee007578a82c2cecb0c1985c6af1393e05570823d99b1d6c5777"
+    },
+    "kinematic-motion-choreography": {
+      "source": "uwayxt/product-design-skills",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/kinematic-motion-choreography/SKILL.md",
+      "computedHash": "8f332f059ec3d73a9e663bf545209cfbef491e9170718e2a02a7df1b1d06547e"
     }
   },
-  "totalSkills": 45,
-  "updatedAt": "2026-08-31T18:00:00Z"
+  "totalSkills": 47,
+  "updatedAt": "2026-09-02T19:00:00Z"
 }

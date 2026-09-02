@@ -8,6 +8,8 @@ import { fileURLToPath } from 'url';
 import os from 'os';
 import { runHealthDoctor } from './generators/health-doctor.js';
 import { runDriftAuditor } from './generators/drift-auditor.js';
+import { runPricingGenerator } from './generators/pricing-modeler.js';
+import { runSpringGenerator } from './generators/spring-calculator.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -177,6 +179,7 @@ async function runList() {
     
     // Grouping by reading path
     const categories = {
+      'Behavioral Psychology & Kinetic Motion': [],
       'Project Intelligence & Drift Prevention': [],
       'Visual Intelligence': [],
       'Product Thinking & Strategy': [],
@@ -190,8 +193,11 @@ async function runList() {
     };
     
     skills.forEach(s => {
+      // Phase 9: Behavioral Psychology & Kinetic Motion
+      if (['behavioral-pricing-psychology', 'kinematic-motion-choreography'].includes(s)) {
+        categories['Behavioral Psychology & Kinetic Motion'].push(s);
       // Phase 8: Project Intelligence & Drift Prevention
-      if (['project-health-diagnostics', 'design-drift-detector'].includes(s)) {
+      } else if (['project-health-diagnostics', 'design-drift-detector'].includes(s)) {
         categories['Project Intelligence & Drift Prevention'].push(s);
       // Domain H: Visual Intelligence
       } else if (['visual-style-extractor', 'cognitive-load-heatmap-prediction'].includes(s)) {
@@ -218,7 +224,7 @@ async function runList() {
       } else if (['prd-traceability-matrix', 'interactive-element-audit', 'flow-based-functional-testing', 'visual-responsive-regression-testing', 'accessibility-runtime-audit', 'qa-feedback-loop-orchestrator', 'ux-chaos-monkey'].includes(s)) {
         categories['QA Autonomous & Traceability'].push(s);
       } else {
-        // Fallback — should never trigger with all 45 registered
+        // Fallback — should never trigger with all 47 registered
         categories['UI & Design System'].push(s);
       }
     });
@@ -369,14 +375,29 @@ async function runAuditDrift(args) {
   await runDriftAuditor(targetDir);
 }
 
+// --- COMMAND: GEN:PRICING ---
+async function runGenPricing(args) {
+  const targetDir = args[1] || '.';
+  await runPricingGenerator(targetDir);
+}
+
+// --- COMMAND: GEN:SPRING ---
+async function runGenSpring(args) {
+  const targetDir = args[1] || '.';
+  await runSpringGenerator(targetDir);
+}
+
 // --- COMMAND: HELP ---
 function showHelp() {
   console.log(pc.cyan(ASCII_ART));
   console.log(pc.bold(pc.white('Usage: agentway <command> [options]\n')));
   console.log(pc.white('Core Commands:'));
   console.log(`  ${pc.green('init')}                    Provision skills locally or globally.`);
-  console.log(`  ${pc.green('list')}                    View all 45 skills across 10 domains.`);
+  console.log(`  ${pc.green('list')}                    View all 47 skills across 11 domains.`);
   console.log(`  ${pc.green('update')}                  Check for registry updates.\n`);
+  console.log(pc.white('Behavioral & Kinematic Tools (v1.7.0):'));
+  console.log(`  ${pc.green('gen:pricing')} [dir]        Scaffold pricing matrix & PricingTable with Decoy Effect.`);
+  console.log(`  ${pc.green('gen:spring')} [dir]         Generate harmonic oscillator spring tokens & motion choreography.\n`);
   console.log(pc.white('Project Intelligence (v1.6.0):'));
   console.log(`  ${pc.green('doctor')} [dir]             Compute TAI score, generate Health Report Card & prescription.`);
   console.log(`  ${pc.green('audit:drift')} [dir]        Detect design token violations: hardcoded CSS, magic numbers.\n`);
@@ -437,6 +458,14 @@ async function main() {
     case 'audit:drift':
     case 'drift':
       await runAuditDrift(args);
+      break;
+    case 'gen:pricing':
+    case 'pricing':
+      await runGenPricing(args);
+      break;
+    case 'gen:spring':
+    case 'spring':
+      await runGenSpring(args);
       break;
     case 'help':
     default:

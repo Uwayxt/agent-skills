@@ -6,7 +6,7 @@
 ### *The Autonomous Product Design, Architecture & QA Engine for AI Coding Agents*
 
 <p align="center">
-  <strong>43 Production-Grade Skills • 9 Specialized Domains • Zero Context Bloat • 100% Model-Agnostic</strong>
+  <strong>47 Production-Grade Skills • 11 Specialized Domains • 10 Automated CLI Generators • 100% Model-Agnostic</strong>
 </p>
 
 <!-- Live NPM & Package Metrics -->
@@ -21,7 +21,7 @@
 
 ---
 
-<img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&size=18&pause=1200&center=true&vCenter=true&width=600&height=40&color=4B9EDB&lines=43+Agent+Skills+%E2%80%A2+Product+Design+to+QA;Multi-IDE+%E2%80%A2+Model-Agnostic;Claude+Code+%E2%80%A2+Google+Antigravity+IDE" alt="Agentway tagline" />
+<img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&size=18&pause=1200&center=true&vCenter=true&width=600&height=40&color=4B9EDB&lines=47+Agent+Skills+%E2%80%A2+Product+Design+to+QA;Multi-IDE+%E2%80%A2+Model-Agnostic;Claude+Code+%E2%80%A2+Google+Antigravity+IDE" alt="Agentway tagline" />
 
 *Transform your AI coding agent into an autonomous Product Designer, UX Researcher, and QA Engineer.*
 
@@ -45,7 +45,7 @@
 ---
 
 ### 🌐 Quick Navigation
-[⚡ Quick Start](#-quick-start) • [📊 System Telemetry](#-system-telemetry--key-metrics) • [🗺️ Skill Directory (45 Skills)](#-skill-directory) • [🔄 End-to-End Workflow](#-the-end-to-end-workflow) • [💻 CLI Commands](#-cli-reference) • [📖 Official Docs](#-official-documentation) • [💖 Sponsorship](#-sponsorship--donations)
+[⚡ Quick Start](#-quick-start) • [🎯 Prompt Playbook](#-prompt-playbook-how-to-drive-your-ai-agent) • [📊 System Telemetry](#-system-telemetry--key-metrics) • [🗺️ Skill Directory (47 Skills)](#-skill-directory) • [🔄 End-to-End Workflow](#-the-end-to-end-workflow) • [💻 CLI Commands](#-cli-reference) • [📖 Official Docs](#-official-documentation) • [💖 Sponsorship](#-sponsorship--donations)
 
 ---
 
@@ -61,13 +61,13 @@ Standard Agent:   Prompt ──────────────────�
 With Agentway:    Prompt ──► Discovery ──► Tokens ──► Scaffolding ──► Code ──► Autonomous QA Loop ──► Ship Verdict
 ```
 
-**Agentway equips any agent with 43 modular engineering contracts.** By leveraging *Progressive Disclosure*, instructions are loaded into context **only when relevant** — maintaining a 0ms runtime footprint with zero token pollution.
+**Agentway equips any agent with 47 modular engineering contracts.** By leveraging *Progressive Disclosure*, instructions are loaded into context **only when relevant** — maintaining a 0ms runtime footprint with zero token pollution.
 
 ---
 <div align="center">
 
-![Skills](https://img.shields.io/badge/Skills-43-6f42c1?style=for-the-badge)
-![Categories](https://img.shields.io/badge/Categories-9-0969da?style=for-the-badge)
+![Skills](https://img.shields.io/badge/Skills-47-6f42c1?style=for-the-badge)
+![Categories](https://img.shields.io/badge/Categories-11-0969da?style=for-the-badge)
 ![Compatible IDEs](https://img.shields.io/badge/Compatible%20IDEs-4-1f883d?style=for-the-badge)
 ![Model Agnostic](https://img.shields.io/badge/Model--Agnostic-Yes-d97706?style=for-the-badge)
 
@@ -81,10 +81,14 @@ With Agentway:    Prompt ──► Discovery ──► Tokens ──► Scaffold
 
 | Metric | Specification | Realized Impact |
 | :--- | :--- | :--- |
-| 📦 **Active Skills** | **43 Modular Protocols** | Full coverage from customer discovery to Playwright QA |
-| 🏷️ **Domain Coverage** | **9 Specialized Pillars** | Product, UX, UI, Delivery, Growth, Mobile, QA, Visual, Modern |
+| 📦 **Active Skills** | **47 Modular Protocols** | Full coverage from customer discovery & pricing to Playwright QA |
+| 🏷️ **Domain Coverage** | **11 Specialized Pillars** | Product, Behavioral, UX, UI, Delivery, Growth, Mobile, QA, Visual, Modern, Diagnostics |
 | 🧠 **Context Overhead** | **0 tokens idle** | On-demand progressive loading; never bloats active context |
 | 🖼️ **Visual Extraction** | **8-Stage Precision Engine** | Extracts tokens from UI screenshots with **≥ 95% visual fidelity** |
+| 💡 **Behavioral Monetization** | **Decoy Effect & Loss Aversion** | Mathematical pricing tier optimization with annual discount toggles |
+| 🌊 **Kinematic Motion** | **Harmonic Spring Oscillator** | Damped spring physics ($\zeta = c / 2\sqrt{km}$) replacing linear transitions |
+| 🩺 **Project Diagnostics**| **Token Adherence Index (TAI)** | Objective 0–100 codebase health score across 4 weighted dimensions |
+| 🔍 **Drift Prevention** | **50+ Pattern Signatures** | Detects hardcoded colors, magic spacing, and CSS anti-patterns with auto-fixes |
 | 🌓 **Theming Model** | **4-Tier Surface Elevation** | Seamless Light/Dark switching without contrast vibration |
 | ♿ **A11y Standard** | **WCAG 2.2 AA Target** | Automated axe-core + keyboard trap tests + VoiceOver guides |
 | 🛡️ **Self-Healing QA** | **3-Iteration Deterministic Loop** | Auto-fixes verified markup errors; escalates ambiguous issues |
@@ -104,7 +108,7 @@ npx @uwayxt/agent-skills init
 ```
 
 ### 2. Global Installation (Recommended)
-Keep all 45 skills persistently available across all your projects:
+Keep all 47 skills persistently available across all your projects:
 
 ```bash
 npm install -g @uwayxt/agent-skills
@@ -112,6 +116,52 @@ agentway init
 ```
 
 Choose **Global Installation** when prompted. Your IDE (Claude Code, Google Antigravity, Cursor) will auto-discover the skill registry on startup.
+
+---
+
+## 🎯 Prompt Playbook: How to Drive Your AI Agent
+
+> **Crucial Rule:** To ensure your agent executes the **full 9-phase lifecycle** rather than leaping straight into writing unstyled code, use explicit prompt orchestration with **mandatory gate approvals**.
+
+### 🌟 Quick-Prompt for New Projects (Greenfield)
+
+Paste this into your AI coding assistant at the start of a new project:
+
+```markdown
+We are building a new project from scratch. Use the complete 47-skill Agentway registry 
+in strict sequential order following the official 9-phase workflow. Do not skip any 
+skill without my permission, and pause for my approval at the end of each phase before proceeding.
+
+Project Context:
+- Idea & Problem: [Describe in 1-2 sentences]
+- Visual Reference (if any): [Attach image / link]
+- Target Platform: [Web / Mobile / Responsive Both]
+- Desired Tech Stack: [e.g., Next.js 15 + Tailwind / Vanilla CSS + Node.js]
+
+PHASE 1 — Problem, Strategy & Monetization: product-discovery, product-strategy, business-model-thinking, mvp-scoping, behavioral-pricing-psychology.
+[STOP HERE: Provide discovery_synthesis.md, MVP cut-line & pricing-matrix.json. Wait for approval before Phase 2]
+
+PHASE 2 — Architecture & UX: user-flow-mapping, information-architecture, dashboard-scaffolding-contract, responsive-breakpoint-strategy.
+[STOP HERE: Provide user flows, sitemap, and layout contracts. Wait for approval before Phase 3]
+
+PHASE 3 — Visual Language, Tokens & Motion: visual-style-extractor, design-tokens, typography-system, dark-mode-theming-system, kinematic-motion-choreography.
+[STOP HERE: Output design-tokens.json & spring-tokens.css. Wait for approval before Phase 4]
+
+PHASE 4 — Resilient Components: design-system-builder, component-style-guide, error-boundary-resilience-design, dashboard-layout-patterns, adaptive-component-behavior, touch-gesture-interaction, perceived-performance-loading.
+[STOP HERE: Output UI component matrix with 5-state resilience. Wait for approval before Phase 5]
+
+PHASE 5 — Delivery & Security: security-privacy-review, design-to-code-handoff, module-registry-sync, route-integrity-checker.
+
+PHASE 6 — Autonomous QA Loop: prd-traceability-matrix, interactive-element-audit, flow-based-functional-testing, visual-responsive-regression-testing, accessibility-runtime-audit (WCAG 2.2 AA), ux-chaos-monkey, qa-feedback-loop-orchestrator.
+
+PHASE 7 & FINAL GATE — Project Intelligence & Ship Verdict: project-health-diagnostics (Compute TAI score), design-drift-detector, cross-functional-review.
+Deliverable: Final Health Report Card (TAI ≥ 85) + Explicit SHIP / NO-SHIP verdict.
+
+Tag each output with "[skill: <skill-name>]". Do not write implementation code until Phases 1–3 are approved.
+```
+
+📖 **Need full brownfield prompt templates, troubleshooting guides, and deep examples?**  
+👉 **[Read the Complete Agentway Prompt Playbook (`docs/PROMPT-PLAYBOOK.md`)](./docs/PROMPT-PLAYBOOK.md)**
 
 ---
 
@@ -126,9 +176,17 @@ $ agentway list
  ██╔══██║██║   ██║██╔══╝  ██║╚██╗██║   ██║   ██║███╗██║██╔══██║  ╚██╔╝  
  ██║  ██║╚██████╔╝███████╗██║ ╚████║   ██║   ╚███╔███╔╝██║  ██║   ██║   
 
-  ✔ 43 Agent Skills Verified & Active across 9 Domains
+  ✔ 47 Agent Skills Verified & Active across 11 Domains
   ✔ Model Compatibility: Claude 3.7 Sonnet, GPT-4o, Gemini 2.0 Flash/Pro, DeepSeek V3
   ✔ Skills Lock: .agents/skills-lock.json (Integrity Verified)
+
+  [Domain K: Behavioral Psychology & Kinetic Motion]
+  └─ behavioral-pricing-psychology .. Decoy Effect, Loss Aversion & Pricing Tiers
+  └─ kinematic-motion-choreography .. Harmonic Spring Oscillator Physics & Asymmetric Curves
+
+  [Domain J: Project Intelligence & Drift Prevention]
+  └─ project-health-diagnostics ..... Token Adherence Index (TAI) & Health Report Card
+  └─ design-drift-detector .......... 50+ regex signatures detecting hardcoded CSS drift
 
   [Domain H: Visual Intelligence]
   └─ visual-style-extractor ......... Extract design tokens & components from reference images
@@ -139,8 +197,6 @@ $ agentway list
   └─ product-strategy ............... RICE / MoSCoW scoring with OKR alignment
   └─ business-model-thinking ........ Unit economics, CAC/LTV & monetization analysis
   └─ mvp-scoping .................... Riskiest assumption isolation & strict scope cut-lines
-  └─ stakeholder-requirement-mapping  Cross-department conflict resolution
-  └─ business-model-reading ......... BMC-to-module derivation engine
 
   [Domain I: Modern Platform Patterns]
   └─ dark-mode-theming-system ....... 4-tier surface elevation & anti-halasi dark tokens
@@ -150,7 +206,7 @@ $ agentway list
   └─ i18n-localization-strategy ..... RTL layout logical properties & string tokenization
   
   [Domains B, C, D, E, F, G: UX, UI, Delivery, Growth, Mobile, QA]
-  └─ 29 additional engineering skills active...
+  └─ 28 additional engineering skills active...
 ```
 
 ---
@@ -158,6 +214,30 @@ $ agentway list
 ## 🗺️ Skill Directory
 
 <details open>
+<summary><h3>💡 Domain K — Behavioral Psychology & Kinetic Motion (v1.7.0)</h3></summary>
+
+> *Harness cognitive behavioral economics and harmonic spring physics for peak conversion and natural UI motion.*
+
+| Skill | Trigger Phrases | Key Artifacts & Capabilities |
+| :--- | :--- | :--- |
+| **`behavioral-pricing-psychology`** | `"pricing table"`, `"decoy effect"`, `"pricing psychology"`, `"paywall UX"`, `"feature gating"` | Mathematically models Decoy Effect (asymmetric dominance), Loss Aversion copywriting, and annual billing toggle savings; outputs `pricing-matrix.json` and `PricingTable.jsx`. |
+| **`kinematic-motion-choreography`** | `"spring animation"`, `"spring physics"`, `"asymmetric motion"`, `"choreography"` | Calculates harmonic oscillator spring physics ($\zeta = c / 2\sqrt{km}$) and asymmetric enter/exit choreography; outputs `spring-tokens.css` and `motion-choreography.js`. |
+
+</details>
+
+<details>
+<summary><h3>🩺 Domain J — Project Intelligence & Drift Prevention (v1.6.0)</h3></summary>
+
+> *Continuous autonomous health auditing and design token drift prevention.*
+
+| Skill | Trigger Phrases | Key Artifacts & Capabilities |
+| :--- | :--- | :--- |
+| **`project-health-diagnostics`** | `"health check"`, `"diagnose project"`, `"TAI score"`, `"agentway doctor"` | Computes **Token Adherence Index (TAI)** score (0–100) across 4 dimensions; outputs `health-report.md`, `health-report.json`, and prioritized `prescription.md`. |
+| **`design-drift-detector`** | `"audit:drift"`, `"hardcoded CSS"`, `"token drift"`, `"design drift"` | Scans 7 violation categories across 50+ regex patterns; generates `drift-report.md`, `drift-report.json`, and find-and-replace `drift-fixes.md`. |
+
+</details>
+
+<details>
 <summary><h3>🖼️ Domain H — Visual Intelligence (Entry Point)</h3></summary>
 
 > *Eliminate visual style drift by parsing reference screenshots into deterministic token contracts.*
@@ -274,8 +354,8 @@ $ agentway list
                                        │
                                        ▼
 ┌─────────────────────────────────────────────────────────────────────────────┐
-│  1. PROBLEM & STRATEGY                                                      │
-│  product-discovery ──► product-strategy ──► business-model-thinking ──► MVP │
+│  1. PROBLEM, STRATEGY & PRICING                                             │
+│  product-discovery ──► product-strategy ──► behavioral-pricing ──► MVP      │
 └──────────────────────────────────────┬──────────────────────────────────────┘
                                        │
                                        ▼
@@ -286,8 +366,8 @@ $ agentway list
                                        │
                                        ▼
 ┌─────────────────────────────────────────────────────────────────────────────┐
-│  3. VISUAL LANGUAGE & MODERN THEMES                                         │
-│  design-tokens ──► typography-system ──► dark-mode-theming-system ──► motion│
+│  3. VISUAL LANGUAGE, TOKENS & KINEMATIC MOTION                              │
+│  design-tokens ──► typography-system ──► dark-mode ──► kinematic-motion     │
 └──────────────────────────────────────┬──────────────────────────────────────┘
                                        │
                                        ▼
@@ -311,6 +391,12 @@ $ agentway list
 │                       qa-feedback-loop-orchestrator                         │
 │                    (Auto-Fix ──► Retest ──► Escalate)                       │
 └──────────────────────────────────────┬──────────────────────────────────────┘
+                                       │
+                                       ▼
+┌─────────────────────────────────────────────────────────────────────────────┐
+│  7. PROJECT INTELLIGENCE & DRIFT PREVENTION                                 │
+│  project-health-diagnostics (TAI Score) ──► design-drift-detector           │
+└──────────────────────────────────────┬──────────────────────────────────────┘
                                        │ (All Passed)
                                        ▼
                          ┌──────────────────────────┐
@@ -320,36 +406,52 @@ $ agentway list
 
 ---
 
-## 💻 CLI Reference
+## 💻 CLI Reference (10 Automation Tools)
 
-```
+> 💡 **New to Agentway CLI?** Read the **[📖 Beginner's CLI Automation Suite Guide (`docs/CLI-TOOLS-GUIDE.md`)](./docs/CLI-TOOLS-GUIDE.md)** for detailed step-by-step examples and outputs for all 10 tools.
+
+```bash
 agentway <command> [options]
 ```
 
-### Core Commands
-| Command | Description |
-| :--- | :--- |
-| `agentway init` | Interactive installer — configures local project or global agent environment. |
-| `agentway list` | Lists all 45 skills categorized by domain with active trigger phrases. |
-| `agentway update` | Checks for skill registry updates and updates `.agents/skills-lock.json`. |
-| `agentway help` | Displays comprehensive command manual and runtime configuration options. |
+### 1. Core Lifecycle Commands
+| Command | When to run this? | Description |
+| :--- | :--- | :--- |
+| `agentway init` | First time setup | Interactive installer — provisions skills locally (`.agents/skills/`) or globally. |
+| `agentway list` | Skill exploration | Displays all 47 skills categorized by domain with active trigger phrases. |
+| `agentway update` | Version upgrade | Checks for skill registry updates and verifies `skills-lock.json`. |
+| `agentway help` | Quick syntax check | Displays command options and runtime arguments. |
 
-### ⚡ Expert Automation Tools
-| Command | Description |
-| :--- | :--- |
-| `agentway tokens:build [file]` | Compiles JSON design tokens into Vanilla CSS Variables, Tailwind v4 config, and TypeScript definitions. |
-| `agentway scaffold:module <name>` | Scaffolds a modular feature slice with manifest, route intent, and 5-state resilience React/JSX container. |
-| `agentway audit:routes [dir]` | Audits codebase for dead links (`href="#"`), orphaned buttons without handlers, and missing `aria-label`. |
-| `agentway audit:cognitive [dir]` | Audits cognitive friction: Hick's Law decision time, Fitts's motor effort, and Cognitive Friction Index (CFI/100). |
-| `agentway gen:playwright [dir]` | Generates automated Playwright test suites covering WCAG 2.2 AA and multi-viewport responsive checks. |
+### 2. Project Health & Token Drift Prevention
+| Command | When to run this? | Description |
+| :--- | :--- | :--- |
+| `agentway doctor [dir]` | Codebase audit | Computes **Token Adherence Index (TAI)** (0–100), outputs `health-report.md` & `prescription.md`. |
+| `agentway audit:drift [dir]` | PR quality check | Scans CSS for 50+ hardcoded anti-patterns; outputs `drift-report.md` & `drift-fixes.md`. |
 
+### 3. Scaffolding & Design System Engineering
+| Command | When to run this? | Description |
+| :--- | :--- | :--- |
+| `agentway tokens:build [file]` | Start of project | Compiles JSON tokens into Vanilla CSS Variables, Tailwind v4, and TypeScript types. |
+| `agentway scaffold:module <name>` | New screen / slice | Generates a React component slice with built-in **5-state resilience** & manifest contract. |
+| `agentway gen:pricing [dir]` | *(v1.7.0)* Paywall / pricing | Generates `pricing-matrix.json`, interactive `PricingTable.jsx` (with Decoy Effect), and `pricing.css`. |
+| `agentway gen:spring [dir]` | *(v1.7.0)* Micro-interactions | Scaffolds harmonic oscillator spring tokens (`spring-tokens.css`) and physics solver. |
+
+### 4. Automated Audits & QA Test Generators
+| Command | When to run this? | Description |
+| :--- | :--- | :--- |
+| `agentway audit:routes [dir]` | Before shipping | Audits codebase for dead links (`href="#"`), orphaned buttons without handlers, and missing `aria-label`. |
+| `agentway audit:cognitive [dir]` | UX review | Calculates Hick's Law decision time & Fitts's Law motor effort to produce a **CFI/100** score. |
+| `agentway chaos:inject [dir]` | Stress testing | Generates Playwright chaos tests: Text Explosions, Data Extremes ($0→$999M), and Flaky Network. |
+| `agentway gen:playwright [dir]` | QA test suite | Scaffolds automated Playwright test suites for **WCAG 2.2 AA** and responsive viewports. |
 
 ---
 
 ## 📖 Official Documentation
 
+- **[🎯 Prompt Playbook & Tutorial](./docs/PROMPT-PLAYBOOK.md)** — Comprehensive guide & copy-paste prompt templates to orchestrate all 47 skills.
+- **[🛠️ CLI Automation Suite Guide](./docs/CLI-TOOLS-GUIDE.md)** — Beginner's guide with scenarios & visual walkthroughs for all 10 CLI tools.
 - **[📖 Skill Authoring Guide](./docs/SKILL-AUTHORING-GUIDE.md)** — Architectural standards and token budget benchmarks for authoring skills.
-- **[🗺️ Complete Skill Map](./docs/SKILL-MAP.md)** — Comprehensive dependency flow & trigger catalog across all 45 skills.
+- **[🗺️ Complete Skill Map](./docs/SKILL-MAP.md)** — Comprehensive dependency flow & trigger catalog across all 47 skills.
 - **[🍳 Practical Recipes](./docs/RECIPES.md)** — 11 production recipes (SaaS from Scratch, Dark Mode, AI Streaming UX, RTL).
 - **[📜 Version Changelog](./docs/CHANGELOG.md)** — Release notes and historical upgrade timeline.
 - **[🤝 Contribution Guidelines](./CONTRIBUTING.md)** — Corporate standards, branching flow, and Conventional Commits.
@@ -372,7 +474,6 @@ Agentway is an independently maintained, open-source engineering initiative. If 
 
 **Saweria Donation:**  
 👉 [https://saweria.co/uwayxt](https://saweria.co/uwayxt)
-
 
 </div>
 

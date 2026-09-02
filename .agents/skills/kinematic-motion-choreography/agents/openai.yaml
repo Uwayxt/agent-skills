@@ -1,0 +1,32 @@
+openapi: "3.1.0"
+info:
+  title: kinematic-motion-choreography
+  description: >
+    Calculates harmonic spring oscillator physics (mass, stiffness, damping)
+    and orchestrates asymmetric UI transitions with cascading stagger delays.
+  version: 1.7.0
+
+x-skill-metadata:
+  phase: 9
+  category: Behavioral Psychology & Kinetic Motion
+  skill-number: 47
+  cli-command: "agentway gen:spring"
+  outputs:
+    - spring-tokens.css
+    - motion-choreography.js
+    - KINEMATIC-TOKENS.md
+  companion-skills:
+    - micro-interaction-motion-design
+    - touch-gesture-interaction
+
+x-agent-triggers:
+  - "spring animation"
+  - "spring physics"
+  - "asymmetric motion"
+  - "enter exit animation"
+  - "staggered animation"
+  - "choreography"
+  - "modal animation"
+  - "drawer physics"
+  - "kinematic tokens"
+  - "agentway gen:spring"

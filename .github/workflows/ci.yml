@@ -29,7 +29,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Validate Skills Directory Structure (45 Skills)
+      - name: Validate Skills Directory Structure (47 Skills)
         run: |
           echo "Checking skills directory structure..."
           MISSING=0
@@ -56,8 +56,8 @@ jobs:
 
           echo "Total skills detected: $SKILL_COUNT"
 
-          if [ $SKILL_COUNT -lt 45 ]; then
-            echo "❌ Expected at least 45 skills, found $SKILL_COUNT."
+          if [ $SKILL_COUNT -lt 47 ]; then
+            echo "❌ Expected at least 47 skills, found $SKILL_COUNT."
             exit 1
           fi
 
@@ -175,7 +175,7 @@ jobs:
           node bin/cli.js list
         shell: bash
 
-      - name: Test All 8 CLI Automation Generators
+      - name: Test All 10 CLI Automation Generators
         run: |
           mkdir -p tmp_ci_test
           node bin/cli.js tokens:build                          && echo "✅ tokens:build"
@@ -186,6 +186,8 @@ jobs:
           node bin/cli.js gen:playwright ./tmp_ci_test          && echo "✅ gen:playwright"
           node bin/cli.js doctor ./tmp_ci_test                  && echo "✅ doctor"
           node bin/cli.js audit:drift ./tmp_ci_test             && echo "✅ audit:drift"
+          node bin/cli.js gen:pricing ./tmp_ci_test             && echo "✅ gen:pricing"
+          node bin/cli.js gen:spring ./tmp_ci_test              && echo "✅ gen:spring"
         shell: bash
 
       - name: Cleanup test artifacts
